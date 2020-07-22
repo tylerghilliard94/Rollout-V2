@@ -30,13 +30,21 @@
 ## Application Overview
 
 
-What problem does your application solve? An app that eases new players into creating a character and playing D&D. It breaks up the huge barrier of entry that there is with this genre of tabletop games and allows new users to take in information in a much more concise manner. 
+### What problem does your application solve? 
 
-Who are the target users of this application? The target audience for this application is new players to D&D. While it has functionality for those that have done this before, its main goal is to help new players break into the genre.
+An app that eases new players into creating a character and playing D&D. It breaks up the huge barrier of entry that there is with this genre of tabletop games and allows new users to take in information in a much more concise manner. 
 
-What can a user do with this application? From logging in a new user should be able to go through character creation without having any prior knowledge needed. Once the character is made they should be able to view their characters profile and see their stats to use in the game. They should also be able to edit their characters to reflect what is going on in the game.
+### Who are the target users of this application? 
 
-Why do you want to build this application? I want to make this app because this is a genre I love and with how things are right now, having a digital aid to help you into a new hobby or a returning player being able to quickly hop in, is something that’s greatly needed. I know many people that want to play but see the character sheet and get overwhelmed by the amount of information needed and just stop there.
+The target audience for this application is new players to D&D. While it has functionality for those that have done this before, its main goal is to help new players break into the genre.
+
+### What can a user do with this application? 
+
+From logging in a new user should be able to go through character creation without having any prior knowledge needed. Once the character is made they should be able to view their characters profile and see their stats to use in the game. They should also be able to edit their characters to reflect what is going on in the game.
+
+### Why do you want to build this application? 
+
+I want to make this app because this is a genre I love and with how things are right now, having a digital aid to help you into a new hobby or a returning player being able to quickly hop in, is something that’s greatly needed. I know many people that want to play but see the character sheet and get overwhelmed by the amount of information needed and just stop there.
 
 
 ## MVP Definition: 
