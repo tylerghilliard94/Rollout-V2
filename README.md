@@ -6,7 +6,7 @@
 
 ### Mentor: Sage Klein
 
-### Github: https://github.com/tylerghilliard94
+### Github: https://github.com/tylerghilliard94/Front-End-Capstone-Re-Roll
 
 ## Initial Proposal
 
