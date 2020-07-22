@@ -67,9 +67,7 @@ I want to make this app because this is a genre I love and with how things are r
 
 * As a new player, I would like to be able to put all of my spells in a tab and save them as needed and delete them as needed.
 
-* As a new player, if I wanted to DM I would like to be able to create a party of players where I can see the characters in the adventure.
-
-* As a new player, if I wanted to DM it would be nice to be able to look up and save monsters to an encounter so i can plan it for the game.
+* As a new player, I would like to be able to add character logs to remind myself of events that happened to my character in game.
 
 
 ## Technology Stack: 
