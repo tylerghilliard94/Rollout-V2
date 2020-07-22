@@ -13,7 +13,7 @@
 ### Name of Project: Re-Roll
 
 ### Brief Proposal:
- An app that eases the barrier of entry to those wanting to try out table top games such as Dungeons and Dragons. It can be extremely daunting with all the information at hand for new players to make sense of it all. It simplifies the character creation into an easy form with some default characters if they choose to use those. They can save the character to their profile and can store items and other things they find in their adventures. Also to ease the lives of Dungeon Masters I plan to use the D&D API to allow for quick access to monsters, spells, and items with the ability to save them to a local API for future use.
+An app that eases the barrier of entry to those wanting to try out table top games such as Dungeons and Dragons. It can be extremely daunting with all the information at hand for new players to make sense of it all. It simplifies the character creation into an easy form with some default characters if they choose to use those. They can save the character to their profile and can edit the character as they go on their adventures.
 
 
 
