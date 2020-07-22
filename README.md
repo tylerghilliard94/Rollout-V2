@@ -4,7 +4,7 @@
 
 ### Email: tylerghilliard@gmail.com
 
-### Mentor: Sage
+### Mentor: Sage Klein
 
 ### Github: https://github.com/tylerghilliard94
 
