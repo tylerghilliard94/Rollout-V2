@@ -72,7 +72,7 @@ I want to make this app because this is a genre I love and with how things are r
 
 ## Technology Stack: 
 
-* React Bootstrap
+* Reactstrap
 * D&D 5e Open API http://www.dnd5eapi.co/
 * React
 
