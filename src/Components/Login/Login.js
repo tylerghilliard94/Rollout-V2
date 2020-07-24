@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import APIManager from "../Modules/APIManager"
-import { Card,CardTitle, CardBody, CardImg, CardSubtitle, Form, FormGroup, Input, Button, Row, Col, Label } from "reactstrap";
+import { Card, CardTitle, CardBody, CardImg, CardSubtitle, Form, FormGroup, Input, Button, Row, Col, Label, Alert } from "reactstrap";
 import "./Login.css"
+
 
 const Login = (props) => {
     const [credentials, setCredentials] = useState({ userId: 0 });
     const [users, setUsers] = useState([])
+    
     
     useEffect(()=> {
       APIManager.GetAll("users")
@@ -29,11 +31,28 @@ const Login = (props) => {
             
             userNameCheck = true;
             if (user.password === userPassword) {
-              
+             
               passwordCheck = true;
               credentials.userId = user.id
+              let characterCheck= false
               props.setUser(credentials)
-              props.history.push("/Dashboard")
+                APIManager.GetAll("characters").then((response) => {
+                   
+                    response.forEach(character => {
+                      if(character.userId === parseInt(sessionStorage.activeUserID)){
+                          characterCheck = true
+                      }
+                    })
+                }).then(() => {
+                    console.log(characterCheck)
+                    if(characterCheck){
+                      props.history.push("/Dashboard")
+                    } else {
+                        props.history.push("/CharacterPrompt")
+                    }
+                })
+              
+              
             } 
           } 
         })
@@ -41,13 +60,12 @@ const Login = (props) => {
             if (passwordCheck === false) {  
               
               return (
-                alert("Password is incorrect.")
-                      )
-              
+                window.alert("Incorrect Password")
+              )
             }
           } else {
             return (
-              alert("Username is incorrect")
+                window.alert("Incorrect Username")
                     )
           }
         
@@ -63,7 +81,7 @@ const Login = (props) => {
     return (
       <div className="loginContainer">
         <Card className="loginCard">
-          <CardBody>
+          <CardBody className="loginCardBody">
           <CardImg 
           className="loginLogo" 
           src={("../images/logo.png")} 
@@ -79,7 +97,7 @@ const Login = (props) => {
           <Row>
             <Col>
             <FormGroup>
-              <Label className="loginLabel">Username</Label>
+              <Label className="loginUsernameLabel">Username</Label>
               <Input className="loginForm"
                 onChange={handleFieldChange}
                 type="text"
@@ -88,7 +106,7 @@ const Login = (props) => {
               />
             </FormGroup>
             <FormGroup>
-              <Label className="loginLabel">Password</Label>
+              <Label className="loginPasswordLabel">Password</Label>
               <Input className="loginForm"
                 onChange={handleFieldChange}
                 type="password"

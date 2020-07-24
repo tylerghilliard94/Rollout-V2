@@ -1,0 +1,16 @@
+.registerWelcome, .registerUsernameLabel, .registerEmailLabel, .registerPasswordLabel, .registerPasswordConfirmationLabel{
+    color: #efede7;
+}
+
+.registerContainer{
+    background-color: #222F2F;
+    display: flex;
+    justify-content: center;
+    margin-top: 12rem;
+    margin-bottom: 2rem;
+}
+
+
+.registrationCardBody {
+    margin: 10vw, 0vw, 0vw, 10vw;
+}
