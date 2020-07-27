@@ -1,0 +1,70 @@
+.raceCardBody {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff8ea;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+}
+
+.raceCardContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80% !important;
+    height: auto;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    margin-left: 5vw;
+    background-color: #222F2F;
+}
+
+.raceContainer {
+    background-color: #222F2F;
+}
+
+.raceCard{
+    width: 12vw;
+    height: 17vw;
+    background-color: #efede7;
+    perspective: 1000px;
+    background-color: transparent;
+   
+   
+}
+
+.raceCard:hover .raceCardBody {
+    transform: rotateY(180deg);
+}
+
+.cardBack, .cardFront {
+position: absolute;
+-webkit-backface-visibility: hidden; 
+backface-visibility: hidden;
+
+}
+
+.cardFront {
+    width: 100%;
+height: 100%;
+}
+
+.cardBack {
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+}
+.raceCardTitleFront {
+    margin-left: -2vw;
+}
+
+.raceCardTitleBack {
+    margin-left: 1.5vw;
+}
+.cardDescription{
+    padding-left: .4vw;
+}

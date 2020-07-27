@@ -5,6 +5,12 @@ export default {
         return fetch(`${apiURL}${string}`)
         .then(response=>response.json())
     },
+    
+    GetDefaultbyClass(string, className){
+        console.log(className)
+        return fetch(`${apiURL}${string}?class=${className}`)
+        .then(response=>response.json())
+    },
 
     Push(string, obj) {
         return fetch(`${apiURL}${string}`, {

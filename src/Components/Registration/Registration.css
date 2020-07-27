@@ -14,3 +14,12 @@
 .registrationCardBody {
     margin: 10vw, 0vw, 0vw, 10vw;
 }
+
+.registrationCard {
+    width: 60rem;
+    border: 2px solid #394141 !important;
+    border-radius: 6px !important;
+    background-color: #394141 !important;
+  
+    
+}
