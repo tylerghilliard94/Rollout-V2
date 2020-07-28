@@ -35,11 +35,11 @@ html {
     margin-left: 1rem; 
 }
 
-.loginLabel{
+.loginUsernameLabel, .loginPasswordLabel{
     margin-left: 1rem;
 }
 
-.loginWelcome.card-title, .loginWelcomeSub.card-subtitle, .loginLabel  {
+.loginWelcome.card-title, .loginWelcomeSub.card-subtitle, .loginUsernameLabel, .loginPasswordLabel  {
     color: #efede7; 
 }
 
