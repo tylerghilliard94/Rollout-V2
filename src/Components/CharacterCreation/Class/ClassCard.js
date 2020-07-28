@@ -7,6 +7,7 @@ const ClassCard = (props) => {
     const setClass = (evt) => {
        
         sessionStorage.setItem("class", evt.target.id)
+        sessionStorage.setItem("hitDice", props.class.hitDice)
         props.history.push("/CharacterType")
         
     }

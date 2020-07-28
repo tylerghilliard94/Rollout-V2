@@ -9,6 +9,7 @@ import CharacterType from "./CharacterCreation/CharacterType/CharacterType"
 import Race from "./CharacterCreation/Race/Race"
 import BaseInfo from "./CharacterCreation/BaseInfo/BaseInfo"
 import Stats from "./CharacterCreation/Stats/Stats"
+import HitPoints from "./CharacterCreation/HitPoints/HitPoints"
 
 const ApplicationViews = props => {
     const hasUser = props.hasUser
@@ -105,6 +106,17 @@ const ApplicationViews = props => {
                 render={props => {
                     if(hasUser){
                        return <Stats {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+            <Route
+                exact
+                path="/HitPoints"
+                render={props => {
+                    if(hasUser){
+                       return <HitPoints {...props} />;
                     } else {
                        return <Redirect exact to="/" />
                     }
