@@ -1,0 +1,74 @@
+html {
+    background-color: #222F2F;
+}
+
+
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background-color: #222F2F
+    
+
+}
+
+.loginButton.btn.btn-custom {
+    background-color: #5C1F1F;
+    color: #efede7;
+    
+}
+.registerButton.btn.btn-secondary {
+    background-color: #5C1F1F;
+    color: #efede7;
+    margin-top: 3.75rem;
+    margin-left: 3rem;
+   
+}
+
+.loginButton {
+    margin-left: 23rem;
+}
+
+.loginForm.form-control {
+    background-color: #efede7;
+    margin-left: 1rem; 
+}
+
+.loginLabel{
+    margin-left: 1rem;
+}
+
+.loginWelcome.card-title, .loginWelcomeSub.card-subtitle, .loginLabel  {
+    color: #efede7; 
+}
+
+.loginLogo {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem !important;
+}
+
+.card {
+    width: 60rem;
+    border: 2px solid #394141 !important;
+    border-radius: 6px !important;
+    background-color: #3a3b3b !important;
+    
+    
+} 
+
+.loginWelcome.card-title.h5, .loginWelcomeSub.card-subtitle.h6 {
+   text-align: center !important;
+}
+.loginWelcome {
+    margin-top: -2rem;
+}
+
+.loginWelcomeSub.card-subtitle.h6 {
+    margin-bottom: 3rem !important;
+}
+
+
+
