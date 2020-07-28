@@ -1,0 +1,112 @@
+.defaultCardBody {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff8ea;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+}
+.customCardBody {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff8ea;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+}
+
+.row{
+    margin-top: 10vw;
+    background-color: #222F2F;
+}
+
+.orTitle{
+    color: #fff8ea;
+    margin-left: 5vw;
+    margin-top: 6vw;
+    font-size: 3vw;
+}
+
+.defaultCard{
+    width: 12vw;
+    height: 17vw;
+    background-color: #efede7;
+    perspective: 1000px;
+    background-color: transparent;
+    margin-left: 27vw;
+    margin-right: 2vw;
+   
+   
+}
+.customCard{
+    width: 12vw;
+    height: 17vw;
+    background-color: #efede7;
+    perspective: 1000px;
+    background-color: transparent;
+    margin-left: 7vw;
+   
+}
+
+.defaultCard:hover .defaultCardBody {
+    transform: rotateY(180deg);
+}
+
+.customCard:hover .customCardBody {
+    transform: rotateY(180deg);
+}
+
+.defaultBack, .defaultFront {
+position: absolute;
+-webkit-backface-visibility: hidden; 
+backface-visibility: hidden;
+
+}
+.customBack, .customFront {
+position: absolute;
+-webkit-backface-visibility: hidden; 
+backface-visibility: hidden;
+
+}
+
+.defaultFront {
+    width: 100%;
+height: 100%;
+}
+
+.customFront {
+    width: 100%;
+height: 100%;
+}
+
+.defaultBack {
+    transform: rotateY(180deg);
+}
+.customBack {
+    transform: rotateY(180deg);
+}
+
+.defaultCardTitleFront {
+    margin-left: -2vw;
+    font-size: 1.5vw;;
+}
+
+.defaultCardDescription{
+    padding-left: .4vw;
+}
+
+.customCardTitleFront {
+    margin-left: -2vw;
+}
+
+.customCardDescription{
+    padding-left: .4vw;
+}

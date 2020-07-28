@@ -5,6 +5,10 @@ import InitialCharacterPrompt from "./InititalCharacterPrompt/InitialCharacterPr
 import Class from "./CharacterCreation/Class/Class"
 import Registration from './Registration/Registration';
 import Login from './Login/Login';
+import CharacterType from "./CharacterCreation/CharacterType/CharacterType"
+import Race from "./CharacterCreation/Race/Race"
+import BaseInfo from "./CharacterCreation/BaseInfo/BaseInfo"
+import Stats from "./CharacterCreation/Stats/Stats"
 
 const ApplicationViews = props => {
     const hasUser = props.hasUser
@@ -57,6 +61,50 @@ const ApplicationViews = props => {
                 render={props => {
                     if(hasUser){
                        return <Class {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+            <Route
+                exact
+                path="/CharacterType"
+                render={props => {
+                    if(hasUser){
+                       return <CharacterType {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+            <Route
+                exact
+                path="/Race"
+                render={props => {
+                    if(hasUser){
+                       return <Race {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+            <Route
+                exact
+                path="/BaseInfo"
+                render={props => {
+                    if(hasUser){
+                       return <BaseInfo {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+            <Route
+                exact
+                path="/Stats"
+                render={props => {
+                    if(hasUser){
+                       return <Stats {...props} />;
                     } else {
                        return <Redirect exact to="/" />
                     }
