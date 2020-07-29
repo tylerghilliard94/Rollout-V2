@@ -35,7 +35,7 @@ const Register = (props) => {
                 if (userNameCheck === true && userNameInputValue !== "") {
                     if (userPasswordValue === userConfirmPasswordValue && userPasswordValue !== "" ) {
                         
-                        APIManager.Push("users", credentials) .then(() => {
+                        APIManager.Post("users", credentials) .then(() => {
                           APIManager.GetAll("users").then((response) => {
                             response.forEach(user => {
                               if(user.userName === userNameInputValue){

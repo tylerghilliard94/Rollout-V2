@@ -53,6 +53,7 @@ const HitPoints = props => {
     const handleNext = (evt) => {
         
         props.history.push("/FinalDetails")
+        sessionStorage.removeItem("chanceHitPoints")
     }
 
     if(sessionStorage.level == 1) {
