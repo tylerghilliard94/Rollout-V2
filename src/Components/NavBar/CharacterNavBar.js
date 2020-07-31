@@ -2,7 +2,7 @@ import React from "react"
 import {NavLink} from "react-router-dom"
 import {Image} from "react-bootstrap"
 
-const BaseNavBar = props => {
+const CharacterNavBar = props => {
     const handleLogout = () => {
         props.clearUser();
         ;
@@ -12,7 +12,7 @@ const BaseNavBar = props => {
         <header>
           <ul id="nav-mobile" className="nav-Container right"  >
               <li>
-              <NavLink className="homeLogo" exact to="/Dashboard"> 
+                 <NavLink className="homeLogo" exact to="/Dashboard"> 
                  {/* <Image placeholder="Logo">
 
                   </Image> */}
@@ -27,4 +27,4 @@ const BaseNavBar = props => {
     )
 }
 
-export default BaseNavBar
+export default CharacterNavBar
