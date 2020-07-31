@@ -7,7 +7,7 @@ import "./FriendList.css"
 
 const FriendsList = props => {
     const [friends, setFriends] = useState([])
-
+    const [refresh, setRefresh] = useState()
     const friendUpdate = () => {
         APIManager.GetUsersFriends("friends")
         .then((response) => {
@@ -18,7 +18,7 @@ const FriendsList = props => {
 
     useEffect(() => {
        friendUpdate()
-        }, [])
+        }, [refresh])
 
     return (
     <div className="friend-container">

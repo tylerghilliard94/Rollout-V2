@@ -49,7 +49,7 @@ let defaultChoice = {}
             <Card.Title className="defaultCardTitleBack"id={sessionStorage.class}>
                 Default Character
             </Card.Title>
-            <p className="Description"id={sessionStorage.class}>
+            <p className="defaultCardDescription"id={sessionStorage.class}>
             Recommended for players who already have some experience or if you need to hop into a game right away.
             </p>
             
@@ -80,7 +80,7 @@ let defaultChoice = {}
             <Card.Title className="customCardTitleBack"id={sessionStorage.class}>
                 Custom Character
             </Card.Title>
-            <p className="customDescription"id={sessionStorage.class}>
+            <p className="customCardDescription"id={sessionStorage.class}>
             Recommended for those new to the game or those looking to create a character piece by piece.
             </p>
             

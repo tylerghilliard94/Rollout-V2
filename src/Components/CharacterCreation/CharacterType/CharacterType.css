@@ -97,16 +97,26 @@ height: 100%;
 .defaultCardTitleFront {
     margin-left: -2vw;
     font-size: 1.5vw;;
+    color: black;
+}
+.defaultCardTitleBack {
+    color: black;
 }
 
 .defaultCardDescription{
     padding-left: .4vw;
+    color: black;
 }
 
 .customCardTitleFront {
     margin-left: -2vw;
+    color: black;
+}
+.customCardTitleBack{
+    color: black;
 }
 
 .customCardDescription{
     padding-left: .4vw;
+    color: black;
 }

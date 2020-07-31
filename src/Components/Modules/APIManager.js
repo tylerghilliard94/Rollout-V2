@@ -13,7 +13,7 @@ export default {
     },
     
     GetDefaultbyClass(string, className){
-        console.log(className)
+        
         return fetch(`${apiURL}${string}?class=${className}`)
         .then(response=>response.json())
     },
@@ -24,7 +24,7 @@ export default {
     GetUsersFriends(str){
         return fetch(`${apiURL}${str}?activeUserId=${sessionStorage.activeUserID}&_expand=user`)
         .then(res=>res.json()).then((response) => {
-            console.log(response)
+            
             return response
         })
     },

@@ -46,6 +46,7 @@ position: absolute;
 -webkit-backface-visibility: hidden; 
 backface-visibility: hidden;
 
+
 }
 
 .cardFront {
@@ -56,12 +57,18 @@ height: 100%;
 .cardBack {
     transform: rotateY(180deg);
 }
+
+.classCardTitleBack {
+    color: black;
+}
 .classCardTitleFront {
     margin-left: -2vw;
+    color: black;
 }
 
 .cardDescription{
     padding-left: .4vw;
+    color: black;
 }
 
 

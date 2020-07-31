@@ -83,6 +83,10 @@ height: 100%;
 }
 .statCardTitleFront {
     margin-left: -2vw;
+    color: black;
+}
+.statCardTitleBack {
+    color: black;
 }
 
 .cardDescription{
