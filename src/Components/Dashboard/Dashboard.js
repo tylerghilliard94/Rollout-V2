@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from "react"
-import {Row, Col, Card} from "react-bootstrap"
+import {Row, Col, Card, Container} from "react-bootstrap"
 import APIManager from "../Modules/APIManager"
 import DashboardCard from "./DashboardCard"
 import BaseNavBar from "../NavBar/BaseNavBar"
 import FriendsList from "../Friends/FriendList"
+import "./Dashboard.css"
 
 
 
@@ -44,42 +45,56 @@ const Dashboard = props => {
     if(props.friendPage) {
         return (
             <>
+            <Container fluid>
+            <div className="navBar">
+            <BaseNavBar clearUser={clearUser} {...props} />
+            </div>
+            
+
+            
             <Row>
-                <BaseNavBar clearUser={clearUser} {...props} />
-            </Row>
-            <Row>
-                <Col>
+                <Col sm={10}>
+                <Row sm={4}>
                 {characters.map(character =>
-                <DashboardCard key={character.id} character={character} friendPage={props.friendPage} updateCharacters={updateCharacters} {...props} />
-                    )}
-                
-               
-                </Col>
                 <Col>
+                <DashboardCard key={character.id} character={character} friendPage={props.friendPage} updateCharacters={updateCharacters} {...props} />
+                    </Col>)}
+                
+                </Row>
+                </Col>
+                <Col sm={2}>
                     <FriendsList newFriends={refresh}  {...props} />
                 </Col>
             </Row>
+            </Container>
             </>
         )
     } else {
         return (
             <>
-            <Row>
+            <div className="navBar">
                 <BaseNavBar clearUser={clearUser} {...props} />
-            </Row>
+            </div>
             <Row>
-                <Col>
+                <Col sm={9}>
+                <Row sm={4}>
                 {characters.map(character =>
+                <Col>
                 <DashboardCard key={character.id} character={character} updateCharacters={updateCharacters} {...props} />
-                    )}
-                
+                </Col>)}
+                <Col>
                 <Card className="startNewCharacterCard" onClick={handleNewCharacter}>
-                    <p>
+                    <Card.Body className="startNewCharacterCardBody">
+                    <p className="cardAddTitle">
                         +
                     </p>
+                    </Card.Body>
                 </Card>
                 </Col>
-                <Col>
+                </Row>
+                </Col>
+                
+                <Col className="friendColDashboard" sm={2}>
                     <FriendsList newFriends={refresh} {...props} />
                 </Col>
             </Row>

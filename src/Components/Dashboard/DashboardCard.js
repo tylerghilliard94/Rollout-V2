@@ -1,8 +1,8 @@
 import React from "react"
-import {Card, Image, Row } from "react-bootstrap"
+import {Card, Image, Row, Col } from "react-bootstrap"
 import APIManager from "../Modules/APIManager"
 import {Button} from "react-materialize"
-import"./Dashboard.css"
+
 import { withRouter } from "react-router"
 
 const DashboardCard = (props) => {
@@ -23,14 +23,16 @@ const DashboardCard = (props) => {
         return(
             <>
             <Card className="DashboardContainer">
+                
                 <Card.Body className="DashboardCardBody">
-                <Row>
+               
                 <Card.Text className="DashboardCardText" id={props.character.id} onClick={handleShowCharacterProfile}>
                 {props.character.characterName}
                 </Card.Text>
                 <Image className="characterImage" src={("../images/Brendaangel.PNG")} roundedCircle />
-                </Row>
+                
                 </Card.Body>
+                
             </Card>
     
             
@@ -43,12 +45,16 @@ const DashboardCard = (props) => {
             <>
             <Card className="DashboardContainer">
                 <Card.Body className="DashboardCardBody">
-                <Row>
+                
                 <Card.Text className="DashboardCardText" id={props.character.id} onClick={handleShowCharacterProfile}>
                 {props.character.characterName}
                 </Card.Text>
                 <Image className="characterImage" src={("../images/Brendaangel.PNG")} roundedCircle />
-                <Button
+                
+               
+                </Card.Body>
+            </Card>
+            <Button
                   className = "delete-Character-btn blue btn-floating halfway-fab large waves-effect waves-light "
                   variant= "custom"
                   id={props.character.id}
@@ -58,10 +64,6 @@ const DashboardCard = (props) => {
                 >
                   Delete Character
                 </Button>
-                </Row>
-                </Card.Body>
-            </Card>
-    
             
     
     

@@ -93,8 +93,8 @@ const HandleFriendModal = (props) => {
   
     return (
       <>
-        <Button variant="custom" onClick={() => setModalShow(true)}>
-          Add new Friend
+        <Button className="addFriendButton" variant="custom" onClick={() => setModalShow(true)}>
+          +
         </Button>
   
         <HandleFriendModal

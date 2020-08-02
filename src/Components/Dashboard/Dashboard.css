@@ -4,10 +4,80 @@
     color: #efede7 !important;
     
 }
-*{
-    color: white;
-}
+
 textarea {
     background-color: #222F2F ;
     border-color: transparent;
+}
+.DashboardCardBody {
+    
+   
+    background-color: #e7eeef;
+    border-radius: 5%;
+    margin: 1rem;
+    padding: 0rem !important;
+    
+    
+}
+
+
+.FriendCardBody {
+    
+   
+    
+    background-color: #34413d;
+    
+    
+}
+.cardAddTitle {
+    font-size: 4vw;
+    text-align: center;
+    margin-top: 5vw;
+    color: #262b2f91;
+    background-color: #f3f2ef !important;
+}
+
+.startNewCharacterCardBody{
+    background-color: #f3f2ef !important;
+    padding: 0rem !important;
+    margin: .2rem;
+}
+.startNewCharacterCardBody:hover{
+    background-color: #f3f2efef !important;
+}
+.cardAddTitle:hover {
+    background-color: #f3f2efef !important;
+}
+.startNewCharacterCard{
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #262b2f5d !important;
+    
+}
+.DashboardContainer{
+   
+
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #262B2F !important;
+   
+    
+    
+    
+}
+*, html{
+    background-color: #f3f2ef;
+    
+}
+
+.delete-Character-btn {
+margin-left: 5.5vw;
+margin-top: 1vw;
+margin-bottom: 2vw;
+}
+
+.friendColDashboard{
+    margin-left: 8vw;
 }

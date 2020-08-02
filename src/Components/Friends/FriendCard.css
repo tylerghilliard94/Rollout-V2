@@ -4,3 +4,30 @@
     color: #efede7 !important;
     
 }
+.material-icons{
+    color: #f3f2ef;
+    background-color: tomato !important;
+}
+
+.friendCardRow{
+    background-color: #262B2F;
+    
+}
+
+.friendCardText {
+    margin-top: .3vw;
+    margin-left: -.5vw;
+    background-color: #262B2F;
+    color: #f3f2ef;
+}
+
+.delete-friend-btn{
+    padding-right: -.2vw;
+}
+.friendCol {
+    background-color: #262B2F;
+}
+.FriendCardBody {
+    padding: 0vw !important;
+    border-color: #262B2F;
+}
