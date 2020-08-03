@@ -26,10 +26,10 @@ const DashboardCard = (props) => {
                 
                 <Card.Body className="DashboardCardBody"id={props.character.id} onClick={handleShowCharacterProfile}>
                
-                <Card.Text className="DashboardCardText" >
+                <Card.Text className="DashboardCardText" id={props.character.id}>
                 {props.character.characterName}
                 </Card.Text>
-                <Image className="dashboardCardImage" src={("http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")} roundedCircle />
+                <Image className="dashboardCardImage"id={props.character.id} src={("http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")} roundedCircle />
                 
                 </Card.Body>
                 
@@ -46,10 +46,10 @@ const DashboardCard = (props) => {
             <Card className={`DashboardContainer${props.character.class}`}>
                 <Card.Body className="DashboardCardBody"id={props.character.id} onClick={handleShowCharacterProfile}>
                 
-                <Card.Text className="DashboardCardText" >
+                <Card.Text className="DashboardCardText"id={props.character.id} >
                 {props.character.characterName}
                 </Card.Text>
-                <Image className="dashboardCardImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
+                <Image className="dashboardCardImage" id={props.character.id} src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
                 
                
                 </Card.Body>

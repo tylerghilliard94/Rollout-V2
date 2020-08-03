@@ -226,6 +226,7 @@ const CharacterProfile = props => {
         
     }
     const handleEditSave = () => {
+        
         APIManager.Update("characters", character.id, character).then(() => {
             setEditable(false)
 
@@ -235,15 +236,15 @@ const CharacterProfile = props => {
     if(parseInt(character.userId) !== parseInt(sessionStorage.activeUserID)){
         return(
             <>
-            <Row>
+            
                     <CharacterNavBar clearUser={clearUser} {...props} />
-            </Row>
+            
             <Row>
                 <Col>
                 <div>
                     
                    
-                    <Image src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png"></Image>
+                    <Image roundedCircle className="dashboardCardImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png"></Image>
                     <h2>{character.characterName}'s Profile</h2>
                     <p>Name: {character.characterName}</p>
                     <p>Description: {character.description}</p>
@@ -278,7 +279,7 @@ const CharacterProfile = props => {
                 <p>Wisdom: {character.wisdom}</p>
                 </Col>
                 <Col>
-                <p className="armorClass">Armor Class: {parseInt(character.armorClass) + parseInt(bonuses.dexterityBonus.split(" ")[1])}</p>
+                <p className="armorClass">Armor Class: {character.armorClass} + {parseInt(bonuses.dexterityBonus.split(" ")[1])}</p>
                 <p>Constitution: {character.constitution}</p>
                 <p>Charisma: {character.charisma}</p>
                 </Col>
@@ -292,15 +293,15 @@ const CharacterProfile = props => {
       if(editable === false) {
         return(
             <>
-            <Row>
+            
                     <CharacterNavBar clearUser={clearUser} {...props} />
-            </Row>
+            
             <Row>
                 <Col>
                 <div>
                     
                    
-                    <Image></Image>
+                <Image roundedCircle className="dashboardCardImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png"></Image>
                     <h2>{character.characterName}'s Profile</h2>
                     <p>Name: <a onClick={handleEdit}>{character.characterName}</a></p>
                     <p>Description: <a onClick={handleEdit}>{character.description}</a></p>
@@ -342,7 +343,7 @@ const CharacterProfile = props => {
                 <div className="armorClassContainer">
                     <p className="ArmorClassLabel">Armor Class</p>
                 <Image className="armorClassImg" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596429468/darkenedShield_g5ypu5.png"/>
-                <p className="armorClass" > <a className="armorClassText" onClick={handleEdit}>{parseInt(character.armorClass) + parseInt(bonuses.dexterityBonus.split(" ")[1])}</a></p>
+                <p className="armorClass" > <a className="armorClassText" onClick={handleEdit}>{character.armorClass} + {parseInt(bonuses.dexterityBonus.split(" ")[1])}</a></p>
                 </div>
                 <p>Constitution: <a onClick={handleEdit}>{character.constitution}</a></p>
                 <p>Charisma: <a onClick={handleEdit}>{character.charisma}</a></p>
@@ -353,15 +354,15 @@ const CharacterProfile = props => {
       } else if (editable === true){
         return(
             <>
-            <Row>
+            
                     <CharacterNavBar clearUser={clearUser} {...props} />
-            </Row>
+            
             <Row>
                 <Col>
                 <div>
                     
                    
-                    <Image></Image>
+                <Image roundedCircle className="dashboardCardImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png"></Image>
                     <h2>{character.characterName}'s Profile</h2>
                     <p>Name: <textarea onChange={handleEvtChange} id="characterName" value={character.characterName}></textarea></p>
                     <p>Description: <textarea onChange={handleEvtChange}id="description" value={character.description}></textarea></p>
@@ -403,7 +404,7 @@ const CharacterProfile = props => {
                 <p>Armor Class</p>
                 <div className="armorClassContainer">
                 <Image className="armorClassImg" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596429468/darkenedShield_g5ypu5.png"/>
-                <p><textarea onChange={handleEvtChange}id="armorClass" className="armorClassTextArea" value={parseInt(character.armorClass) + parseInt(bonuses.dexterityBonus.split(" ")[1])}></textarea></p>
+                <p><textarea onChange={handleEvtChange}id="armorClass" className="armorClassTextArea" value={character.armorClass}></textarea></p>
                 </div>
                 <p>Constitution: <textarea onChange={handleEvtChange}id="constitution"value={character.constitution}></textarea></p>
                 <p>Charisma: <textarea onChange={handleEvtChange}id="charisma"value={character.charisma}></textarea></p>

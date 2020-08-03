@@ -1,6 +1,7 @@
 import React from "react"
 import {NavLink} from "react-router-dom"
 import {Image, Row, Col} from "react-bootstrap"
+import "./BaseNavBar.css"
 
 const BaseNavBar = props => {
     const handleLogout = () => {
@@ -15,15 +16,15 @@ const BaseNavBar = props => {
                   <Col sm={11}>
               <li>
               <NavLink className="homeLogo" exact to="/Dashboard"> 
-                 {/* <Image placeholder="Logo">
+                 <Image className="logoImg" src="https://res.cloudinary.com/dgllrw1m3/image/upload/v1596404968/Role_Out_D_ygzjys.png" placeholder="Logo"/>
 
-                  </Image> */}
-                  <h1>Logo Goes Here</h1>
+                  
+                  
                   </NavLink>
               </li>
               </Col>
               <Col sm={1}>
-              <li>
+              <li className="logoutList">
               <NavLink className="LogoutNavLink" exact to= "/" onClick={handleLogout}> Logout </NavLink>
               </li>
               </Col>
