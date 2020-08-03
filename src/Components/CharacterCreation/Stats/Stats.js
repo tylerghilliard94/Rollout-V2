@@ -17,30 +17,30 @@ const Stats = props => {
         sessionStorage.setItem("rollWisdom", Math.ceil(Math.random() * 20))
         sessionStorage.setItem("rollCharisma", Math.ceil(Math.random() * 20))
 
-        if(sessionStorage.rollStrength < 10) {
+        if(parseInt(sessionStorage.rollStrength) < 10) {
             sessionStorage.setItem("rollStrength", Math.ceil(Math.random() * 20))
-            if(sessionStorage.rollStrength < 10) {
+            if(parseInt(sessionStorage.rollStrength) < 10) {
                 sessionStorage.setItem("rollStrength", Math.ceil(Math.random() * 20))
             }
         }
 
-        if(sessionStorage.rollDexterity < 10) {
+        if(parseInt(sessionStorage.rollDexterity) < 10) {
             sessionStorage.setItem("rollDexterity", Math.ceil(Math.random() * 20))
-            if(sessionStorage.rollDexterity < 10) {
+            if(parseInt(sessionStorage.rollDexterity) < 10) {
                 sessionStorage.setItem("rollDexterity", Math.ceil(Math.random() * 20))
             }
         }
 
-        if(sessionStorage.rollConsitution < 10) {
+        if(sessionStorage.rollConstitution < 10) {
             sessionStorage.setItem("rollConstitution", Math.ceil(Math.random() * 20))
             if(sessionStorage.rollConsitution < 10) {
                 sessionStorage.setItem("rollConstitution", Math.ceil(Math.random() * 20))
             }
         }
-
-        if(sessionStorage.rollIntelligence < 10) {
+        
+        if(parseInt(sessionStorage.rollIntelligence) < 10) {
             sessionStorage.setItem("rollIntelligence", Math.ceil(Math.random() * 20))
-            if(sessionStorage.rollIntelligence < 10) {
+            if(parseInt(sessionStorage.rollIntelligence) < 10) {
                 sessionStorage.setItem("rollIntelligence", Math.ceil(Math.random() * 20))
             }
         }
@@ -52,103 +52,131 @@ const Stats = props => {
             }
         }
 
-        if(sessionStorage.rollCharisma < 10) {
+        if(parseInt(sessionStorage.rollCharisma) < 10) {
             sessionStorage.setItem("rollCharisma", Math.ceil(Math.random() * 20))
-            if(sessionStorage.rollCharisma < 10) {
+            if(parseInt(sessionStorage.rollCharisma) < 10) {
                 sessionStorage.setItem("rollCharisma", Math.ceil(Math.random() * 20))
             }
         }
-
-        if(sessionStorage.rollStrength > 0 && sessionStorage.rollStrength < 2) {
+        if(sessionStorage.race === "Dragonborn"){
+            sessionStorage.rollStrength = parseInt(sessionStorage.rollStrength) + 2
+            sessionStorage.rollCharisma = parseInt(sessionStorage.rollCharisma) + 1
+        }else if(sessionStorage.race === "Dwarf"){
+            sessionStorage.rollConstitution = parseInt(sessionStorage.rollConstitution) + 2
+        }else if(sessionStorage.race === "Elf"){
+            sessionStorage.rollDexterity = parseInt(sessionStorage.rollDexterity) + 2
+        } else if(sessionStorage.race === "Gnome"){
+            sessionStorage.rollIntelligence = parseInt(sessionStorage.rollIntelligence) + 2
+        } else if(sessionStorage.race === "Half-Elf"){
+            sessionStorage.rollCharisma = parseInt(sessionStorage.rollCharisma) + 2
+            sessionStorage.rollDexterity = parseInt(sessionStorage.rollDexterity) + 1
+            sessionStorage.rollConstitution = parseInt(sessionStorage.rollConstitution) + 1
+        }else if(sessionStorage.race === "Halfling"){
+            sessionStorage.rollDexterity = parseInt(sessionStorage.rollDexterity) + 2
+        }else if(sessionStorage.race === "Half-Orc"){
+            sessionStorage.rollStrength = parseInt(sessionStorage.rollStrength) + 2
+            sessionStorage.rollConstitution = parseInt(sessionStorage.rollConstitution) + 2
+        }else if(sessionStorage.race === "Human"){
+            sessionStorage.rollStrength = parseInt(sessionStorage.rollStrength) + 1
+            sessionStorage.rollDexterity = parseInt(sessionStorage.rollDexterity) + 1
+            sessionStorage.rollConstitution = parseInt(sessionStorage.rollConstitution) + 1
+            sessionStorage.rollIntelligence = parseInt(sessionStorage.rollIntelligence) + 1
+            sessionStorage.rollWisdom = parseInt(sessionStorage.rollWisdom) + 1
+            sessionStorage.rollCharisma = parseInt(sessionStorage.rollCharisma) + 1
+        }else if (sessionStorage.race === "Tiefling"){
+            sessionStorage.rollCharisma = parseInt(sessionStorage.rollCharisma) + 2
+            sessionStorage.rollIntelligence = parseInt(sessionStorage.rollIntelligence) + 1
+        }
+        if(parseInt(sessionStorage.rollStrength) > 0 && parseInt(sessionStorage.rollStrength) < 2) {
             sessionStorage.setItem("strengthBonus", "- 5")
-        }else if (sessionStorage.rollStrength >= 2 && sessionStorage.rollStrength < 4){
+        }else if (parseInt(sessionStorage.rollStrength) >= 2 && parseInt(sessionStorage.rollStrength) < 4){
             sessionStorage.setItem("strengthBonus", "- 4")
-        }else if (sessionStorage.rollStrength >= 4 && sessionStorage.rollStrength < 6){
+        }else if (parseInt(sessionStorage.rollStrength) >= 4 && parseInt(sessionStorage.rollStrength) < 6){
             sessionStorage.setItem("strengthBonus", "- 3")
-        }else if (sessionStorage.rollStrength >= 6 && sessionStorage.rollStrength < 8) {
+        }else if (parseInt(sessionStorage.rollStrength) >= 6 && parseInt(sessionStorage.rollStrength) < 8) {
             sessionStorage.setItem("strengthBonus", "- 2")
-        }else if (sessionStorage.rollStrength >= 8 && sessionStorage.rollStrength < 10) {
+        }else if (parseInt(sessionStorage.rollStrength) >= 8 && parseInt(sessionStorage.rollStrength) < 10) {
             sessionStorage.setItem("strengthBonus", "- 1")
-        }else if (sessionStorage.rollStrength >= 10 && sessionStorage.rollStrength < 12) {
+        }else if (parseInt(sessionStorage.rollStrength) >= 10 && parseInt(sessionStorage.rollStrength) < 12) {
             sessionStorage.setItem("strengthBonus", "+ 0")
-        }else if (sessionStorage.rollStrength >= 12 && sessionStorage.rollStrength < 14) {
+        }else if (parseInt(sessionStorage.rollStrength) >= 12 && parseInt(sessionStorage.rollStrength) < 14) {
             sessionStorage.setItem("strengthBonus", "+ 1")
-        }else if (sessionStorage.rollStrength >= 14 && sessionStorage.rollStrength < 16) {
+        }else if (parseInt(sessionStorage.rollStrength) >= 14 && parseInt(sessionStorage.rollStrength) < 16) {
             sessionStorage.setItem("strengthBonus", "+ 2")
-        }else if (sessionStorage.rollStrength >= 16 && sessionStorage.rollStrength < 18) {
+        }else if (parseInt(sessionStorage.rollStrength) >= 16 && parseInt(sessionStorage.rollStrength) < 18) {
             sessionStorage.setItem("strengthBonus", "+ 3")
-        }else if (sessionStorage.rollStrength >= 18 && sessionStorage.rollStrength < 20) {
+        }else if (parseInt(sessionStorage.rollStrength) >= 18 && parseInt(sessionStorage.rollStrength) < 20) {
             sessionStorage.setItem("strengthBonus", "+ 4")
-        }else if (sessionStorage.rollStrength == 20) {
+        }else if (parseInt(sessionStorage.rollStrength) == 20) {
             sessionStorage.setItem("strengthBonus", "+ 5")
         }
-        if(sessionStorage.rollDexterity> 0 && sessionStorage.rollDexterity< 2) {
+        if(parseInt(sessionStorage.rollDexterity)> 0 && parseInt(sessionStorage.rollDexterity)< 2) {
             sessionStorage.setItem("dexterityBonus", "- 5")
-        }else if (sessionStorage.rollDexterity>= 2 && sessionStorage.rollDexterity< 4){
+        }else if (parseInt(sessionStorage.rollDexterity)>= 2 && parseInt(sessionStorage.rollDexterity)< 4){
             sessionStorage.setItem("dexterityBonus", "- 4")
-        }else if (sessionStorage.rollDexterity>= 4 && sessionStorage.rollDexterity< 6){
+        }else if (parseInt(sessionStorage.rollDexterity)>= 4 && parseInt(sessionStorage.rollDexterity)< 6){
             sessionStorage.setItem("dexterityBonus", "- 3")
-        }else if (sessionStorage.rollDexterity>= 6 && sessionStorage.rollDexterity< 8) {
+        }else if (parseInt(sessionStorage.rollDexterity)>= 6 && parseInt(sessionStorage.rollDexterity)< 8) {
             sessionStorage.setItem("dexterityBonus", "- 2")
-        }else if (sessionStorage.rollDexterity>= 8 && sessionStorage.rollDexterity< 10) {
+        }else if (parseInt(sessionStorage.rollDexterity)>= 8 && parseInt(sessionStorage.rollDexterity)< 10) {
             sessionStorage.setItem("dexterityBonus", "- 1")
-        }else if (sessionStorage.rollDexterity>= 10 && sessionStorage.rollDexterity< 12) {
+        }else if (parseInt(sessionStorage.rollDexterity)>= 10 && parseInt(sessionStorage.rollDexterity)< 12) {
             sessionStorage.setItem("dexterityBonus", "+ 0")
-        }else if (sessionStorage.rollDexterity>= 12 && sessionStorage.rollDexterity< 14) {
+        }else if (parseInt(sessionStorage.rollDexterity)>= 12 && parseInt(sessionStorage.rollDexterity)< 14) {
             sessionStorage.setItem("dexterityBonus", "+ 1")
-        }else if (sessionStorage.rollDexterity>= 14 && sessionStorage.rollDexterity< 16) {
+        }else if (parseInt(sessionStorage.rollDexterity)>= 14 && parseInt(sessionStorage.rollDexterity)< 16) {
             sessionStorage.setItem("dexterityBonus", "+ 2")
-        }else if (sessionStorage.rollDexterity>= 16 && sessionStorage.rollDexterity< 18) {
+        }else if (parseInt(sessionStorage.rollDexterity)>= 16 && parseInt(sessionStorage.rollDexterity)< 18) {
             sessionStorage.setItem("dexterityBonus", "+ 3")
-        }else if (sessionStorage.rollDexterity>= 18 && sessionStorage.rollDexterity< 20) {
+        }else if (parseInt(sessionStorage.rollDexterity)>= 18 && parseInt(sessionStorage.rollDexterity)< 20) {
             sessionStorage.setItem("dexterityBonus", "+ 4")
-        }else if (sessionStorage.rollDexterity == 20) {
+        }else if (parseInt(sessionStorage.rollDexterity) == 20) {
             sessionStorage.setItem("dexterityBonus", "+ 5")
         }
-        if(sessionStorage.rollConstitution> 0 && sessionStorage.rollConstitution< 2) {
+        if(parseInt(sessionStorage.rollConstitution)> 0 && parseInt(sessionStorage.rollConstitution)< 2) {
             sessionStorage.setItem("constitutionBonus", "- 5")
-        }else if (sessionStorage.rollConstitution>= 2 && sessionStorage.rollConstitution< 4){
+        }else if (parseInt(sessionStorage.rollConstitution)>= 2 && parseInt(sessionStorage.rollConstitution)< 4){
             sessionStorage.setItem("constitutionBonus", "- 4")
-        }else if (sessionStorage.rollConstitution>= 4 && sessionStorage.rollConstitution< 6){
+        }else if (parseInt(sessionStorage.rollConstitution)>= 4 && parseInt(sessionStorage.rollConstitution)< 6){
             sessionStorage.setItem("constitutionBonus", "- 3")
-        }else if (sessionStorage.rollConstitution>= 6 && sessionStorage.rollConstitution< 8) {
+        }else if (parseInt(sessionStorage.rollConstitution)>= 6 && parseInt(sessionStorage.rollConstitution)< 8) {
             sessionStorage.setItem("constitutionBonus", "- 2")
-        }else if (sessionStorage.rollConstitution>= 8 && sessionStorage.rollConstitution< 10) {
+        }else if (parseInt(sessionStorage.rollConstitution)>= 8 && parseInt(sessionStorage.rollConstitution)< 10) {
             sessionStorage.setItem("constitutionBonus", "- 1")
-        }else if (sessionStorage.rollConstitution>= 10 && sessionStorage.rollConstitution< 12) {
+        }else if (parseInt(sessionStorage.rollConstitution)>= 10 && parseInt(sessionStorage.rollConstitution)< 12) {
             sessionStorage.setItem("constitutionBonus", "+ 0")
-        }else if (sessionStorage.rollConstitution>= 12 && sessionStorage.rollConstitution< 14) {
+        }else if (parseInt(sessionStorage.rollConstitution)>= 12 && parseInt(sessionStorage.rollConstitution)< 14) {
             sessionStorage.setItem("constitutionBonus", "+ 1")
-        }else if (sessionStorage.rollConstitution>= 14 && sessionStorage.rollConstitution< 16) {
+        }else if (parseInt(sessionStorage.rollConstitution)>= 14 && parseInt(sessionStorage.rollConstitution)< 16) {
             sessionStorage.setItem("constitutionBonus", "+ 2")
-        }else if (sessionStorage.rollConstitution>= 16 && sessionStorage.rollConstitution< 18) {
+        }else if (parseInt(sessionStorage.rollConstitution)>= 16 && parseInt(sessionStorage.rollConstitution)< 18) {
             sessionStorage.setItem("constitutionBonus", "+ 3")
-        }else if (sessionStorage.rollConstitution>= 18 && sessionStorage.rollConstitution< 20) {
+        }else if (parseInt(sessionStorage.rollConstitution)>= 18 && parseInt(sessionStorage.rollConstitution)< 20) {
             sessionStorage.setItem("constitutionBonus", "+ 4")
-        }else if (sessionStorage.rollConstitution == 20) {
+        }else if (parseInt(sessionStorage.rollConstitution) == 20) {
             sessionStorage.setItem("constitutionBonus", "+ 5")
         }
-        if(sessionStorage.rollIntelligence> 0 && sessionStorage.rollIntelligence< 2) {
+        if(parseInt(sessionStorage.rollIntelligence)> 0 && parseInt(sessionStorage.rollIntelligence)< 2) {
             sessionStorage.setItem("intelligenceBonus", "- 5")
-        }else if (sessionStorage.rollIntelligence>= 2 && sessionStorage.rollIntelligence< 4){
+        }else if (parseInt(sessionStorage.rollIntelligence)>= 2 && parseInt(sessionStorage.rollIntelligence)< 4){
             sessionStorage.setItem("intelligenceBonus", "- 4")
-        }else if (sessionStorage.rollIntelligence>= 4 && sessionStorage.rollIntelligence< 6){
+        }else if (parseInt(sessionStorage.rollIntelligence)>= 4 && parseInt(sessionStorage.rollIntelligence)< 6){
             sessionStorage.setItem("intelligenceBonus", "- 3")
-        }else if (sessionStorage.rollIntelligence>= 6 && sessionStorage.rollIntelligence< 8) {
+        }else if (parseInt(sessionStorage.rollIntelligence)>= 6 && parseInt(sessionStorage.rollIntelligence)< 8) {
             sessionStorage.setItem("intelligenceBonus", "- 2")
-        }else if (sessionStorage.rollIntelligence>= 8 && sessionStorage.rollIntelligence< 10) {
+        }else if (parseInt(sessionStorage.rollIntelligence)>= 8 && parseInt(sessionStorage.rollIntelligence)< 10) {
             sessionStorage.setItem("intelligenceBonus", "- 1")
-        }else if (sessionStorage.rollIntelligence>= 10 && sessionStorage.rollIntelligence< 12) {
+        }else if (parseInt(sessionStorage.rollIntelligence)>= 10 && parseInt(sessionStorage.rollIntelligence)< 12) {
             sessionStorage.setItem("intelligenceBonus", "+ 0")
-        }else if (sessionStorage.rollIntelligence>= 12 && sessionStorage.rollIntelligence< 14) {
+        }else if (parseInt(sessionStorage.rollIntelligence)>= 12 && parseInt(sessionStorage.rollIntelligence)< 14) {
             sessionStorage.setItem("intelligenceBonus", "+ 1")
-        }else if (sessionStorage.rollIntelligence>= 14 && sessionStorage.rollIntelligence< 16) {
+        }else if (parseInt(sessionStorage.rollIntelligence)>= 14 && parseInt(sessionStorage.rollIntelligence)< 16) {
             sessionStorage.setItem("intelligenceBonus", "+ 2")
-        }else if (sessionStorage.rollIntelligence>= 16 && sessionStorage.rollIntelligence< 18) {
+        }else if (parseInt(sessionStorage.rollIntelligence)>= 16 && parseInt(sessionStorage.rollIntelligence)< 18) {
             sessionStorage.setItem("intelligenceBonus", "+ 3")
-        }else if (sessionStorage.rollIntelligence>= 18 && sessionStorage.rollIntelligence< 20) {
+        }else if (parseInt(sessionStorage.rollIntelligence)>= 18 && parseInt(sessionStorage.rollIntelligence)< 20) {
             sessionStorage.setItem("intelligenceBonus", "+ 4")
-        }else if (sessionStorage.rollIntelligence == 20) {
+        }else if (parseInt(sessionStorage.rollIntelligence) == 20) {
             sessionStorage.setItem("intelligenceBonus", "+ 5")
         }
         if(sessionStorage.rollWisdom> 0 && sessionStorage.rollWisdom< 2) {
@@ -174,27 +202,27 @@ const Stats = props => {
         }else if (sessionStorage.rollWisdom == 20) {
             sessionStorage.setItem("wisdomBonus", "+ 5")
         }
-        if(sessionStorage.rollCharisma> 0 && sessionStorage.rollCharisma< 2) {
+        if(parseInt(sessionStorage.rollCharisma)> 0 && parseInt(sessionStorage.rollCharisma)< 2) {
             sessionStorage.setItem("charismaBonus", "- 5")
-        }else if (sessionStorage.rollCharisma>= 2 && sessionStorage.rollCharisma< 4){
+        }else if (parseInt(sessionStorage.rollCharisma)>= 2 && parseInt(sessionStorage.rollCharisma)< 4){
             sessionStorage.setItem("charismaBonus", "- 4")
-        }else if (sessionStorage.rollCharisma>= 4 && sessionStorage.rollCharisma< 6){
+        }else if (parseInt(sessionStorage.rollCharisma)>= 4 && parseInt(sessionStorage.rollCharisma)< 6){
             sessionStorage.setItem("charismaBonus", "- 3")
-        }else if (sessionStorage.rollCharisma>= 6 && sessionStorage.rollCharisma< 8) {
+        }else if (parseInt(sessionStorage.rollCharisma)>= 6 && parseInt(sessionStorage.rollCharisma)< 8) {
             sessionStorage.setItem("charismaBonus", "- 2")
-        }else if (sessionStorage.rollCharisma>= 8 && sessionStorage.rollCharisma< 10) {
+        }else if (parseInt(sessionStorage.rollCharisma)>= 8 && parseInt(sessionStorage.rollCharisma)< 10) {
             sessionStorage.setItem("charismaBonus", "- 1")
-        }else if (sessionStorage.rollCharisma>= 10 && sessionStorage.rollCharisma< 12) {
+        }else if (parseInt(sessionStorage.rollCharisma)>= 10 && parseInt(sessionStorage.rollCharisma)< 12) {
             sessionStorage.setItem("charismaBonus", "+ 0")
-        }else if (sessionStorage.rollCharisma>= 12 && sessionStorage.rollCharisma< 14) {
+        }else if (parseInt(sessionStorage.rollCharisma)>= 12 && parseInt(sessionStorage.rollCharisma)< 14) {
             sessionStorage.setItem("charismaBonus", "+ 1")
-        }else if (sessionStorage.rollCharisma>= 14 && sessionStorage.rollCharisma< 16) {
+        }else if (parseInt(sessionStorage.rollCharisma)>= 14 && parseInt(sessionStorage.rollCharisma)< 16) {
             sessionStorage.setItem("charismaBonus", "+ 2")
-        }else if (sessionStorage.rollCharisma>= 16 && sessionStorage.rollCharisma< 18) {
+        }else if (parseInt(sessionStorage.rollCharisma)>= 16 && parseInt(sessionStorage.rollCharisma)< 18) {
             sessionStorage.setItem("charismaBonus", "+ 3")
-        }else if (sessionStorage.rollCharisma>= 18 && sessionStorage.rollCharisma< 20) {
+        }else if (parseInt(sessionStorage.rollCharisma)>= 18 && parseInt(sessionStorage.rollCharisma)< 20) {
             sessionStorage.setItem("charismaBonus", "+ 4")
-        }else if (sessionStorage.rollCharisma == 20) {
+        }else if (parseInt(sessionStorage.rollCharisma) == 20) {
             sessionStorage.setItem("charismaBonus", "+ 5")
         }
         
@@ -255,7 +283,7 @@ return (
             </Card.Title>
             <p className="cardDescription">
                 Your Strength stat is<br></br>
-                {sessionStorage.rollStrength}<br></br>
+                {parseInt(sessionStorage.rollStrength)}<br></br>
                 which gives you a bonus of<br></br>
                 {sessionStorage.strengthBonus}
             </p>
@@ -282,7 +310,7 @@ return (
             </Card.Title>
             <p className="cardDescription">
             Your Strength stat is<br></br>
-                {sessionStorage.rollDexterity}<br></br>
+                {parseInt(sessionStorage.rollDexterity)}<br></br>
                 which gives you a bonus of<br></br>
                 {sessionStorage.dexterityBonus}
             </p>
@@ -309,7 +337,7 @@ return (
             </Card.Title>
             <p className="cardDescription">
             Your Constitution stat is<br></br>
-                {sessionStorage.rollConstitution}<br></br>
+                {parseInt(sessionStorage.rollConstitution)}<br></br>
                 which gives you a bonus of<br></br>
                 {sessionStorage.constitutionBonus}
             </p>
@@ -389,7 +417,7 @@ return (
             </Card.Title>
             <p className="cardDescription">
             Your Intelligence stat is<br></br>
-                {sessionStorage.rollIntelligence}<br></br>
+                {parseInt(sessionStorage.rollIntelligence)}<br></br>
                 which gives you a bonus of<br></br>
                 {sessionStorage.intelligenceBonus}
             </p>
@@ -441,7 +469,7 @@ return (
             </Card.Title>
             <p className="cardDescription">
             Your Charisma stat is<br></br>
-                {sessionStorage.rollCharisma}<br></br>
+                {parseInt(sessionStorage.rollCharisma)}<br></br>
                 which gives you a bonus of<br></br>
                 {sessionStorage.charismaBonus}
             </p>

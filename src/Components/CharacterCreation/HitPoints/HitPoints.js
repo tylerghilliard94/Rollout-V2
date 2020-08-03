@@ -4,17 +4,29 @@ import "./HitPoints.css"
 
 const HitPoints = props => {
     const [refresh, setRefresh] = useState(false)
-
+    
     useEffect(() => {
         if(sessionStorage.level == 1){
         let bonusSplit = sessionStorage.constitutionBonus
         bonusSplit = bonusSplit.split(" ")[1]
-        let hitTotal = parseInt(sessionStorage.hitDice) + parseInt(bonusSplit)
+        let hitTotal = 0
+        if(sessionStorage.constitutionBonus.split(" ")[0] === "+"){
+            hitTotal = parseInt(sessionStorage.hitDice) + parseInt(bonusSplit)
+        }else{
+            hitTotal = parseInt(sessionStorage.hitDice) - parseInt(bonusSplit)
+        }
+        
         sessionStorage.setItem("hitPoints", hitTotal)
         }else{
             let bonusSplit = sessionStorage.constitutionBonus
             bonusSplit = bonusSplit.split(" ")[1]
-            let safeHitTotal = parseInt(sessionStorage.hitDice) + parseInt(bonusSplit)
+            let safeHitTotal = 0
+            if(sessionStorage.constitutionBonus.split(" ")[0] === "+"){
+            safeHitTotal = parseInt(sessionStorage.hitDice) + parseInt(bonusSplit)
+            }else{
+                safeHitTotal = parseInt(sessionStorage.hitDice) - parseInt(bonusSplit)
+            }
+            
             let safeHit = sessionStorage.hitDice / 2
             
             let chanceHitTotal = parseInt(safeHitTotal)
@@ -27,7 +39,12 @@ const HitPoints = props => {
 
             for(let i = 2; i <= sessionStorage.level; i++){
                 chanceHitTotal += Math.ceil(Math.random() * parseInt(sessionStorage.hitDice))
-                chanceHitTotal += parseInt(bonusSplit)
+                if(sessionStorage.constitutionBonus.split(" ")[0] === "+"){
+                    chanceHitTotal += parseInt(bonusSplit)
+                }else{
+                    chanceHitTotal -= parseInt(bonusSplit)
+                }
+                
             }
             sessionStorage.setItem("hitPoints", safeHitTotal)
             sessionStorage.setItem("chanceHitPoints", chanceHitTotal)
@@ -54,6 +71,7 @@ const HitPoints = props => {
         
         props.history.push("/FinalDetails")
         sessionStorage.removeItem("chanceHitPoints")
+        
     }
 
     if(sessionStorage.level == 1) {
@@ -94,7 +112,15 @@ const HitPoints = props => {
             </div>
             </Card.Body>
         </Card>
-
+        <Button 
+            className="showButton"
+            variant="custom" 
+            type="submit"
+            id="next"
+            onClick={handleNext}
+            >
+              Next
+            </Button>
         </Row>
         <Row>
             <Button 

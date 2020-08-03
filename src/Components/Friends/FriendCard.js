@@ -46,7 +46,7 @@ const FriendCard = props => {
               
               id={props.friend.id}
               onClick={handleFriendDelete}
-              icon={<Icon>delete</Icon>}
+              icon={<Icon onClick={handleFriendDelete}>delete</Icon>}
                
              
              

@@ -13,7 +13,7 @@ const BaseNavBar = props => {
         <header>
           <ul id="nav-mobile" className="nav-Container right"  >
               <Row>
-                  <Col sm={11}>
+                  <Col sm={9}>
               <li>
               <NavLink className="homeLogo" exact to="/Dashboard"> 
                  <Image className="logoImg" src="https://res.cloudinary.com/dgllrw1m3/image/upload/v1596404968/Role_Out_D_ygzjys.png" placeholder="Logo"/>
@@ -21,6 +21,10 @@ const BaseNavBar = props => {
                   
                   
                   </NavLink>
+              </li>
+              </Col><Col sm={2}>
+              <li className="userNameTitle">
+              <p>Welcome, {sessionStorage.activeUser}</p>
               </li>
               </Col>
               <Col sm={1}>

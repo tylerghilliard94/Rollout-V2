@@ -22,6 +22,7 @@ textarea {
 
 .DashboardCardText {
     text-align: center;
+    margin-top: 3vw;
 }
 
 .FriendCardBody {
@@ -58,13 +59,145 @@ textarea {
     background-color: #262b2f5d !important;
     
 }
+.DashboardContainerBarbarian{
+   
+
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #d67a45 !important;
+   
+    
+    
+    
+}
+.DashboardContainerBard{
+   
+
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #c369bf !important;
+   
+    
+    
+    
+}
+.DashboardContainerCleric{
+   
+
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #79848d !important;
+   
+    
+    
+    
+}
+.DashboardContainerDruid{
+   
+
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #62af3e !important;
+   
+    
+    
+    
+}
 .DashboardContainerFighter{
    
 
     width: 14vw;
     height: 20vw;
     margin-left: auto;
-    background-color: #72170f !important;
+    background-color: #5f140d !important;
+   
+    
+    
+    
+}
+.DashboardContainerMonk{
+   
+
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #61c0c3 !important;
+   
+    
+    
+    
+}
+.DashboardContainerPaladin{
+   
+
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #dee94b !important;
+   
+    
+    
+    
+}
+.DashboardContainerRanger{
+   
+
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #1c4b22 !important;
+   
+    
+    
+    
+}
+.DashboardContainerRogue{
+   
+
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #272a27 !important;
+   
+    
+    
+    
+}
+.DashboardContainerSorcerer{
+   
+
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #b47421 !important;
+   
+    
+    
+    
+}
+.DashboardContainerWarlock{
+   
+
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #8444a1 !important;
+   
+    
+    
+    
+}
+.DashboardContainerWizard{
+   
+
+    width: 14vw;
+    height: 20vw;
+    margin-left: auto;
+    background-color: #3c53b8 !important;
    
     
     
@@ -91,7 +224,7 @@ margin-bottom: 2vw;
 .dashboardCardImage {
     height:4vw;
     width: 4vw;
-    margin-top: 4vw;
+    margin-top: 2vw;
     margin-left: 4vw;
     margin-right: .8rem;
     background-color: #f3f2ef;
