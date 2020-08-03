@@ -91,7 +91,8 @@ const Register = (props) => {
         <CardBody className="registrationCardBody">
           <CardImg
             className="registrationLogo"
-            src={("../images/logo.png")}
+            src=
+                "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596404968/Role_Out_D_ygzjys.png"
             alt="imgLogo"
           />
           <CardSubtitle className="registerWelcome">

@@ -14,15 +14,15 @@ html {
 }
 
 .loginButton.btn.btn-custom {
-    background-color: #5C1F1F;
+    background-color: tomato !important;
     color: #efede7;
     
 }
 .registerButton.btn.btn-secondary {
-    background-color: #5C1F1F;
+    background-color: tomato;
     color: #efede7;
     margin-top: 3.75rem;
-    margin-left: 3rem;
+    margin-left: 7rem;
    
 }
 
@@ -40,7 +40,7 @@ html {
 }
 
 .loginWelcome.card-title, .loginWelcomeSub.card-subtitle, .loginUsernameLabel, .loginPasswordLabel  {
-    color: #efede7; 
+    color: #262B2F; 
 }
 
 .loginLogo {
@@ -52,15 +52,20 @@ html {
 
 .loginCard {
     width: 60rem;
-    border: 2px solid #394141 !important;
+    border: 2px solid #efede7 !important;
     border-radius: 6px !important;
-    background-color: #3a3b3b !important;
+    background-color: #efede7!important;
     
     
 } 
 
-.loginWelcome.card-title.h5, .loginWelcomeSub.card-subtitle.h6 {
+.loginWelcomeSub {
    text-align: center !important;
+   margin-top: 0vw!important;
+   margin-bottom: 2vw !important;
+   font-size: 2vw;
+   font-family: rieven-uncial, sans-serif;
+   
 }
 .loginWelcome {
     margin-top: -2rem;

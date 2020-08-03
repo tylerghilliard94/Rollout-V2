@@ -1,7 +1,7 @@
 import React, {useEffect} from "react"
 import APIManager from "../../Modules/APIManager"
 
-import {Card, Row} from "react-bootstrap"
+import {Card, Row, ProgressBar} from "react-bootstrap"
 import "./CharacterType.css"
 
 const CharacterType = props => {
@@ -32,6 +32,7 @@ let defaultChoice = {}
     ]
     return (
         <div className="choiceContainer">
+            <ProgressBar className="characterCreationProgress" animated variant="danger" now="14" ></ProgressBar>
             <Row>
         <div className="defaultChoiceContainer">
         <Card className="defaultCard text-center" id={sessionStorage.class} onClick={handleDefault}>

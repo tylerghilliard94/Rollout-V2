@@ -22,14 +22,14 @@ const DashboardCard = (props) => {
     if(props.friendPage) {
         return(
             <>
-            <Card className="DashboardContainer">
+            <Card className={`DashboardContainer${props.character.class}`}>
                 
-                <Card.Body className="DashboardCardBody">
+                <Card.Body className="DashboardCardBody"id={props.character.id} onClick={handleShowCharacterProfile}>
                
-                <Card.Text className="DashboardCardText" id={props.character.id} onClick={handleShowCharacterProfile}>
+                <Card.Text className="DashboardCardText" >
                 {props.character.characterName}
                 </Card.Text>
-                <Image className="characterImage" src={("../images/Brendaangel.PNG")} roundedCircle />
+                <Image className="dashboardCardImage" src={("http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")} roundedCircle />
                 
                 </Card.Body>
                 
@@ -43,13 +43,13 @@ const DashboardCard = (props) => {
     }else {
         return(
             <>
-            <Card className="DashboardContainer">
-                <Card.Body className="DashboardCardBody">
+            <Card className={`DashboardContainer${props.character.class}`}>
+                <Card.Body className="DashboardCardBody"id={props.character.id} onClick={handleShowCharacterProfile}>
                 
-                <Card.Text className="DashboardCardText" id={props.character.id} onClick={handleShowCharacterProfile}>
+                <Card.Text className="DashboardCardText" >
                 {props.character.characterName}
                 </Card.Text>
-                <Image className="characterImage" src={("../images/Brendaangel.PNG")} roundedCircle />
+                <Image className="dashboardCardImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
                 
                
                 </Card.Body>

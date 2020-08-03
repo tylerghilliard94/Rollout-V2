@@ -84,11 +84,11 @@ const Login = (props) => {
           <CardBody className="loginCardBody">
           <CardImg 
           className="loginLogo" 
-          src={("../images/logo.png")} 
+          src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596404968/Role_Out_D_ygzjys.png"
+
+
           alt="imgLogo" />
-         <CardTitle className="loginWelcome"> 
-         Welcome to Re-Roll
-         </CardTitle>
+         
          <CardSubtitle className="loginWelcomeSub">
            Your life of adventure starts here!
          </CardSubtitle>

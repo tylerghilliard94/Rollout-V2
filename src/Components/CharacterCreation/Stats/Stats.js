@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react"
-import {Card, Button, Row} from "react-bootstrap"
+import {Card, Button, Row, ProgressBar} from "react-bootstrap"
 import "./Stats.css"
 
 
@@ -224,6 +224,7 @@ const Stats = props => {
 
 return (
     <div className="stats">
+        <ProgressBar className="characterCreationProgress" animated variant="danger" now="56" ></ProgressBar>
         <Button 
             className="rollButton3"
             variant="custom" 

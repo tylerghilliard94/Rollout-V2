@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import {Button, Form, Row} from "react-bootstrap"
+import {Button, Form, Row, ProgressBar} from "react-bootstrap"
 import APIManager from "../../Modules/APIManager"
 
 const FinalDetails = props => {
@@ -169,7 +169,10 @@ const FinalDetails = props => {
     }, [])
 
     return(
+        <>
+         <ProgressBar className="characterCreationProgress" animated variant="danger" now="90" ></ProgressBar>
         <div className="baseInfo">
+           
         
         
         
@@ -310,7 +313,7 @@ const FinalDetails = props => {
             
             
         </div>
-        
+        </>
     )
 }
 

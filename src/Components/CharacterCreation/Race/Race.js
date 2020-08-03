@@ -3,7 +3,7 @@ import {useEffect, useState} from "react"
 import APIManager from "../../Modules/APIManager"
 import RaceCard from "./RaceCard"
 import "./Race.css"
-import { Card, Row, Col, Container } from "react-bootstrap"
+import { Card, Row, Col, Container, ProgressBar } from "react-bootstrap"
 
 
 const Race = props => {
@@ -17,7 +17,7 @@ const Race = props => {
     return (
         <div className="raceContainer">
           
-           
+          <ProgressBar className="characterCreationProgress" animated variant="danger" now="28" ></ProgressBar>
            <Container className="raceCardContainer">
             {races.map(characterRace => 
                 <RaceCard race={characterRace} key={characterRace.race}  {...props} />   )}

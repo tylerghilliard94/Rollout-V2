@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {Form, Button, Card} from "react-bootstrap"
+import {Form, Button, Card, ProgressBar} from "react-bootstrap"
 import "./BaseInfo.css"
 
 
@@ -27,10 +27,13 @@ const BaseInfo = props => {
    
 
     return (
+        <>
+        <ProgressBar className="characterCreationProgress" animated variant="danger" now="42" ></ProgressBar>
         <div className="baseInfo">
         
         
         <div className="baseInfodiv">
+            
         <Button 
             className="backButton"
             variant="custom" 
@@ -110,6 +113,7 @@ const BaseInfo = props => {
            
             
         </div>
+        </>
     )
 }
 

@@ -31,7 +31,7 @@ const FriendCard = props => {
             <Card.Body className="FriendCardBody"   >
             <Row className="friendCardRow" >
                 <Col className="friendCol" sm={3}>
-            <Image className="angelImage" src={("../images/Brendaangel.PNG")} roundedCircle />
+            <Image className="friendImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
             </Col>
             <Col className="friendCol" sm={6}>
             <Card.Text className="friendCardText"id={props.friend.id}onClick={handleShowFriendDashboard}>

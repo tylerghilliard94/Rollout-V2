@@ -13,6 +13,9 @@
     background-color: #262B2F;
     
 }
+.friendCardRow:hover{
+    background-color: #4a4e5293 !important
+}
 
 .friendCardText {
     margin-top: .3vw;
@@ -23,6 +26,14 @@
 
 .delete-friend-btn{
     padding-right: -.2vw;
+    width:3vw;
+    height: 2.5vw;
+}
+.material-icons{
+    margin-right: .5vw;
+    width:.8vw !important;
+    height:.8vw !important;
+    font-size:1.5vw;
 }
 .friendCol {
     background-color: #262B2F;
@@ -30,4 +41,12 @@
 .FriendCardBody {
     padding: 0vw !important;
     border-color: #262B2F;
+}
+.friendImage{
+    height:2vw;
+    width: 2vw;
+    margin-top: .25vw;
+    margin-left: -.3vw;
+    margin-right: .8vw;
+    background-color: #f3f2ef;
 }
