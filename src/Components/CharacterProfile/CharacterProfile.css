@@ -4,13 +4,13 @@
 }
 
 .armorClass{
-    position: absolute;
-    bottom: 4vw;
+    position: relative;
+    bottom: 6vw;
     left: 1.9vw;
     color:#f3f2ef;
 }
 .hitPoints{
-    position: absolute;
+    position: relative;
     bottom: 39.8rem;
     left: 2.8vw;
     color:#f3f2ef !important;

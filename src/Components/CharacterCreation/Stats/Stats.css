@@ -1,10 +1,10 @@
-.statCardBody1, .statCardBody2, .statCardBody3, .statCardBody4, .statCardBody5, .statCardBody6 {
+.statCardBodyFighter {
     width: 12vw;
     height: 17vw;
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #fff8ea;
+    background-color: #72170f;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -12,7 +12,30 @@
     
 }
 
-.rollButton1
+.arrowBackStats {
+    content: ">";
+	height: 2vw; width: 2vw;
+	border: 1px solid tomato;
+	border-width: 2px 2px 0 0;
+    transform: rotate(225deg);
+    margin-top: 21vw;
+    margin-left: 3vw;
+    
+}
+.arrowBackStats:hover, .arrowNextStats:hover{
+    transition: .5s;
+    height: 3vw; width: 3vw;
+}
+
+.arrowNextStats {
+    content: ">";
+	height: 2vw; width: 2vw;
+	border: 1px solid tomato;
+	border-width: 2px 2px 0 0;
+    transform: rotate(45deg);
+    margin-top: 21vw;
+    margin-left: 8vw;
+}
 .stats{
     display: flex;
     flex-direction: column;
@@ -22,31 +45,55 @@
     margin-top: 2vw;
     margin-bottom: 2vw;
     margin-left: 5vw;
-    background-color: #222F2F;
+    background-color: #efede7;
 
 }
 
-
-.rollButton1, .rollButton4 {
-    background-color: #af2121 !important;
-    color: #efede7 !important;
-    margin-left: 4vw;
+.statCardImg{
     margin-top: 1vw;
-    width: 3vw
+    height: 4vw !important;
+    width: 4vw !important;
+}
+.statTitle{
+    text-align: center;
+    margin-top: 0vw;;
+    margin-left: 6vw;
+}
+.statCardCol {
+ margin-left: 9vw !important;
+}
+.rollButtonAll{
+    background-color: tomato !important;
+    color: #efede7 !important;
+    margin-left: 17.5vw;
+    margin-top: 1vw;
+    width: 6vw
+}
+.rollButton1, .rollButton4 {
+    background-color: tomato !important;
+    color: #efede7 !important;
+    margin-left: 3.8vw;
+    margin-top: .25vw;
+    width: 4vw
 }
 .rollButton2, .rollButton5 {
-    background-color: #af2121 !important;
+    background-color: tomato !important;
     color: #efede7 !important;
     margin-left: 10.5vw;
-    margin-top: 1vw;
-    width: 3vw
+    margin-top: .25vw;
+    width: 4vw
 }
 .rollButton3, .rollButton6 {
-    background-color: #af2121 !important;
+    background-color: tomato !important;
     color: #efede7 !important;
-    margin-left: 10.5vw;
-    margin-top: 1vw;
-    width: 3vw
+    margin-left: 10vw;
+    margin-top: .25vw;
+    width: 4vw;
+    
+}
+
+.rollStrong{
+    margin-right: .6vw !important;
 }
 .statContainer {
     background-color: #222F2F;
@@ -55,7 +102,7 @@
 .statCard{
     width: 12vw;
     height: 17vw;
-    background-color: #efede7;
+    background-color: #efede7 !important;
     perspective: 1000px;
     background-color: transparent;
    
@@ -82,11 +129,12 @@ height: 100%;
     transform: rotateY(180deg);
 }
 .statCardTitleFront {
-    margin-left: -2vw;
+    margin-top: 1vw;
     color: black;
 }
 .statCardTitleBack {
     color: black;
+    margin-top: 1vw;
 }
 
 .cardDescription{

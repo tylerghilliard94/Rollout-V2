@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react"
-import {Card, Button, Row, ProgressBar} from "react-bootstrap"
+import {Card, Button, Row, ProgressBar, Col} from "react-bootstrap"
 import "./Stats.css"
 
 
@@ -107,8 +107,10 @@ const Stats = props => {
             sessionStorage.setItem("strengthBonus", "+ 3")
         }else if (parseInt(sessionStorage.rollStrength) >= 18 && parseInt(sessionStorage.rollStrength) < 20) {
             sessionStorage.setItem("strengthBonus", "+ 4")
-        }else if (parseInt(sessionStorage.rollStrength) == 20) {
-            sessionStorage.setItem("strengthBonus", "+ 5")
+        }else if (parseInt(sessionStorage.rollStrength) >= 20 && parseInt(sessionStorage.rollStrength) < 22) {
+            sessionStorage.setItem("strengthBonus", "+ 5") 
+        }else if(parseInt(sessionStorage.rollStrength) == 22){
+            sessionStorage.setItem("strengthBonus", "+ 6") 
         }
         if(parseInt(sessionStorage.rollDexterity)> 0 && parseInt(sessionStorage.rollDexterity)< 2) {
             sessionStorage.setItem("dexterityBonus", "- 5")
@@ -130,8 +132,10 @@ const Stats = props => {
             sessionStorage.setItem("dexterityBonus", "+ 3")
         }else if (parseInt(sessionStorage.rollDexterity)>= 18 && parseInt(sessionStorage.rollDexterity)< 20) {
             sessionStorage.setItem("dexterityBonus", "+ 4")
-        }else if (parseInt(sessionStorage.rollDexterity) == 20) {
+        }else if (parseInt(sessionStorage.rollDexterity) >= 20 && parseInt(sessionStorage.rollDexterity) < 22) {
             sessionStorage.setItem("dexterityBonus", "+ 5")
+        }else if(parseInt(sessionStorage.rollDexterity) == 22){
+            sessionStorage.setItem("dexterityBonus", "+ 6")
         }
         if(parseInt(sessionStorage.rollConstitution)> 0 && parseInt(sessionStorage.rollConstitution)< 2) {
             sessionStorage.setItem("constitutionBonus", "- 5")
@@ -153,8 +157,10 @@ const Stats = props => {
             sessionStorage.setItem("constitutionBonus", "+ 3")
         }else if (parseInt(sessionStorage.rollConstitution)>= 18 && parseInt(sessionStorage.rollConstitution)< 20) {
             sessionStorage.setItem("constitutionBonus", "+ 4")
-        }else if (parseInt(sessionStorage.rollConstitution) == 20) {
+        }else if (parseInt(sessionStorage.rollConstitution) >= 20 && parseInt(sessionStorage.rollConstitution) < 22) {
             sessionStorage.setItem("constitutionBonus", "+ 5")
+        }else if(parseInt(sessionStorage.rollConstitution) == 22){
+            sessionStorage.setItem("constitutionBonus", "+ 6")
         }
         if(parseInt(sessionStorage.rollIntelligence)> 0 && parseInt(sessionStorage.rollIntelligence)< 2) {
             sessionStorage.setItem("intelligenceBonus", "- 5")
@@ -176,8 +182,10 @@ const Stats = props => {
             sessionStorage.setItem("intelligenceBonus", "+ 3")
         }else if (parseInt(sessionStorage.rollIntelligence)>= 18 && parseInt(sessionStorage.rollIntelligence)< 20) {
             sessionStorage.setItem("intelligenceBonus", "+ 4")
-        }else if (parseInt(sessionStorage.rollIntelligence) == 20) {
+        }else if (parseInt(sessionStorage.rollIntelligence) >= 20 && parseInt(sessionStorage.rollIntelligence) < 22) {
             sessionStorage.setItem("intelligenceBonus", "+ 5")
+        }else if(parseInt(sessionStorage.rollIntelligence) == 22){
+            sessionStorage.setItem("intelligenceBonus", "+ 6")
         }
         if(sessionStorage.rollWisdom> 0 && sessionStorage.rollWisdom< 2) {
             sessionStorage.setItem("wisdomBonus", "- 5")
@@ -199,8 +207,10 @@ const Stats = props => {
             sessionStorage.setItem("wisdomBonus", "+ 3")
         }else if (sessionStorage.rollWisdom>= 18 && sessionStorage.rollWisdom< 20) {
             sessionStorage.setItem("wisdomBonus", "+ 4")
-        }else if (sessionStorage.rollWisdom == 20) {
+        }else if (parseInt(sessionStorage.rollWisdom) >= 20 && parseInt(sessionStorage.rollWisdom) < 22) {
             sessionStorage.setItem("wisdomBonus", "+ 5")
+        }else if(parseInt(sessionStorage.rollWisdom) == 22){
+            sessionStorage.setItem("wisdomBonus", "+ 6")
         }
         if(parseInt(sessionStorage.rollCharisma)> 0 && parseInt(sessionStorage.rollCharisma)< 2) {
             sessionStorage.setItem("charismaBonus", "- 5")
@@ -220,10 +230,12 @@ const Stats = props => {
             sessionStorage.setItem("charismaBonus", "+ 2")
         }else if (parseInt(sessionStorage.rollCharisma)>= 16 && parseInt(sessionStorage.rollCharisma)< 18) {
             sessionStorage.setItem("charismaBonus", "+ 3")
-        }else if (parseInt(sessionStorage.rollCharisma)>= 18 && parseInt(sessionStorage.rollCharisma)< 20) {
+        }else if (sessionStorage.rollCharisma>= 18 && sessionStorage.rollCharisma< 20) {
             sessionStorage.setItem("charismaBonus", "+ 4")
-        }else if (parseInt(sessionStorage.rollCharisma) == 20) {
+        }else if (parseInt(sessionStorage.rollCharisma) >= 20 && parseInt(sessionStorage.rollCharisma) < 22) {
             sessionStorage.setItem("charismaBonus", "+ 5")
+        }else if(parseInt(sessionStorage.rollCharisma) == 22){
+            sessionStorage.setItem("charismaBonus", "+ 6")
         }
         
         setStats(true)
@@ -238,7 +250,7 @@ const Stats = props => {
         document.getElementById(`Charisma`).className +=' animation';
     }
     const handleRoll = (evt) => {
-        
+       
         document.getElementById(`${evt.target.id}`).className +=' animation';
     }
     const handleBack = (evt) => {
@@ -251,36 +263,47 @@ const Stats = props => {
     }
 
 return (
+    <>
+    <ProgressBar className="characterCreationProgress" animated variant="danger" now="56" ></ProgressBar>
     <div className="stats">
-        <ProgressBar className="characterCreationProgress" animated variant="danger" now="56" ></ProgressBar>
+        
+        <h1 className="statTitle">Primary Stats</h1>
+        <Row>
+        <Col sm={2}>
+            
+        <div onClick={handleBack} class="arrowBackStats"></div>
+        </Col>
+        <Col sm={8} className="statCardCol">
         <Button 
-            className="rollButton3"
+            className="rollButtonAll"
             variant="custom" 
             type="submit"
             id="rollAll"
             onClick={handleRollAll}
             >
-              Roll All
+           <strong className="boldRollAll">Roll All</strong>
             </Button>
+           
     <div className="cardRow1">
-        <Row>
+        <Row className="statCardRow">
             <Card className="statCard text-center m-3" >
-            <Card.Body className="statCardBody1"id="Strength">
+            <Card.Body className={`statCardBody${sessionStorage.class}`}id="Strength">
             <div className="cardFront" >
             <Card.Title className="statCardTitleFront">
                 Strength
             </Card.Title>
-            <Card.Img className="statCardImg">
+            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
                 
             </Card.Img>
             </div>
             <div className="cardBack" >
-            <Card.Img className="statCardImg">
+            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
                 
             </Card.Img>
             <Card.Title className="statCardTitleBack">
                 Strength
             </Card.Title>
+            
             <p className="cardDescription">
                 Your Strength stat is<br></br>
                 {parseInt(sessionStorage.rollStrength)}<br></br>
@@ -292,17 +315,17 @@ return (
             </Card.Body>
         </Card>
         <Card className="statCard text-center m-3"  >
-            <Card.Body className="statCardBody2" id="Dexterity">
+            <Card.Body className={`statCardBody${sessionStorage.class}`} id="Dexterity">
             <div className="cardFront" >
             <Card.Title className="statCardTitleFront">
                 Dexterity
             </Card.Title>
-            <Card.Img className="statCardImg">
+            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
                 
             </Card.Img>
             </div>
             <div className="cardBack" >
-            <Card.Img className="statCardImg">
+            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
                 
             </Card.Img>
             <Card.Title className="statCardTitleBack">
@@ -319,17 +342,17 @@ return (
             </Card.Body>
         </Card>
         <Card className="statCard text-center m-3"  >
-            <Card.Body className="statCardBody3" id="Constitution">
+            <Card.Body className={`statCardBody${sessionStorage.class}`} id="Constitution">
             <div className="cardFront" >
             <Card.Title className="statCardTitleFront">
                 Constitution
             </Card.Title>
-            <Card.Img className="statCardImg">
+            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
                 
             </Card.Img>
             </div>
             <div className="cardBack" >
-            <Card.Img className="statCardImg">
+            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
                 
             </Card.Img>
             <Card.Title className="statCardTitleBack">
@@ -349,15 +372,8 @@ return (
         
         </div>
         <div className="rollButtonRow1">
-        <Button 
-            className="backButton"
-            variant="custom" 
-            type="submit"
-            id="back"
-            onClick={handleBack}
-            >
-              Back
-            </Button>
+        
+        
         <Button 
             className="rollButton1"
             variant="custom" 
@@ -365,7 +381,7 @@ return (
             id="Strength"
             onClick={handleRoll}
             >
-              Roll
+            <strong id="Strength" className="boldRoll">Roll</strong>
             </Button>
             <Button 
             className="rollButton2"
@@ -374,7 +390,7 @@ return (
             id="Dexterity"
             onClick={handleRoll}
             >
-              Roll
+           <strong id="Dexterity" className="boldRoll">Roll</strong>
             </Button>
             <Button 
             className="rollButton3"
@@ -383,33 +399,25 @@ return (
             id="Constitution"
             onClick={handleRoll}
             >
-              Roll
+              <strong id="Constitution" className="boldRoll">Roll</strong>
             </Button>
-            <Button 
-            className="nextButton"
-            variant="custom" 
-            type="submit"
-            id="next"
-            onClick={handleNext}
-            >
-              Next
-            </Button>
+           
             
         </div>
         <div className="cardRow2">
-            <Row>
+            <Row className="statCardRow">
         <Card className="statCard text-center m-3"  >
-            <Card.Body className="statCardBody4" id="Intelligence">
+            <Card.Body className={`statCardBody${sessionStorage.class}`} id="Intelligence">
             <div className="cardFront" >
             <Card.Title className="statCardTitleFront">
                 Intelligence
             </Card.Title>
-            <Card.Img className="statCardImg">
+            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
                 
             </Card.Img>
             </div>
             <div className="cardBack" >
-            <Card.Img className="statCardImg">
+            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
                 
             </Card.Img>
             <Card.Title className="statCardTitleBack">
@@ -425,17 +433,17 @@ return (
             </div>
             </Card.Body>
         </Card><Card className="statCard text-center m-3"  >
-            <Card.Body className="statCardBody5" id="Wisdom">
+            <Card.Body className={`statCardBody${sessionStorage.class}`} id="Wisdom">
             <div className="cardFront" >
             <Card.Title className="statCardTitleFront">
                 Wisdom
             </Card.Title>
-            <Card.Img className="statCardImg">
+            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
                 
             </Card.Img>
             </div>
             <div className="cardBack" >
-            <Card.Img className="statCardImg">
+            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
                 
             </Card.Img>
             <Card.Title className="statCardTitleBack">
@@ -451,17 +459,17 @@ return (
             </div>
             </Card.Body>
         </Card><Card className="statCard text-center m-3"  >
-            <Card.Body className="statCardBody6" id="Charisma">
+            <Card.Body className={`statCardBody${sessionStorage.class}`} id="Charisma">
             <div className="cardFront" >
             <Card.Title className="statCardTitleFront">
                 Charisma
             </Card.Title>
-            <Card.Img className="statCardImg">
+            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
                 
             </Card.Img>
             </div>
             <div className="cardBack" >
-            <Card.Img className="statCardImg">
+            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
                 
             </Card.Img>
             <Card.Title className="statCardTitleBack">
@@ -488,7 +496,7 @@ return (
             onClick={handleRoll}
             
             >
-              Roll
+            <strong  id="Intelligence" className="boldRoll">Roll</strong>
             </Button>
             <Button 
             className="rollButton5"
@@ -497,7 +505,7 @@ return (
             id="Wisdom"
             onClick={handleRoll}
             >
-              Roll
+            <strong id="Wisdom" className="boldRoll">Roll</strong>
             </Button>
             <Button 
             className="rollButton6"
@@ -506,12 +514,16 @@ return (
             id="Charisma"
             onClick={handleRoll}
             >
-              Roll
+          <strong  id="Charisma" className="boldRoll">Roll</strong>
             </Button>
         </div>
-        
-        
+        </Col>
+        <Col>
+        <div onClick={handleNext} class="arrowNextStats"></div>
+        </Col>
+        </Row>
 </div>
+</>
 )
 }
 

@@ -19,8 +19,9 @@ const CharacterCreation = props => {
           
          
       
-        <h1 className="classTitle">Choose a Class</h1>
+       
         <ProgressBar className="characterCreationProgress" animated variant="danger" now="5" ></ProgressBar>
+        <h1 className="classTitle">Choose a Class</h1>
    
            <Container className="classCardContainer">
             {classes.map(characterClass => 

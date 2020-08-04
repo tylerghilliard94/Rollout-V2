@@ -208,7 +208,7 @@ textarea {
 background-color: #f3f2ef !important;
 
 }
-#root{
+body{
     background-color: #f3f2ef !important;
 }
 .delete-Character-btn {
@@ -218,7 +218,7 @@ margin-bottom: 2vw;
 }
 
 .friendColDashboard{
-    margin-left: 8vw;
+    margin-left: 7.79vw;
 }
 
 .dashboardCardImage {
@@ -231,4 +231,8 @@ margin-bottom: 2vw;
     border: 2vw;
     border-color: darkred;
     box-shadow: 0 4px 12px 0 #6b6b6b, 0 2px 10px 0 #727272
+}
+
+html {
+    overflow-x: hidden;
 }

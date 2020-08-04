@@ -18,6 +18,7 @@ const Race = props => {
         <div className="raceContainer">
           
           <ProgressBar className="characterCreationProgress" animated variant="danger" now="28" ></ProgressBar>
+           <h1 className="raceTitle"> Choose a Race</h1>
            <Container className="raceCardContainer">
             {races.map(characterRace => 
                 <RaceCard race={characterRace} key={characterRace.race}  {...props} />   )}

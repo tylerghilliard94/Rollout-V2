@@ -9,6 +9,7 @@
     transition: 1.5s;
     transform-style: preserve-3d;
     
+    
 }
 
 .raceCardContainer{
@@ -19,7 +20,7 @@
     height: auto;
     margin-top: 2vw;
     margin-bottom: 2vw;
-    margin-left: 5vw;
+    margin-left: 13vw !important;
     background-color: #efede7;
 }
 
@@ -45,6 +46,7 @@
 position: absolute;
 -webkit-backface-visibility: hidden; 
 backface-visibility: hidden;
+border-radius: 5%;
 
 }
 
@@ -87,4 +89,9 @@ height: 15vw !important;
     margin-top: 1vw;
     height: 4vw !important;
     width: 4vw !important;
+}
+
+.raceTitle{
+    text-align: center;
+    margin-top: 1.5vw;
 }
