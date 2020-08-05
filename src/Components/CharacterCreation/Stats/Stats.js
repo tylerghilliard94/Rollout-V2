@@ -304,7 +304,7 @@ return (
                 Strength
             </Card.Title>
             
-            <p className="cardDescription">
+            <p className="cardDescriptionStats">
                 Your Strength stat is<br></br>
                 {parseInt(sessionStorage.rollStrength)}<br></br>
                 which gives you a bonus of<br></br>
@@ -331,7 +331,7 @@ return (
             <Card.Title className="statCardTitleBack">
             Dexterity
             </Card.Title>
-            <p className="cardDescription">
+            <p className="cardDescriptionStats">
             Your Strength stat is<br></br>
                 {parseInt(sessionStorage.rollDexterity)}<br></br>
                 which gives you a bonus of<br></br>
@@ -358,7 +358,7 @@ return (
             <Card.Title className="statCardTitleBack">
             Constitution
             </Card.Title>
-            <p className="cardDescription">
+            <p className="cardDescriptionStats">
             Your Constitution stat is<br></br>
                 {parseInt(sessionStorage.rollConstitution)}<br></br>
                 which gives you a bonus of<br></br>
@@ -423,7 +423,7 @@ return (
             <Card.Title className="statCardTitleBack">
             Intelligence
             </Card.Title>
-            <p className="cardDescription">
+            <p className="cardDescriptionStats">
             Your Intelligence stat is<br></br>
                 {parseInt(sessionStorage.rollIntelligence)}<br></br>
                 which gives you a bonus of<br></br>
@@ -449,7 +449,7 @@ return (
             <Card.Title className="statCardTitleBack">
             Wisdom
             </Card.Title>
-            <p className="cardDescription">
+            <p className="cardDescriptionStats">
             Your Wisdom stat is<br></br>
                 {sessionStorage.rollWisdom}<br></br>
                 which gives you a bonus of<br></br>
@@ -475,7 +475,7 @@ return (
             <Card.Title className="statCardTitleBack">
             Charisma
             </Card.Title>
-            <p className="cardDescription">
+            <p className="cardDescriptionStats">
             Your Charisma stat is<br></br>
                 {parseInt(sessionStorage.rollCharisma)}<br></br>
                 which gives you a bonus of<br></br>

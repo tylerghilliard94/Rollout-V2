@@ -118,11 +118,11 @@ height: 15vw !important;
     margin-top: 2vw;
 }
 
-.cardDescription{
+.cardDescriptionClass{
 
     color: black;
     margin-right: .2vw;
-    font-size: .8vw;
+    font-size: .8vw !important;
 }
 
 .classCardImg{

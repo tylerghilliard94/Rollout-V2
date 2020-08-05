@@ -1,4 +1,140 @@
+.statCardBodyBarbarian {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #72170f;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+
+.statCardBodyBard {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #72170f;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+
+.statCardBodyCleric {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #72170f;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+
+
 .statCardBodyFighter {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #72170f;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+.statCardBodyMonk {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #72170f;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+
+.statCardBodyPaladin {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #72170f;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+.statCardBodyRanger {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #72170f;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+.statCardBodyRogue {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #72170f;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+.statCardBodySorcerer {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #72170f;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+
+.statCardBodyWarlock{
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #72170f;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+.statCardBodyWizard {
     width: 12vw;
     height: 17vw;
     flex: 0, 0, 20%;
@@ -137,8 +273,9 @@ height: 100%;
     margin-top: 1vw;
 }
 
-.cardDescription{
+.cardDescriptionStats{
     padding-left: .4vw;
+    font-size: .8vw;
 }
 
 
