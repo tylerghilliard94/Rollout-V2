@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import {Row, Col, Image, Button} from "react-bootstrap"
+import {Row, Col, Image, Button, Card} from "react-bootstrap"
 import APIManager from "../Modules/APIManager"
 import CharacterNavBar from "../NavBar/CharacterNavBar"
 import { set } from "object-path"
@@ -319,81 +319,105 @@ const CharacterProfile = props => {
             <>
             
                     <CharacterNavBar clearUser={clearUser} {...props} />
-            
-            <Row>
-                <Col>
+                    <Row>
+                    <Col sm={3} className="infoCol">
                 <div>
                     
-                <h2>{character.characterName}'s Profile</h2>
-                    <Image roundedCircle className="dashboardCardImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png"></Image>
+               
                     
-                    <p>Name: {character.characterName}</p>
-                    <p>Description: {character.description}</p>
-                    <p>Level: {character.level}</p>
-                    <p>Alignment: {character.alignment}</p>
-                    <p>Proficient Skills:<br></br>
+                    
+                    <p className="characterName">{character.characterName}</p>
+                    <Image roundedCircle className="profileImage" src={character.picture}></Image>
+                    <p className="characterDescription">Description: {character.description}</p>
+                    <p className="characterLevel">Level: {character.level}</p>
+                    <p className="experience">Experience: {character.experience}</p>
+                    <p className="characterAlignment">Alignment: {character.alignment}</p>
+                    <p className="characterSkills">Proficient Skills:<br></br>
                     {character.skill1}<br></br>
                     {character.skill2}<br></br>
                     {character.skill3}</p>
-                    <p>Proficiency bonus: {character.proficiencyBonus}</p>
-                    <p>Spellcasting Ability: {character.spellcastingAbility}</p>
-                    <p>Spell Save DC: {character.spellSaveDC}</p>
-                    <p>Spell Attack Bonus: {character.spellAttackBonus}</p>
+                    <p className="characterProficiency">Proficiency bonus: {character.proficiencyBonus}</p>
+                    <p className="characterSpellCastingAbility">Spellcasting Ability: {character.spellcastingAbility}</p>
+                    <p className="characterSpellSaveDC">Spell Save DC: {character.spellSaveDC}</p>
+                    <p className="characterSpellAttackBonus">Spell Attack Bonus: {character.spellAttackBonus}</p>
+                   
                     
     
                 </div>
                 </Col>
+                <Col className="profileStatCol">
+                <Row className="profileStatRow">
+               
+                
                 <Col>
-                <p className="experience">Experience: {character.experience}</p>
-                {/* Create Sections for these tomorrow  */}
-                {strengthSkills.map(skill =>
-                    
-                   <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                   
-                )}
-                {dexteritySkills.map(skill =>
-                    
-                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                    
-                 )}
-                 {constitutionSkills.map(skill =>
-                    
-                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                    
-                 )}
-                 {intelligenceSkills.map(skill =>
-                    
-                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                    
-                 )}
-                 {wisdomSkills.map(skill =>
-                    
-                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                    
-                 )}
-                 {charismaSkills.map(skill =>
-                    
-                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                    
-                 )}
+                <div className="HitPointContainer">
+                <p className="hitPointsLabel">Hit Points</p>
+                    <Image roundedCircle  className= "hitPointsImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596428401/gold_ring_tvyezp.png"/>
+                <p className="hitPoints"> <a className="hitPointsText" onClick={handleEdit}>{character.hitPoints}</a></p>
+                </div>
+                <Card>
+                    <Card.Body>
+                <p className="characterStrength">Strength</p>
+                <p className="strengthNumber"></p>
+                </Card.Body>
+                </Card>
+                <p className="characterIntelligence">Intelligence: {character.intelligence}</p>
                 </Col>
                 <Col>
-                <p>Hit Points: {character.hitPoints}</p>
-                <p>Strength: {character.strength}</p>
-    
-                <p>Intelligence: {character.intelligence}</p>
+                <p className="characterInitiative">Initiative: {bonuses.dexterityBonus}</p>
+                <p className="characterDexterity">Dexterity: {character.dexterity}</p>
+                <p className="characterWisdom">Wisdom: {character.wisdom}</p>
                 </Col>
                 <Col>
-                <p>Initiative: {bonuses.dexterityBonus}</p>
-                <p>Dexterity: {character.dexterity}</p>
-                <p>Wisdom: {character.wisdom}</p>
-                </Col>
-                <Col>
-                <p className="armorClass">Armor Class: {character.armorClass} + {parseInt(bonuses.dexterityBonus.split(" ")[1])}</p>
-                <p>Constitution: {character.constitution}</p>
-                <p>Charisma: {character.charisma}</p>
+                <div className="armorClassContainer">
+                    <p className="ArmorClassLabel">Armor Class</p>
+                <Image className="armorClassImg" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596429468/darkenedShield_g5ypu5.png"/>
+                <p className="armorClass" > <a className="armorClassText" onClick={handleEdit}>{character.armorClass} + {parseInt(bonuses.dexterityBonus.split(" ")[1])}</a></p>
+                </div>
+                <p className="characterConsitution">Constitution: {character.constitution}</p>
+                <p className="characterCharisma">Charisma: {character.charisma}</p>
                 </Col>
             </Row>
+            <Row className="skillRow">
+                    <Col className="strengthCol">
+                {strengthSkills.map(skill =>
+                    
+                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                    
+                 )}
+                 </Col>
+                 <Col className="dexterityCol">
+                 {dexteritySkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  </Col>
+                  
+                  <Col className="intelligenceCol">
+                  {intelligenceSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  </Col>
+                  <Col className="wisdomCol">
+                  {wisdomSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  </Col>
+                  <Col className="charismaCol">
+                  {charismaSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  </Col>
+                </Row>
+                </Col>
+                </Row>
             </>
         )
 
@@ -405,76 +429,94 @@ const CharacterProfile = props => {
             <>
             
                     <CharacterNavBar clearUser={clearUser} {...props} />
-            
-            <Row>
-                <Col>
+                    <Row>
+                    <Col  className="infoCol"sm={3}>
                 <div>
                     
-                <h2>{character.characterName}'s Profile</h2>
-                <Image roundedCircle className="dashboardCardImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png"></Image>
+             
+                
+                    <Row>
+                    <Image roundedCircle className="profileImage" src={character.picture}></Image>
+                    <p className="characterName"><a className="characterNameText"onClick={handleEdit}>{character.characterName}</a></p>
                     
-                    <p>Name: <a onClick={handleEdit}>{character.characterName}</a></p>
-                    <p>Description: <a onClick={handleEdit}>{character.description}</a></p>
-                    <p>Level: <a onClick={handleEdit}>{character.level}</a></p>
-                    <p>Alignment: <a onClick={handleEdit}>{character.alignment}</a></p>
-                    <p>Proficient Skills:<br></br>
+                    </Row>
+                    <p className="characterDescription">Description: <a onClick={handleEdit}>{character.description}</a></p>
+                    <p className="characterLevel">Level: <a onClick={handleEdit}>{character.level}</a></p>
+                    <p className="characterExperience">Experience: <a onClick={handleEdit}>{character.experience}</a></p>
+                    <p className="characterAlignment">Alignment: <a onClick={handleEdit}>{character.alignment}</a></p>
+                    <p className="characterSkills">Proficient Skills:<br></br>
                     {character.skill1}<br></br>
                     {character.skill2}<br></br>
                     {character.skill3}</p>
-                    <p>Proficiency bonus: <a onClick={handleEdit}>{character.proficiencyBonus}</a></p>
-                    <p>Spellcasting Ability: {character.spellcastingAbility}</p>
-                    <p>Spell Save DC: {character.spellSaveDC}</p>
-                    <p>Spell Attack Bonus: {character.spellAttackBonus}</p>
-    
+                    <p className="characterProficiency">Proficiency bonus: <a onClick={handleEdit}>{character.proficiencyBonus}</a></p>
+                    <p className="characterSpellcastingAbility">Spellcasting Ability: {character.spellcastingAbility}</p>
+                    <p className="characterSpellSaveDC">Spell Save DC: {character.spellSaveDC}</p>
+                    <p className="characterSpellAttackBonus">Spell Attack Bonus: {character.spellAttackBonus}</p>
+                    
                 </div>
                 </Col>
-                <Col>
-                <p>Experience: <a onClick={handleEdit}>{character.experience}</a></p>
-                {strengthSkills.map(skill =>
-                    
-                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                    
-                 )}
-                 {dexteritySkills.map(skill =>
-                     
-                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                     
-                  )}
-                  {constitutionSkills.map(skill =>
-                     
-                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                     
-                  )}
-                  {intelligenceSkills.map(skill =>
-                     
-                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                     
-                  )}
-                  {wisdomSkills.map(skill =>
-                     
-                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                     
-                  )}
-                  {charismaSkills.map(skill =>
-                     
-                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                     
-                  )}
-                </Col>
+                <Col className="profileStatCol">
+                <Row className="profileStatRow">
+                
+                
                 <Col>
                 <div className="HitPointContainer">
-                    <p>Hit Points</p>
+                    <p className="hitPointsLabel">Hit Points</p>
                     <Image roundedCircle  className= "hitPointsImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596428401/gold_ring_tvyezp.png"/>
                 <p className="hitPoints"> <a className="hitPointsText" onClick={handleEdit}>{character.hitPoints}</a></p>
                 </div>
-                <p>Strength: <a onClick={handleEdit}>{character.strength}</a></p>
+                <Card className={`profileCard`}>
+                    <Card.Body className="profileCardBody">
+                <Card.Title className="characterStrength">Strength</Card.Title>
+                <p className="strengthNumber"onClick={handleEdit}>{character.strength}</p>
+                </Card.Body>
+                </Card>
+                <Card className={`profileCardBonus`}>
+                    <Card.Body className="profileCardBodyBonus">
+                <Card.Title className="characterStrengthBonus">{bonuses.strengthBonus}</Card.Title>
+                
+                </Card.Body>
+                </Card>
     
-                <p>Intelligence: <a onClick={handleEdit}>{character.intelligence}</a></p>
+                <Card className={`profileCardRow2`}>
+                    <Card.Body className="profileCardBodyRow2">
+                <Card.Title className="characterStrength">Intelligence</Card.Title>
+                <p className="strengthNumber"onClick={handleEdit}>{character.intelligence}</p>
+                </Card.Body>
+                </Card>
+                <Card className={`profileCardBonus`}>
+                    <Card.Body className="profileCardBodyBonus">
+                <Card.Title className="characterStrengthBonus">{bonuses.intelligenceBonus}</Card.Title>
+                
+                </Card.Body>
+                </Card>
                 </Col>
                 <Col>
-                <p>Initiative: <a onClick={handleEdit}>{bonuses.dexterityBonus}</a></p>
-                <p>Dexterity: <a onClick={handleEdit}>{character.dexterity}</a></p>
-                <p>Wisdom: <a onClick={handleEdit}>{character.wisdom}</a></p>
+                <p className="characterInitiative">Initiative: <a onClick={handleEdit}>{bonuses.dexterityBonus}</a></p>
+                <Card className={`profileCardMiddle`}>
+                    <Card.Body className="profileCardBody">
+                <Card.Title className="characterStrength">Dexterity</Card.Title>
+                <p className="strengthNumber"onClick={handleEdit}>{character.dexterity}</p>
+                </Card.Body>
+                </Card>
+                <Card className={`profileCardBonus`}>
+                    <Card.Body className="profileCardBodyBonus">
+                <Card.Title className="characterStrengthBonus">{bonuses.dexterityBonus}</Card.Title>
+                
+                </Card.Body>
+                </Card>
+                <Card className={`profileCardRow2`}>
+                    <Card.Body className="profileCardBodyRow2">
+                <Card.Title className="characterStrength">Wisdom</Card.Title>
+                <p className="strengthNumber"onClick={handleEdit}>{character.wisdom}</p>
+                </Card.Body>
+                </Card>
+                <Card className={`profileCardBonus`}>
+                    <Card.Body className="profileCardBodyBonus">
+                <Card.Title className="characterStrengthBonus">{bonuses.wisdomBonus}</Card.Title>
+                
+                </Card.Body>
+                </Card>
                 </Col>
                 <Col>
                 <div className="armorClassContainer">
@@ -482,10 +524,88 @@ const CharacterProfile = props => {
                 <Image className="armorClassImg" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596429468/darkenedShield_g5ypu5.png"/>
                 <p className="armorClass" > <a className="armorClassText" onClick={handleEdit}>{character.armorClass} + {parseInt(bonuses.dexterityBonus.split(" ")[1])}</a></p>
                 </div>
-                <p>Constitution: <a onClick={handleEdit}>{character.constitution}</a></p>
-                <p>Charisma: <a onClick={handleEdit}>{character.charisma}</a></p>
+                <Card className={`profileCardEnd`}>
+                    <Card.Body className="profileCardBody">
+                <Card.Title className="characterStrength">Constitution</Card.Title>
+                <p className="strengthNumber"onClick={handleEdit}>{character.constitution}</p>
+                </Card.Body>
+                </Card>
+                <Card className={`profileCardBonus`}>
+                    <Card.Body className="profileCardBodyBonus">
+                <Card.Title className="characterStrengthBonus">{bonuses.constitutionBonus}</Card.Title>
+                
+                </Card.Body>
+                </Card>
+                <Card className={`profileCardRow2`}>
+                    <Card.Body className="profileCardBodyRow2">
+                <Card.Title className="characterStrength">Charisma</Card.Title>
+                <p className="strengthNumber"onClick={handleEdit}>{character.charisma}</p>
+                </Card.Body>
+                </Card>
+                <Card className={`profileCardBonus`}>
+                    <Card.Body className="profileCardBodyBonus">
+                <Card.Title className="characterStrengthBonus">{bonuses.charismaBonus}</Card.Title>
+                
+                </Card.Body>
+                </Card>
                 </Col>
+                
             </Row>
+            <Row className="skillRow">
+                    <Col className="strengthCol">
+                <Card className="skillBonusCard">
+                    <Card.Title>Strength Skills</Card.Title>
+                {strengthSkills.map(skill =>
+                    
+                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                    
+                 )}
+                 </Card>
+                 </Col>
+                 <Col className="dexterityCol">
+                     <Card  className="skillBonusCard">
+                     <Card.Title>Dexterity Skills</Card.Title>
+                 {dexteritySkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  </Card>
+                  </Col>
+                  
+                  <Col className="intelligenceCol">
+                      <Card  className="skillBonusCard">
+                      <Card.Title>Intelligence Skills</Card.Title>
+                  {intelligenceSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  </Card>
+                  </Col>
+                  <Col className="wisdomCol">
+                  <Card  className="skillBonusCard">
+                  <Card.Title>Wisdom Skills</Card.Title>
+                  {wisdomSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  </Card>
+                  </Col>
+                  <Col className="charismaCol">
+                      <Card  className="skillBonusCard">
+                      <Card.Title>Charisma Skills</Card.Title>
+                  {charismaSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  </Card>
+                  </Col>
+                </Row>
+                </Col>
+                </Row>
             </>
         )
       } else if (editable === true){
@@ -493,91 +613,103 @@ const CharacterProfile = props => {
             <>
             
                     <CharacterNavBar clearUser={clearUser} {...props} />
-            
-            <Row>
-                <Col>
+                    <Row>
+                    <Col className="infoCol" sm={3}>
                 <div>
                     
-                <h2>{character.characterName}'s Profile</h2>
-                <Image roundedCircle className="dashboardCardImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png"></Image>
+               
+              
                    
-                    <p>Name: <textarea onChange={handleEvtChange} id="characterName" value={character.characterName}></textarea></p>
-                    <p>Description: <textarea onChange={handleEvtChange}id="description" value={character.description}></textarea></p>
-                    <p>Level: <textarea onChange={handleEvtChange}id="level"value={character.level}></textarea></p>
-                    <p>Alignment: <textarea onChange={handleEvtChange}id="alignment"value={character.alignment}></textarea></p>
-                    <p>Proficient Skills:<br></br>
+                    <p className="characterName"> <textarea onChange={handleEvtChange} id="characterName" value={character.characterName}></textarea></p>
+                    <Image roundedCircle className="profileImage" src={character.picture}></Image>
+                    <p className="characterDescription">Description: <textarea onChange={handleEvtChange}id="description" value={character.description}></textarea></p>
+                    <p className="characterLevel">Level: <textarea onChange={handleEvtChange}id="level"value={character.level}></textarea></p>
+                    <p className="characterExperience">Experience: <textarea onChange={handleEvtChange}id="experience"value={character.experience}></textarea></p>
+                    <p className="characterAlignment">Alignment: <textarea onChange={handleEvtChange}id="alignment"value={character.alignment}></textarea></p>
+                    <p className="characterSkills">Proficient Skills:<br></br>
                     {character.skill1}<br></br>
                     {character.skill2}<br></br>
                     {character.skill3}</p>
-                    <p>Proficiency bonus: <textarea onChange={handleEvtChange}id="proficiencyBonus"value={character.proficiencyBonus}></textarea></p>
-                    <p>Spellcasting Ability: {character.spellcastingAbility}</p>
-                    <p>Spell Save DC: <textarea onChange={handleEvtChange}id="spellSaveDC"value={character.spellSaveDC}></textarea></p>
-                    <p>Spell Attack Bonus: <textarea onChange={handleEvtChange}id="spellAttackBonus"value={character.spellAttackBonus}></textarea></p>
+                    <p className="characterProficiency">Proficiency bonus: <textarea onChange={handleEvtChange}id="proficiencyBonus"value={character.proficiencyBonus}></textarea></p>
+                    <p className="characterSpellcastingAbility">Spellcasting Ability: {character.spellcastingAbility}</p>
+                    <p className="characterSpellSaveDC">Spell Save DC: <textarea onChange={handleEvtChange}id="spellSaveDC"value={character.spellSaveDC}></textarea></p>
+                    <p className="characterSpellAttackBonus">Spell Attack Bonus: <textarea onChange={handleEvtChange}id="spellAttackBonus"value={character.spellAttackBonus}></textarea></p>
     
                 </div>
                 </Col>
+                <Col className="profileStatCol">
+            <Row className="profileStatRow">
+                
+                
                 <Col>
-                <p>Experience: <textarea onChange={handleEvtChange}id="experience"value={character.experience}></textarea></p>
+                <div className="HitPointContainer">
+                <p className="hitPointsLabel">Hit Points</p>
+                    <Image roundedCircle  className= "hitPointsImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596428401/gold_ring_tvyezp.png"/>
+                <p> <textarea onChange={handleEvtChange}id="hitPoints" className="hitPointsTextArea" value={character.hitPoints}></textarea></p>
+                </div>
+                <p className="characterStrength">Strength: <textarea onChange={handleEvtChange}id="strength"value={character.strength}></textarea></p>
+    
+                <p className="characterIntelligence">Intelligence: <textarea onChange={handleEvtChange}id="intelligence"value={character.intelligence}></textarea></p>
+                </Col>
+                <Col>
+                <p className="characterInitiative">Initiative: {bonuses.dexterityBonus}</p>
+                <p className="characterDexterity">Dexterity: <textarea onChange={handleEvtChange}id="dexterity"value={character.dexterity}></textarea></p>
+                <p className="characterWisdom">Wisdom: <textarea onChange={handleEvtChange}id="wisdom"value={character.wisdom}></textarea></p>
+                </Col>
+                <Col>
+                <p className="ArmorClassLabel">Armor Class</p>
+                <div className="armorClassContainer">
+                <Image className="armorClassImg" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596429468/darkenedShield_g5ypu5.png"/>
+                <p className="armorClass"><textarea onChange={handleEvtChange}id="armorClass" className="armorClassTextArea" value={character.armorClass}></textarea></p>
+                </div>
+                <p className="characterConstitution">Constitution: <textarea onChange={handleEvtChange}id="constitution"value={character.constitution}></textarea></p>
+                <p className="characterCharisma">Charisma: <textarea onChange={handleEvtChange}id="charisma"value={character.charisma}></textarea></p>
+
+                <Button className="saveEditButton" onClick={handleEditSave}>
+                    Save Edit
+                </Button>
+                </Col>
+            </Row>
+            <Row className="skillRow">
+                    <Col>
                 {strengthSkills.map(skill =>
                     
                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
                     
                  )}
+                 </Col>
+                 <Col>
                  {dexteritySkills.map(skill =>
                      
                      <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
                      
                   )}
-                  {constitutionSkills.map(skill =>
-                     
-                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
-                     
-                  )}
+                  </Col>
+                  
+                  <Col>
                   {intelligenceSkills.map(skill =>
                      
                      <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
                      
                   )}
+                  </Col>
+                  <Col>
                   {wisdomSkills.map(skill =>
                      
                      <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
                      
                   )}
+                  </Col>
+                  <Col>
                   {charismaSkills.map(skill =>
                      
                      <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
                      
                   )}
+                  </Col>
+                </Row>
                 </Col>
-                <Col>
-                <div className="HitPointContainer">
-                    <p>Hit Points</p>
-                    <Image roundedCircle  className= "hitPointsImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596428401/gold_ring_tvyezp.png"/>
-                <p> <textarea onChange={handleEvtChange}id="hitPoints" className="hitPointsTextArea" value={character.hitPoints}></textarea></p>
-                </div>
-                <p>Strength: <textarea onChange={handleEvtChange}id="strength"value={character.strength}></textarea></p>
-    
-                <p>Intelligence: <textarea onChange={handleEvtChange}id="intelligence"value={character.intelligence}></textarea></p>
-                </Col>
-                <Col>
-                <p>Initiative: {bonuses.dexterityBonus}</p>
-                <p>Dexterity: <textarea onChange={handleEvtChange}id="dexterity"value={character.dexterity}></textarea></p>
-                <p>Wisdom: <textarea onChange={handleEvtChange}id="wisdom"value={character.wisdom}></textarea></p>
-                </Col>
-                <Col>
-                <p>Armor Class</p>
-                <div className="armorClassContainer">
-                <Image className="armorClassImg" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596429468/darkenedShield_g5ypu5.png"/>
-                <p><textarea onChange={handleEvtChange}id="armorClass" className="armorClassTextArea" value={character.armorClass}></textarea></p>
-                </div>
-                <p>Constitution: <textarea onChange={handleEvtChange}id="constitution"value={character.constitution}></textarea></p>
-                <p>Charisma: <textarea onChange={handleEvtChange}id="charisma"value={character.charisma}></textarea></p>
-
-                <Button onClick={handleEditSave}>
-                    Save Edit
-                </Button>
-                </Col>
-            </Row>
+                </Row>
             </>
         )
       }
