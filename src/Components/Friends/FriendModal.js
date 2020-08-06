@@ -4,6 +4,7 @@ import {Button, Modal, Form, FormControl} from "react-bootstrap"
 
 import NewFriendCard from "./NewFriendCard"
 import "./FriendModal.css"
+import { filter } from 'async';
 
 
 const HandleFriendModal = (props) => {
@@ -22,21 +23,32 @@ const HandleFriendModal = (props) => {
             
         
         )
-        let finalFilter = filteredFriends.filter(friend => {
+        let activeUserFilter= filteredFriends.filter(friend =>{
+            
+            if(friend.userName === sessionStorage.activeUser){
+                return false
+                
+            }else {
+                return true
+            }
+            
+        })
+        console.log(activeUserFilter)
+        let finalFilter = activeUserFilter.filter(friend => {
+            
             let filterCheck = true
             newFriend.forEach(person =>{
-                
+               
                 if(friend.userName == person.user.userName){
                     filterCheck = false
-                }else if(friend.userName == sessionStorage.activeUser){
-                    filterCheck = false
-                    
-                }
+                } 
                
             })
 
             return filterCheck
         })
+        console.log(finalFilter)
+        
         if(searchEvent == ""){
             finalFilter = []
         }
@@ -69,11 +81,11 @@ const HandleFriendModal = (props) => {
       >
         <Modal.Body>
           <h4 className="new-friends">New Friends</h4>
-        <Form inline>
+        <Form inline className="searchForm">
             <FormControl type="text" placeholder="Search" className=" mr-sm-2  friendSearchBar" onChange={handleSearchChange} onClick={userFriends} />
             
         </Form>
-        <div className="new-friends">
+        <div className="new-friends-div">
         {filterFriends.map(friend => 
         <NewFriendCard key={friend.id} friend={friend} newFriends={props.newFriends} setFriends={setFriends} friendUpdate={props.friendUpdate} clear={clearSearch} setFilterFriends={setFilterFriends} setNewFriends={setNewFriend} {...props} />
             )}
@@ -95,8 +107,9 @@ const HandleFriendModal = (props) => {
       <>
       <div>
         <Button className="addFriendButton" variant="custom" onClick={() => setModalShow(true)} > 
+        +
         </Button>
-        <p className="addFriendPlus"onClick={() => setModalShow(true)}>+</p>
+      
         </div>
         <HandleFriendModal
           newFriends={props.newFriends} 

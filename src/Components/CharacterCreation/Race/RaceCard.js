@@ -15,17 +15,17 @@ const RaceCard = (props) => {
         <>
         
         <Card className="raceCard text-center m-3" id={props.race.race} onClick={setRace}>
-            <Card.Body className="raceCardBody"id={props.race.race}>
+            <Card.Body className={`raceCardBody${sessionStorage.class}`}id={props.race.race}>
             <div className="cardFront" id={props.race.race}>
             <Card.Title className="raceCardTitleFront"id={props.race.race}>
                 {props.race.race}
             </Card.Title>
-            <Card.Img src="https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="raceCardImg"id={props.race.race}>
+            <Card.Img src={sessionStorage.picture} className="raceCardImg"id={props.race.race}>
                 
             </Card.Img>
             </div>
             <div className="cardBack" id={props.race.race}>
-            <Card.Img src="https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="raceCardImg"id={props.race.race}>
+            <Card.Img src={sessionStorage.picture} className="raceCardImg"id={props.race.race}>
                 
             </Card.Img>
             <Card.Title className="raceCardTitleBack"id={props.race.race}>

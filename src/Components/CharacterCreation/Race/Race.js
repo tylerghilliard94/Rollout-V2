@@ -4,6 +4,7 @@ import APIManager from "../../Modules/APIManager"
 import RaceCard from "./RaceCard"
 import "./Race.css"
 import { Card, Row, Col, Container, ProgressBar } from "react-bootstrap"
+import BaseNavBar from "../../NavBar/BaseNavBar"
 
 
 const Race = props => {
@@ -15,6 +16,8 @@ const Race = props => {
 
     
     return (
+        <>
+        <BaseNavBar />
         <div className="raceContainer">
           
           <ProgressBar className="characterCreationProgress" animated variant="danger" now="28" ></ProgressBar>
@@ -26,6 +29,7 @@ const Race = props => {
           
           
         </div>
+        </>
     )
 }
 

@@ -42,3 +42,17 @@ option {
     margin-top: 10vw;
     margin-left: 10vw;
 }
+.arrowBack:hover, .arrowNext:hover{
+    transition: .5s;
+    height: 3vw; width: 3vw;
+}
+
+.nextButtonDisable{
+    background-color: #f3f2ef !important;
+    border-color: #f3f2ef !important;
+    user-select: none;
+    height: .000001vw !important;
+    width: .000001vw !important;
+    padding: 0vw !important;
+}
+

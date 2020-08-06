@@ -15,7 +15,7 @@ const CharacterNavBar = props => {
                   <Col sm={11}>
               <li>
               <NavLink className="homeLogo" exact to="/Dashboard"> 
-                 <Image className="logoImg" src="https://res.cloudinary.com/dgllrw1m3/image/upload/v1596404968/Role_Out_D_ygzjys.png" placeholder="Logo"/>
+                 <Image className="logoImg" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596723032/Role_Out_D_white_ebgssw.png" placeholder="Logo"/>
 
                   
                   

@@ -79,7 +79,7 @@ const Login = (props) => {
 
 
     return (
-      <div className="loginContainer">
+      <Col className="loginContainer">
         <Card className="loginCard">
           <CardBody className="loginCardBody">
           <CardImg 
@@ -136,7 +136,7 @@ const Login = (props) => {
           </Form>
           </CardBody>
         </Card>
-      </div>
+      </Col>
     );
 }
 

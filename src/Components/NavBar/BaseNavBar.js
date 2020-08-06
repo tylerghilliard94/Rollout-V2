@@ -5,10 +5,14 @@ import "./BaseNavBar.css"
 
 const BaseNavBar = props => {
     const handleLogout = () => {
-        props.clearUser();
+        clearUser();
         ;
       }
-
+      const clearUser = () => {
+        sessionStorage.clear();
+        localStorage.clear();
+        
+    }
     return(
         <header>
           <ul id="nav-mobile" className="nav-Container right"  >
@@ -16,7 +20,7 @@ const BaseNavBar = props => {
                   <Col sm={9}>
               <li>
               <NavLink className="homeLogo" exact to="/Dashboard"> 
-                 <Image className="logoImg" src="https://res.cloudinary.com/dgllrw1m3/image/upload/v1596404968/Role_Out_D_ygzjys.png" placeholder="Logo"/>
+                 <Image className="logoImg" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596723032/Role_Out_D_white_ebgssw.png" placeholder="Logo"/>
 
                   
                   

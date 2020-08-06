@@ -8,7 +8,7 @@
 .DashboardCardBody {
     
    
-    background-color: #e7eeef;
+    background-color: #f3f2ef;
     border-radius: 5%;
     margin: 1rem;
     padding: 0rem !important;
@@ -19,6 +19,8 @@
 .DashboardCardText {
     text-align: center;
     margin-top: 3vw;
+    font-size: 1.3vw;
+    
 }
 
 .FriendCardBody {
@@ -53,6 +55,7 @@
     height: 20vw;
     margin-left: auto;
     background-color: #262b2f5d !important;
+  
     
 }
 .DashboardContainerBarbarian{
@@ -62,7 +65,7 @@
     height: 20vw;
     margin-left: auto;
     background-color: #d67a45 !important;
-   
+   filter: drop-shadow(.25vw .25vw .25vw #676969);
     
     
     

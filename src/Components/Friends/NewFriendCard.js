@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {Card, Button, Container, Row} from "react-bootstrap"
+import {Card, Button,  Row, Col, Image} from "react-bootstrap"
 import APIManager from "../Modules/APIManager"
 
 import "./NewFriendCard.css"
@@ -24,22 +24,41 @@ const NewFriendCard = props => {
     
     return (
         <>
-        <Container className="newfriendcontainer">
-            <Row>
-            <p className="new-freind-text">{props.friend.userName}</p>
+         <Card className="FriendCardContainer">
+            <Card.Body className="FriendCardBody"   >
+            <Row className="friendCardRowNew" >
+                <Col className="friendCol" sm={3}>
+            <Image className="friendImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
+            </Col>
+            <Col className="friendCol" sm={6}>
+            <Card.Text className="friendCardText">
+            {props.friend.userName}
+            </Card.Text>
+            
+            </Col>
+            <Col className="friendCol" sm={2}>
             <Button
-              className = "add-friend-btn"
-              variant= "custom"
+              className = "addNew-friend-btn blue large red "
+              
+              
               id={props.friend.id}
-              
               onClick={handleFriendAdd}
-              
-              type="submit"
+          
+               
+             
+             
+              type="button"
             >
-              Add
+               <strong onClick={handleFriendAdd}> +</strong>
             </Button>
+            </Col>
+            
+             
+            
+           
             </Row>
-        </Container>
+            </Card.Body>
+        </Card>
         
         
 
@@ -47,22 +66,8 @@ const NewFriendCard = props => {
         </>
 
     )
-    }else {
-        return (
-            <>
-            <Card>
-            <Card.Text>    
-                {props.friend.userName}
-            </Card.Text>    
-            </Card>
-            
-            
-    
-    
-            </>
-    
-        )
     }
+    
 }
 
 export default NewFriendCard

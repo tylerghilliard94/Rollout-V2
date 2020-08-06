@@ -1,45 +1,34 @@
-import React from "react"
-import { CardImg, Button, Jumbotron } from "reactstrap"
+import React, {useState} from "react"
+import { Button, Col, Row, Image } from "react-bootstrap"
 import { NavLink } from "react-router-dom"
+import BaseNavBar from "../NavBar/BaseNavBar"
+import FriendsList from "../Friends/FriendList"
+import "./InitialCharacterPrompt.css"
 
 const InitialCharacterPrompt = props => {
-
-    
+    const handleNewCharacter = () => {
+        props.history.push("/Class")
+    }
 
     return (
-        <div className="characterPromptContainer">
-            <Jumbotron className="characterPromptCard">
-                
-                
+        <>
+            <div className="navBar">
+                <BaseNavBar {...props} />
+            </div>
+            <Row className="mainRow">
+                <Col sm={9}>
+                <Image  className="initialPromptImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596404968/Role_Out_D_ygzjys.png">
 
-                <h1 className="Title">
-                    Welcome to Re-Roll
-                </h1>
-                <p className="LeadingText">
-                    To get started on your adventure, lets begin by creating a character.
-                </p>
-                <hr />
-                <p className="DescribingText">
-                    Click on the button below to begin.
-                </p>
-                <NavLink className="classNavLink" to="/Class" >
-                <Button
-                className="characterPromptButton"
-                variant="custom"
-                type="submit"
-                >
-                   Create Character
+                </Image>
+                <h2 className="initialPromptTitle"> Let's get started on your adventure!</h2>
+                <Button onClick={handleNewCharacter} className="initialPromptButton">
+                <storng>Create a Character</storng>
                 </Button>
-                </NavLink>
+                </Col>
                 
-            </Jumbotron>
-
-            <CardImg 
-                className="characterPromptImage"
-                src={("")}
-                alt="Re-roll Logo"
-                />
-        </div>
+                
+            </Row>
+            </>
     )
 }
 

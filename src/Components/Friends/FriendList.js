@@ -23,10 +23,14 @@ const FriendsList = props => {
 
     return (
     <div className="friend-container">
+      
         <Row className="friendListRow">
+         
         <h4 className="FriendListTitle">Friend's List</h4>
         <NewFriend friendUpdate={friendUpdate} newFriends={props.newFriends} />
+     
         </Row>
+     
     <div className="friend-card-container">
         {friends.map(friend => 
             <FriendCard key={friend.id} friend={friend} setFriends={friendUpdate}{...props} />

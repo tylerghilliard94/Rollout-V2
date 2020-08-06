@@ -1,6 +1,6 @@
 import React, {useEffect} from "react"
 import APIManager from "../../Modules/APIManager"
-
+import BaseNavBar from "../../NavBar/BaseNavBar"
 import {Card, Row, ProgressBar} from "react-bootstrap"
 import "./CharacterType.css"
 
@@ -31,6 +31,8 @@ let defaultChoice = {}
         props.history.push("/Race")
     ]
     return (
+        <>
+        <BaseNavBar />
         <div className="choiceContainer">
             <ProgressBar className="characterCreationProgress" animated variant="danger" now="14" ></ProgressBar>
             
@@ -84,6 +86,7 @@ let defaultChoice = {}
         </div>
         </Row>
         </div>
+        </>
     )
 }
 

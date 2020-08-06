@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Form, FormGroup, Label,  Button, Card, Alert, CardImg, CardBody, CardSubtitle, Input } from "reactstrap";
+import { Form, FormGroup, Label,  Button, Card, Alert, CardImg, CardBody, CardSubtitle, Input, Col } from "reactstrap";
 import APIManager from "../Modules/APIManager";
 import "./Registration.css";
 
@@ -86,7 +86,7 @@ const Register = (props) => {
         setCredentials(stateToChange);
     }
     return (
-      <div className="registerContainer">
+      <Col className="registerContainer">
         <Card className="registrationCard">
         <CardBody className="registrationCardBody">
           <CardImg
@@ -152,7 +152,7 @@ const Register = (props) => {
           </Form>
           </CardBody>
         </Card>
-      </div>
+      </Col>
     );
 }
 export default Register

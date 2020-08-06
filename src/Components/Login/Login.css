@@ -4,9 +4,8 @@
 .loginContainer {
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    background-color: #222F2F
+   background-color: #222f2f;
+    
     
 
 }
@@ -21,15 +20,18 @@
     color: #efede7;
     margin-top: 3.75rem;
     margin-left: 7rem;
+    border-color: tomato !important;
    
 }
 
 .loginButton {
     margin-left: 23rem;
+    background-color: tomato !important;
+    border-color: tomato !important;
 }
 
 .loginForm.form-control {
-    background-color: #efede7;
+   
     margin-left: 1rem; 
 }
 
@@ -50,10 +52,12 @@
 
 .loginCard {
     width: 60rem;
+    height: 45rem;
     border: 2px solid #efede7 !important;
     border-radius: 6px !important;
     background-color: #efede7!important;
-    
+    margin-top: 5.3vw;
+    margin-bottom: 5.3vw;
     
 } 
 

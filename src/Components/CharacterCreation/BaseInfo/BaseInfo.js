@@ -1,11 +1,13 @@
 import React, {useState} from "react"
 import {Form, Button, Card, ProgressBar, Col} from "react-bootstrap"
 import "./BaseInfo.css"
+import BaseNavBar from "../../NavBar/BaseNavBar"
 
 
 const BaseInfo = props => {
     
     const [info, setInfo] = useState({characterName: "", level: 0, description: ""})
+    const [nextDisable, setNextDisable] = useState(true)
    
 
     const handleBaseInfo = () => {
@@ -26,10 +28,17 @@ const BaseInfo = props => {
         stateToChange[event.target.id] = event.target.value;
         setInfo(stateToChange);
     }
+    const handleFieldChangeLevel = (event) => {
+        const stateToChange = { ...info };
+        stateToChange[event.target.id] = event.target.value;
+        setInfo(stateToChange);
+        setNextDisable(false)
+    }
    
 
     return (
         <>
+        <BaseNavBar />
         <ProgressBar className="characterCreationProgress" animated variant="danger" now="42" ></ProgressBar>
         <h1 className="baseInfoTitle">Base Character Information</h1>
         <div className="baseInfo">
@@ -56,7 +65,7 @@ const BaseInfo = props => {
             <Form.Group>
               <label className="characterLevellabel">Character Level</label>
               <Form.Control className="characterLevelForm"
-                onChange={handleFieldChange}
+                onChange={handleFieldChangeLevel}
                 as="select"
                 name="select"
                 id="level"
@@ -103,7 +112,9 @@ const BaseInfo = props => {
             </Col>
             <Col sm={2}>
             <div>
-            <div onClick={handleBaseInfo} class="arrowNext"></div>
+                <Button className="nextButtonDisable" disabled={nextDisable}>
+            <div  onClick={handleBaseInfo} class="arrowNext"></div>
+            </Button>
             </div>
             </Col>
            

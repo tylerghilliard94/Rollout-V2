@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react"
 import {Row, Card, Button, SplitButton,ProgressBar, Col} from "react-bootstrap"
 import "./HitPoints.css"
+import BaseNavBar from "../../NavBar/BaseNavBar"
 
 const HitPoints = props => {
     const [refresh, setRefresh] = useState(false)
@@ -85,7 +86,7 @@ const HitPoints = props => {
     
     return(
         <>
-        
+        <BaseNavBar />
         
         <ProgressBar className="characterCreationProgress" animated variant="danger" now="75" ></ProgressBar>
         <h1 className="hitPointsTitle">Hit Points</h1>
@@ -147,15 +148,15 @@ const HitPoints = props => {
     }else{
         return(
             <>
-           
+           <BaseNavBar />
             <ProgressBar className="characterCreationProgress" animated variant="danger" now="75" ></ProgressBar>
             <h1 className="hitPointsTitle">Hit Points</h1>
             <Row>
             <Col className="backBtnCol" sm={2}>
-            <div onClick={handleBack} class="arrowBack"></div>
+            <div onClick={handleBack} class="arrowBackHitPoints"></div>
             </Col>
             <Col className="hitPointCol" sm={6}>
-            <Row>
+            <Row className="hitPointRow">
             
             
             <Card className="hitCard text-center m-3" >
@@ -167,12 +168,21 @@ const HitPoints = props => {
             <Card.Img className="hitCardImg">
                 
             </Card.Img>
-            <p className="cardDescription">
+            <p className="cardDescriptionNumber">
                 {sessionStorage.hitPoints}
             </p>
             <p className="hitPointDescription"> Default Choice <br></br> This takes the average of your hit die and adds your Constitution Bonus for each level over 1.</p>
             </div>
+            <div className="cardBack" >
+            <Card.Img src="https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="hitPointCardImg">
+                
+                </Card.Img>
+            <Card.Title className="hitCardTitleBack">
+                Good Luck!
+            </Card.Title>
+          
             
+            </div>
             </Card.Body>
         </Card>
             <p className="orTitleHitPoints">
@@ -198,7 +208,7 @@ const HitPoints = props => {
             <Card.Title className="hitCardTitleBack">
                 Hit Points
             </Card.Title>
-            <p className="hitPointDescription">
+            <p className="hitPointDescriptionNumber">
             {sessionStorage.chanceHitPoints}
 
             </p>
@@ -219,12 +229,12 @@ const HitPoints = props => {
             id="chance"
             onClick={handleShowChance}
             >
-              Choose Risky Choice
+              <strong id="chance" onClick={handleShowChance}>Take a Chance</strong>
             </Button>
         </Row>
         </Col>
         <Col className="nextBtnCol" sm={2}>
-        <div onClick={handleNext} class="arrowNext"></div>
+        <div onClick={handleNext} class="arrowNextHitPoints"></div>
         </Col>
         </Row>
         </>

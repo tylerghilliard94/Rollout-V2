@@ -2,7 +2,8 @@ import React from "react"
 import {Card, Row, Image, Col } from "react-bootstrap"
 import APIManager from "../Modules/APIManager"
 import "./FriendCard.css"
-import {Button, Icon} from "react-materialize"
+import {Button} from "react-bootstrap"
+import {MdDelete} from "react-icons/md"
 
 
 
@@ -41,18 +42,18 @@ const FriendCard = props => {
             </Col>
             <Col className="friendCol" sm={2}>
             <Button
-              className = "delete-friend-btn blue  large red "
+              className = "delete-friend-btn blue large red "
               
               
               id={props.friend.id}
               onClick={handleFriendDelete}
-              icon={<Icon onClick={handleFriendDelete}>delete</Icon>}
+          
                
              
              
-              type="submit"
+              type="button"
             >
-                 
+               <strong> X</strong>
             </Button>
             </Col>
             

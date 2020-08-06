@@ -1,0 +1,43 @@
+.arrowBackFinal{
+    content: ">";
+	height: 2vw; width: 2vw;
+	border: 1px solid tomato;
+	border-width: 2px 2px 0 0;
+    transform: rotate(225deg);
+    margin-top: 22vw;
+    margin-left: 7vw;
+    
+}
+.arrowBackFinal:hover, .arrowNextHitPoints:hover{
+    transition: .5s;
+    height: 3vw; width: 3vw;
+}
+
+.arrowNextFinal {
+    content: ">";
+	height: 2vw; width: 2vw;
+	border: 1px solid tomato;
+	border-width: 2px 2px 0 0;
+    transform: rotate(45deg);
+    margin-top: 19vw;
+    margin-left: 8vw;
+}
+
+.languageTitle, .skillTitle, .alignmentTitle{
+    font-family: rieven-uncial, sans-serif;
+}
+
+.dropdownForm{
+    margin-top: 3vw  !important;
+}
+
+.finalInfoContainer{
+    margin-top: 2vw !important;
+}
+
+.finalCharacter{
+    background-color: tomato !important;
+    color:#f3f2ef !important;
+    margin-top: 22vw;
+    margin-left: 12vw;
+}
