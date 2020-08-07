@@ -20,6 +20,9 @@ textarea {
     
 }
 
+.DashboardCardText {
+    text-align: center;
+}
 
 .FriendCardBody {
     
@@ -55,29 +58,44 @@ textarea {
     background-color: #262b2f5d !important;
     
 }
-.DashboardContainer{
+.DashboardContainerFighter{
    
 
     width: 14vw;
     height: 20vw;
     margin-left: auto;
-    background-color: #262B2F !important;
+    background-color: #72170f !important;
    
     
     
     
 }
-*, html{
-    background-color: #f3f2ef;
-    
-}
 
+.mainRow{
+background-color: #f3f2ef !important;
+
+}
+#root{
+    background-color: #f3f2ef !important;
+}
 .delete-Character-btn {
-margin-left: 5.5vw;
+margin-left: 6vw;
 margin-top: 1vw;
 margin-bottom: 2vw;
 }
 
 .friendColDashboard{
     margin-left: 8vw;
+}
+
+.dashboardCardImage {
+    height:4vw;
+    width: 4vw;
+    margin-top: 4vw;
+    margin-left: 4vw;
+    margin-right: .8rem;
+    background-color: #f3f2ef;
+    border: 2vw;
+    border-color: darkred;
+    box-shadow: 0 4px 12px 0 #6b6b6b, 0 2px 10px 0 #727272
 }

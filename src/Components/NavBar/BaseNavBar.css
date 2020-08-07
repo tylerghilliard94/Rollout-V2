@@ -1,0 +1,17 @@
+.logoImg{
+    height: 5vw;
+    
+}
+.nav-Container{
+    list-style-type: none;
+}
+
+.LogoutNavLink{
+    color: #222F2F;
+    
+}
+
+.logoutList{
+    margin-top: 1.5vw;
+    font-style: bold;
+}

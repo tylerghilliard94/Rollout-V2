@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react"
-import {Row, Card, Button, SplitButton} from "react-bootstrap"
+import {Row, Card, Button, SplitButton,ProgressBar} from "react-bootstrap"
 import "./HitPoints.css"
 
 const HitPoints = props => {
@@ -61,7 +61,11 @@ const HitPoints = props => {
     
     return(
         <>
+        
+        
+        <ProgressBar className="characterCreationProgress" animated variant="danger" now="75" ></ProgressBar>
         <Row>
+        
             <Card className="hitCard text-center m-3" >
             <Card.Body className="hitCardBody"id="default">
             <div className="cardFront" >
@@ -103,12 +107,16 @@ const HitPoints = props => {
               Show
             </Button>
         </Row>
+        
         </>
     )
     }else{
         return(
             <>
+           
+            <ProgressBar className="characterCreationProgress" animated variant="danger" now="75" ></ProgressBar>
             <Row>
+            
             <Card className="hitCard text-center m-3" >
             <Card.Body className="hitCardBody"id="safe">
             <div className="cardFront" >
@@ -177,6 +185,7 @@ const HitPoints = props => {
               Choose Risky Choice
             </Button>
         </Row>
+        
         </>
         )
     }

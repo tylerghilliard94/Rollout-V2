@@ -3,7 +3,7 @@ import {useEffect, useState} from "react"
 import APIManager from "../../Modules/APIManager"
 import ClassCard from "./ClassCard"
 import "./Class.css"
-import { Card, Row, Col, Container } from "react-bootstrap"
+import { Card, Row, Col, Container, ProgressBar } from "react-bootstrap"
 
 
 const CharacterCreation = props => {
@@ -17,7 +17,11 @@ const CharacterCreation = props => {
     return (
         <div className="classContainer">
           
-           
+          <div className="text-center">Plain</div>
+      
+        
+        <ProgressBar className="characterCreationProgress" animated variant="danger" now="0" ></ProgressBar>
+   
            <Container className="classCardContainer">
             {classes.map(characterClass => 
                 <ClassCard class={characterClass} key={characterClass.class}  {...props} />   )}

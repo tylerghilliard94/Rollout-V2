@@ -52,7 +52,7 @@ const Dashboard = props => {
             
 
             
-            <Row>
+            <Row className="mainRow">
                 <Col sm={10}>
                 <Row sm={4}>
                 {characters.map(character =>
@@ -75,7 +75,7 @@ const Dashboard = props => {
             <div className="navBar">
                 <BaseNavBar clearUser={clearUser} {...props} />
             </div>
-            <Row>
+            <Row className="mainRow">
                 <Col sm={9}>
                 <Row sm={4}>
                 {characters.map(character =>

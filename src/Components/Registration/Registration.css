@@ -1,7 +1,11 @@
 .registerWelcome, .registerUsernameLabel, .registerEmailLabel, .registerPasswordLabel, .registerPasswordConfirmationLabel{
-    color: #efede7;
+    color: #262B2F;
 }
-
+.registerWelcome {
+    text-align: center;
+    font-size: xx-large;
+    font-family: rieven-uncial, sans-serif;
+}
 .registerContainer{
     background-color: #222F2F;
     display: flex;
@@ -17,9 +21,20 @@
 
 .registrationCard {
     width: 60rem;
-    border: 2px solid #394141 !important;
+    border: 2px solid #efede7!important;
     border-radius: 6px !important;
-    background-color: #394141 !important;
-  
+    background-color: #efede7!important;
+    margin-bottom: 8vw;
+    margin-top: -2vw
     
+}
+.registrationLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem !important;
+}
+
+.registrationButton {
+    background-color: tomato !important;
 }

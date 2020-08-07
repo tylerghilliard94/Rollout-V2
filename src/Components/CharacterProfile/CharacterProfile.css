@@ -1,0 +1,57 @@
+.armorClassContainer, .HealthPointsContainer{
+    position: relative;
+    
+}
+
+.armorClass{
+    position: absolute;
+    bottom: 4vw;
+    left: 1.9vw;
+    color:#f3f2ef;
+}
+.hitPoints{
+    position: absolute;
+    bottom: 40rem;
+    left: 2.5vw;
+    color:#f3f2ef !important;
+}
+.armorClassImg  {
+    height:7vw;
+    width: 6vw;
+    
+  
+    margin-right: .7rem;
+    margin-bottom: 2vw;
+    margin-left: -.5vw;
+}
+
+.armorClassTextArea{
+    position: absolute;
+    bottom: 4.7vw;
+    left: 1.7vw;
+    height: 2vw;
+    width: 2vw;
+    color:#f3f2ef;
+    resize:none;
+}
+.hitPointsImage{
+    height:6vw;
+    width: 6vw;
+    background-color: #222f2f;
+  
+    margin-right: .7rem;
+    margin-bottom: 2vw;
+    margin-left: -.5vw;
+}
+.hitPointsTextArea{
+    position: absolute;
+    bottom: 42.8rem;
+    left: 2.5rem;
+    height: 2vw;
+    width: 3vw;
+    color:#f3f2ef;
+    resize:none;
+}
+*{
+    font-size: 1vw;
+}

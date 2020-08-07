@@ -70,3 +70,7 @@ height: 100%;
 .cardDescription{
     padding-left: .4vw;
 }
+
+.characterCreationProgress, .progress{
+    color: tomato !important;
+}
