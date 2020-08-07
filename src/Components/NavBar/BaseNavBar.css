@@ -4,14 +4,20 @@
 }
 .nav-Container{
     list-style-type: none;
+    background-color: #222F2F;
 }
 
 .LogoutNavLink{
-    color: #222F2F;
+    color: #efede7;
     
 }
 
 .logoutList{
     margin-top: 1.5vw;
     font-style: bold;
+}
+.userNameTitle{
+    margin-top: 1.5vw;
+    margin-left: 5vw;
+    color: #efede7;
 }

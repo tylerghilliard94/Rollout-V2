@@ -11,22 +11,22 @@
 }
 .hitPoints{
     position: absolute;
-    bottom: 40rem;
-    left: 2.5vw;
+    bottom: 39.8rem;
+    left: 2.8vw;
     color:#f3f2ef !important;
 }
 .armorClassImg  {
     height:7vw;
     width: 6vw;
     
-  
+    position: absolute;
     margin-right: .7rem;
     margin-bottom: 2vw;
     margin-left: -.5vw;
 }
 
 .armorClassTextArea{
-    position: absolute;
+    position: relative;
     bottom: 4.7vw;
     left: 1.7vw;
     height: 2vw;
@@ -38,15 +38,15 @@
     height:6vw;
     width: 6vw;
     background-color: #222f2f;
-  
+    position: absolute;
     margin-right: .7rem;
     margin-bottom: 2vw;
     margin-left: -.5vw;
 }
 .hitPointsTextArea{
-    position: absolute;
-    bottom: 42.8rem;
-    left: 2.5rem;
+    position: relative;
+    bottom: 49.25rem;
+    left: 2.63rem;
     height: 2vw;
     width: 3vw;
     color:#f3f2ef;
@@ -54,4 +54,12 @@
 }
 *{
     font-size: 1vw;
+}
+
+.skillBonuses{
+    line-height: 1vw !important;
+}
+
+.experience{
+    margin-bottom: 1vw !important;
 }

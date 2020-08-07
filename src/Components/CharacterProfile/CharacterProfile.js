@@ -48,8 +48,10 @@ const CharacterProfile = props => {
         bonuses.strengthBonus = "+ 3"
     }else if (character.strength >= 18 && character.strength < 20) {
         bonuses.strengthBonus = "+ 4"
-    }else if (character.strength == 20) {
+    }else if (character.strength >= 20 && character.strength < 22) {
         bonuses.strengthBonus = "+ 5"
+    }else if(character.strength == 22){
+        bonuses.strengthBonus = "+ 6"
     }
     if(character.dexterity> 0 && character.dexterity< 2) {
         bonuses.dexterityBonus = "- 5"
@@ -71,8 +73,10 @@ const CharacterProfile = props => {
         bonuses.dexterityBonus = "+ 3"
     }else if (character.dexterity>= 18 && character.dexterity< 20) {
         bonuses.dexterityBonus = "+ 4"
-    }else if (character.dexterity == 20) {
+    }else if (character.dexterity >= 20 && character.dexterity < 22) {
         bonuses.dexterityBonus = "+ 5"
+    }else if(character.dexterity == 22){
+        bonuses.dexterityBonus = "+ 6"
     }
     if(character.constitution> 0 && character.constitution< 2) {
         bonuses.constitutionBonus = "- 5"
@@ -94,8 +98,10 @@ const CharacterProfile = props => {
         bonuses.constitutionBonus = "+ 3"
     }else if (character.constitution>= 18 && character.constitution< 20) {
         bonuses.constitutionBonus = "+ 4"
-    }else if (character.constitution == 20) {
+    }else if (character.constitution >= 20 && character.constitution < 22) {
         bonuses.constitutionBonus = "+ 5"
+    }else if(character.constitution == 22){
+        bonuses.constitutionBonus = "+ 6"
     }
     if(character.intelligence> 0 && character.intelligence< 2) {
         bonuses.intelligenceBonus = "- 5"
@@ -117,8 +123,10 @@ const CharacterProfile = props => {
         bonuses.intelligenceBonus = "+ 3"
     }else if (character.intelligence>= 18 && character.intelligence< 20) {
         bonuses.intelligenceBonus = "+ 4"
-    }else if (character.intelligence == 20) {
+    }else if (character.intelligence >= 20 && character.intelligence < 22) {
         bonuses.intelligenceBonus = "+ 5"
+    }else if(character.intelligence == 22){
+        bonuses.intelligenceBonus = "+ 6"
     }
     if(character.wisdom> 0 && character.wisdom< 2) {
         bonuses.wisdomBonus = "- 5"
@@ -140,8 +148,10 @@ const CharacterProfile = props => {
         bonuses.wisdomBonus = "+ 3"
     }else if (character.wisdom>= 18 && character.wisdom< 20) {
         bonuses.wisdomBonus = "+ 4"
-    }else if (character.wisdom == 20) {
+    }else if (character.wisdom >= 20 && character.wisdom < 22) {
         bonuses.wisdomBonus = "+ 5"
+    }else if(character.wisdom == 22){
+        bonuses.wisdomBonus = "+ 6"
     }
     if(character.charisma> 0 && character.charisma< 2) {
         bonuses.charismaBonus = "- 5"
@@ -163,8 +173,10 @@ const CharacterProfile = props => {
         bonuses.charismaBonus = "+ 3"
     }else if (character.charisma>= 18 && character.charisma< 20) {
         bonuses.charismaBonus = "+ 4"
-    }else if (character.charisma == 20) {
+    }else if (character.charisma >= 20 && character.charisma < 22) {
         bonuses.charismaBonus = "+ 5"
+    }else if(character.charisma == 22){
+        bonuses.charismaBonus = "+ 6"
     }
 
    
@@ -243,9 +255,9 @@ const CharacterProfile = props => {
                 <Col>
                 <div>
                     
-                   
+                <h2>{character.characterName}'s Profile</h2>
                     <Image roundedCircle className="dashboardCardImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png"></Image>
-                    <h2>{character.characterName}'s Profile</h2>
+                    
                     <p>Name: {character.characterName}</p>
                     <p>Description: {character.description}</p>
                     <p>Level: {character.level}</p>
@@ -255,15 +267,18 @@ const CharacterProfile = props => {
                     {character.skill2}<br></br>
                     {character.skill3}</p>
                     <p>Proficiency bonus: {character.proficiencyBonus}</p>
+                    <p>Spellcasting Ability: {character.spellcastingAbility}</p>
+                    <p>Spell Save DC: {character.spellSaveDC}</p>
+                    <p>Spell Attack Bonus: {character.spellAttackBonus}</p>
                     
     
                 </div>
                 </Col>
                 <Col>
-                <p>Experience: {character.experience}</p>
+                <p className="experience">Experience: {character.experience}</p>
                 {skills.map(skill =>
                     
-                   <p> {skill.name}: {skillBonuses(skill)} </p>
+                   <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
                    
                 )}
                 </Col>
@@ -300,9 +315,9 @@ const CharacterProfile = props => {
                 <Col>
                 <div>
                     
-                   
+                <h2>{character.characterName}'s Profile</h2>
                 <Image roundedCircle className="dashboardCardImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png"></Image>
-                    <h2>{character.characterName}'s Profile</h2>
+                    
                     <p>Name: <a onClick={handleEdit}>{character.characterName}</a></p>
                     <p>Description: <a onClick={handleEdit}>{character.description}</a></p>
                     <p>Level: <a onClick={handleEdit}>{character.level}</a></p>
@@ -312,7 +327,9 @@ const CharacterProfile = props => {
                     {character.skill2}<br></br>
                     {character.skill3}</p>
                     <p>Proficiency bonus: <a onClick={handleEdit}>{character.proficiencyBonus}</a></p>
-                    
+                    <p>Spellcasting Ability: {character.spellcastingAbility}</p>
+                    <p>Spell Save DC: {character.spellSaveDC}</p>
+                    <p>Spell Attack Bonus: {character.spellAttackBonus}</p>
     
                 </div>
                 </Col>
@@ -361,9 +378,9 @@ const CharacterProfile = props => {
                 <Col>
                 <div>
                     
-                   
+                <h2>{character.characterName}'s Profile</h2>
                 <Image roundedCircle className="dashboardCardImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png"></Image>
-                    <h2>{character.characterName}'s Profile</h2>
+                   
                     <p>Name: <textarea onChange={handleEvtChange} id="characterName" value={character.characterName}></textarea></p>
                     <p>Description: <textarea onChange={handleEvtChange}id="description" value={character.description}></textarea></p>
                     <p>Level: <textarea onChange={handleEvtChange}id="level"value={character.level}></textarea></p>
@@ -373,7 +390,9 @@ const CharacterProfile = props => {
                     {character.skill2}<br></br>
                     {character.skill3}</p>
                     <p>Proficiency bonus: <textarea onChange={handleEvtChange}id="proficiencyBonus"value={character.proficiencyBonus}></textarea></p>
-                    
+                    <p>Spellcasting Ability: {character.spellcastingAbility}</p>
+                    <p>Spell Save DC: <textarea onChange={handleEvtChange}id="spellSaveDC"value={character.spellSaveDC}></textarea></p>
+                    <p>Spell Attack Bonus: <textarea onChange={handleEvtChange}id="spellAttackBonus"value={character.spellAttackBonus}></textarea></p>
     
                 </div>
                 </Col>

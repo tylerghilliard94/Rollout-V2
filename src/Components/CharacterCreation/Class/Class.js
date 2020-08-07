@@ -17,10 +17,10 @@ const CharacterCreation = props => {
     return (
         <div className="classContainer">
           
-          <div className="text-center">Plain</div>
+         
       
-        
-        <ProgressBar className="characterCreationProgress" animated variant="danger" now="0" ></ProgressBar>
+        <h1 className="classTitle">Choose a Class</h1>
+        <ProgressBar className="characterCreationProgress" animated variant="danger" now="5" ></ProgressBar>
    
            <Container className="classCardContainer">
             {classes.map(characterClass => 

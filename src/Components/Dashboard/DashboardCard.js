@@ -29,7 +29,7 @@ const DashboardCard = (props) => {
                 <Card.Text className="DashboardCardText" id={props.character.id}>
                 {props.character.characterName}
                 </Card.Text>
-                <Image className="dashboardCardImage"id={props.character.id} src={("http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")} roundedCircle />
+                <Image className="dashboardCardImage"id={props.character.id} src={props.character.picture} roundedCircle />
                 
                 </Card.Body>
                 

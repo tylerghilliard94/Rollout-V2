@@ -20,20 +20,22 @@ const RaceCard = (props) => {
             <Card.Title className="raceCardTitleFront"id={props.race.race}>
                 {props.race.race}
             </Card.Title>
-            <Card.Img className="raceCardImg"id={props.race.race}>
+            <Card.Img src="https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="raceCardImg"id={props.race.race}>
                 
             </Card.Img>
             </div>
             <div className="cardBack" id={props.race.race}>
-            <Card.Img className="raceCardImg"id={props.race.race}>
+            <Card.Img src="https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="raceCardImg"id={props.race.race}>
                 
             </Card.Img>
             <Card.Title className="raceCardTitleBack"id={props.race.race}>
                 {props.race.race}
             </Card.Title>
             <p className="cardDescription"id={props.race.race}>
-            {props.race.description}
+            {props.race.description}<br></br><br></br>
+            {props.race.statBonus}
             </p>
+           
             
             </div>
             </Card.Body>

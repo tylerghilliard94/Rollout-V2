@@ -17,6 +17,7 @@ const FinalDetails = props => {
         finalCharacter.userId = parseInt(sessionStorage.activeUserID)
         finalCharacter.characterName = sessionStorage.characterName
         finalCharacter.class = sessionStorage.class
+        finalCharacter.picture = sessionStorage.picture
         finalCharacter.level = parseInt(sessionStorage.level)
         finalCharacter.race = sessionStorage.race
         finalCharacter.description = sessionStorage.description
@@ -29,7 +30,7 @@ const FinalDetails = props => {
         finalCharacter.wisdom = parseInt(sessionStorage.rollWisdom)
         finalCharacter.charisma = parseInt(sessionStorage.rollCharisma)
         // for now like this
-        finalCharacter.proficiencyBonus = 2
+        finalCharacter.proficiencyBonus = parseInt(sessionStorage.proficiencyBonus)
         finalCharacter.hitPoints = parseInt(sessionStorage.hitPoints)
         finalCharacter.hitDice = parseInt(sessionStorage.hitDice)
         finalCharacter.skill1 = sessionStorage.skill1
@@ -42,11 +43,45 @@ const FinalDetails = props => {
         finalCharacter.language1 = sessionStorage.language1
         finalCharacter.language2 = sessionStorage.language2
         // for now like this
-        finalCharacter.spellcastingAbility = null
+        if(sessionStorage.class === "Bard"){
+            finalCharacter.spellcastingAbility = "Charisma"
+            finalCharacter.spellSaveDC = (8 + parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.charismaBonus.split(" ")[1]))
+            finalCharacter.spellAttackBonus = (parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.charismaBonus.split(" ")[1]))
+        }else if(sessionStorage.class === "Cleric"){
+            finalCharacter.spellcastingAbility = "Wisdom"
+            finalCharacter.spellSaveDC = (8 + parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.wisdomBonus.split(" ")[1]))
+            finalCharacter.spellAttackBonus = (parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.wisdomBonus.split(" ")[1]))
+        }else if(sessionStorage.class === "Druid"){
+            finalCharacter.spellcastingAbility = "Wisdom"
+            finalCharacter.spellSaveDC = (8 + parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.wisdomBonus.split(" ")[1]))
+            finalCharacter.spellAttackBonus = (parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.wisdomBonus.split(" ")[1]))
+        }else if(sessionStorage.class === "Paladin"){
+            finalCharacter.spellcastingAbility = "Charisma"
+            finalCharacter.spellSaveDC = (8 + parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.charismaBonus.split(" ")[1]))
+            finalCharacter.spellAttackBonus = (parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.charismaBonus.split(" ")[1]))
+        } else if(sessionStorage.class === "Sorcerer"){
+            finalCharacter.spellcastingAbility = "Charisma"
+            console.log((8 + parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.charismaBonus.split(" ")[1])))
+            finalCharacter.spellSaveDC = (8 + parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.charismaBonus.split(" ")[1]))
+            finalCharacter.spellAttackBonus = (parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.charismaBonus.split(" ")[1]))
+        }else if(sessionStorage.class === "Warlock"){
+            finalCharacter.spellcastingAbility = "Charisma"
+            finalCharacter.spellSaveDC = (8 + parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.charismaBonus.split(" ")[1]))
+            finalCharacter.spellAttackBonus = (parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.charismaBonus.split(" ")[1]))
+        }else if(sessionStorage.class === "Wizard"){
+            finalCharacter.spellcastingAbility = "Intelligence"
+            finalCharacter.spellSaveDC = (8 + parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.intelligenceBonus.split(" ")[1]))
+            finalCharacter.spellAttackBonus = (parseInt(sessionStorage.proficiencyBonus) + parseInt(sessionStorage.intelligenceBonus.split(" ")[1]))
+        }else{
+            finalCharacter.spellcastingAbility = 0
+            finalCharacter.spellSaveDC = 0
+            finalCharacter.spellAttackBonus = 0
+        }
+        
         // for now like this
-        finalCharacter.spellSaveDC = null
+       
         // for now like this
-        finalCharacter.spellAttackBonus = null
+        
 
         return finalCharacter
 
@@ -66,6 +101,7 @@ const FinalDetails = props => {
         sessionStorage.removeItem("class")
         sessionStorage.removeItem("level")
         sessionStorage.removeItem("race")
+        sessionStorage.removeItem("picture")
         sessionStorage.removeItem("description")
         sessionStorage.removeItem("alignment")
         sessionStorage.removeItem("rollStrength")

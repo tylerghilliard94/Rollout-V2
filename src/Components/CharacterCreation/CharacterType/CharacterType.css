@@ -1,65 +1,56 @@
 .defaultCardBody {
-    width: 12vw;
-    height: 17vw;
-    flex: 0, 0, 20%;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #fff8ea;
-    position: relative;
-    transition: 1.5s;
-    transform-style: preserve-3d;
+    background-color: #e7eeef;
+    border-radius: 5%;
+    margin: 1rem;
+    padding: 0rem !important;
     
 }
 .customCardBody {
-    width: 12vw;
-    height: 17vw;
-    flex: 0, 0, 20%;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #fff8ea;
-    position: relative;
-    transition: 1.5s;
-    transform-style: preserve-3d;
+    background-color: #e7eeef;
+    border-radius: 5%;
+    margin: 1rem;
+    padding: 0rem !important;
     
 }
 
 
 
 .orTitle{
-    color: #fff8ea;
+    color: #222f2f;
     margin-left: 5vw;
-    margin-top: 6vw;
+    
     font-size: 3vw;
+    margin-top: 12vw;
+    margin-bottom: 5vw;
 }
 
-.defaultCard{
-    width: 12vw;
-    height: 17vw;
-    background-color: #efede7;
+.defaultCardFighter {
+    width: 14vw;
+    height: 20vw;
+    background-color: #6d1d13 !important;
     perspective: 1000px;
-    background-color: transparent;
+   
     margin-left: 27vw;
     margin-right: 2vw;
-   
+    margin-top: 5vw;
+    margin-bottom: 5vw;
    
 }
-.customCard{
-    width: 12vw;
-    height: 17vw;
-    background-color: #efede7;
+.customCardFighter{
+    width: 14vw;
+    height: 20vw;
+    background-color: #6d1d13 !important;
     perspective: 1000px;
-    background-color: transparent;
+   
     margin-left: 7vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
    
 }
 
-.defaultCard:hover .defaultCardBody {
-    transform: rotateY(180deg);
-}
 
-.customCard:hover .customCardBody {
-    transform: rotateY(180deg);
-}
 
 .defaultBack, .defaultFront {
 position: absolute;
@@ -74,46 +65,41 @@ backface-visibility: hidden;
 
 }
 
-.defaultFront {
-    width: 100%;
-height: 100%;
-}
 
-.customFront {
-    width: 100%;
-height: 100%;
-}
-
-.defaultBack {
-    transform: rotateY(180deg);
-}
-.customBack {
-    transform: rotateY(180deg);
-}
 
 .defaultCardTitleFront {
-    margin-left: -2vw;
-    font-size: 1.5vw;;
-    color: black;
-}
-.defaultCardTitleBack {
+    margin-top: 1vw;
     color: black;
 }
 
+
 .defaultCardDescription{
-    padding-left: .4vw;
+ 
     color: black;
 }
 
 .customCardTitleFront {
-    margin-left: -2vw;
-    color: black;
-}
-.customCardTitleBack{
+    margin-top: 1vw;
     color: black;
 }
 
+
 .customCardDescription{
-    padding-left: .4vw;
+   
     color: black;
+}
+
+
+.html{
+    overflow: hidden;
+}
+
+.choiceContainer {
+    height: 100%;
+}
+
+.defaultCardImg, .customCardImg{
+    margin-top: 1vw;
+    height: 4vw !important;
+    width: 4vw !important;
 }

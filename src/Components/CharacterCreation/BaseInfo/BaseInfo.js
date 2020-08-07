@@ -12,6 +12,8 @@ const BaseInfo = props => {
         sessionStorage.setItem("characterName", info.characterName)
         sessionStorage.setItem("level", info.level)
         sessionStorage.setItem("description", info.description)
+        sessionStorage.setItem("proficiencyBonus", 2)
+
         props.history.push("/Stats")
     }
 
