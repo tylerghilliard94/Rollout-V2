@@ -5,6 +5,7 @@ import Initialize from './Components/Initialize'
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'materialize-css';
 
 ReactDOM.render(
   <Router>

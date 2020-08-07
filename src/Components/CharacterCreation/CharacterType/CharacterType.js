@@ -19,9 +19,9 @@ let defaultChoice = {}
 
     const handleDefault = (evt) => {
         console.log(defaultChoice)
-        defaultChoice.userId = parseInt(sessionStorage.activeUserID)
+        defaultChoice[0].userId = parseInt(sessionStorage.activeUserID)
         delete defaultChoice[0].id
-        APIManager.Push("characters", defaultChoice[0])
+        APIManager.Post("characters", defaultChoice[0])
         props.history.push("/Dashboard")
     }
 
