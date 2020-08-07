@@ -29,7 +29,7 @@ const ClassCard = (props) => {
         }else if(sessionStorage.class === "Sorcerer"){
             sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
         }else if(sessionStorage.class === "Warlock"){
-            sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
+            sessionStorage.setItem("picture", "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596603800/Warlock_Logo_3d0674_lqlf6l.png")
         }else if(sessionStorage.class === "Wizard"){
             sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
         }
@@ -58,7 +58,7 @@ const ClassCard = (props) => {
             <Card.Title className="classCardTitleBack"id={props.class.class}>
                 {props.class.class}
             </Card.Title>
-            <p className="cardDescription"id={props.class.class}>
+            <p className="cardDescriptionClass"id={props.class.class}>
             {props.class.description}
             </p>
             

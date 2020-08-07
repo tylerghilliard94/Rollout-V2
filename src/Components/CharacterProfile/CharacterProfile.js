@@ -8,21 +8,90 @@ import "./CharacterProfile.css"
 const CharacterProfile = props => {
     const [character, setCharacter] = useState({})
     const [skills, setSkills] = useState([])
+    const [strengthSkills, setStrengthSkills] = useState([])
+    const [dexteritySkills, setDexteritySkills] = useState([])
+    const [constitutionSkills, setConstitutionSkills] = useState([])
+    const [intelligenceSkills, setIntelligenceSkills] = useState([])
+    const [wisdomSkills, setWisdomSkills] = useState([])
+    const [charismaSkills, setCharismaSkills] = useState([])
    const [refresh, setRefresh] = useState(false)
    const [editable, setEditable] = useState(false)
    const [bonuses, setBonuses] = useState({strengthBonus: "+ 0", dexterityBonus: "+ 0", constitutionBonus: "+ 0", intelligenceBonus: "+ 0", wisdomBonus: "+ 0", charismaBonus: "+ 0",})
+
+
+   const skillFilter = () => {
+    let strengthFilter = skills.filter(skill => {
+        if(skill.stat === "Strength"){
+            return true
+        }else{
+            return false
+        }
+        
+    })
+
+    let dexterityFilter = skills.filter(skill => {
+        if(skill.stat === "Dexterity"){
+            return true
+        }else{
+            return false
+        }
+    })
+
+    let constitutionFilter = skills.filter(skill => {
+        if(skill.stat === "Constitution"){
+            return true
+        }else{
+            return false
+        }
+    })
+
+    let intelligenceFilter = skills.filter(skill => {
+        if(skill.stat === "Intelligence"){
+            return true
+        }else{
+            return false
+        }
+    })
+
+    let wisdomFilter = skills.filter(skill => {
+        if(skill.stat === "Wisdom"){
+            return true
+        }else{
+            return false
+        }
+    })
+
+    let charismaFilter = skills.filter(skill => {
+        if(skill.stat === "Charisma"){
+            return true
+        }else{
+            return false
+        }
+    })
+    setStrengthSkills(strengthFilter)
+    setDexteritySkills(dexterityFilter)
+    setConstitutionSkills(constitutionFilter)
+    setIntelligenceSkills(intelligenceFilter)
+    setWisdomSkills(wisdomFilter)
+    setCharismaSkills(charismaFilter)
+   }
    useEffect(() => {
+    APIManager.GetAll("skills").then((response) => {
+        setSkills(response)
+    })
     APIManager.GetbyId("characters", sessionStorage.characterId).then((response) => {
         setCharacter(response)
        
     }).then(() => {
         setRefresh(true)
-        
+        skillFilter()
         
     })
-    APIManager.GetAll("skills").then((response) => {
-        setSkills(response)
-    })
+    
+    
+   
+    
+     
 }, [refresh])
 
 
@@ -276,11 +345,37 @@ const CharacterProfile = props => {
                 </Col>
                 <Col>
                 <p className="experience">Experience: {character.experience}</p>
-                {skills.map(skill =>
+                {/* Create Sections for these tomorrow  */}
+                {strengthSkills.map(skill =>
                     
                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
                    
                 )}
+                {dexteritySkills.map(skill =>
+                    
+                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                    
+                 )}
+                 {constitutionSkills.map(skill =>
+                    
+                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                    
+                 )}
+                 {intelligenceSkills.map(skill =>
+                    
+                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                    
+                 )}
+                 {wisdomSkills.map(skill =>
+                    
+                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                    
+                 )}
+                 {charismaSkills.map(skill =>
+                    
+                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                    
+                 )}
                 </Col>
                 <Col>
                 <p>Hit Points: {character.hitPoints}</p>
@@ -335,11 +430,36 @@ const CharacterProfile = props => {
                 </Col>
                 <Col>
                 <p>Experience: <a onClick={handleEdit}>{character.experience}</a></p>
-                {skills.map(skill =>
+                {strengthSkills.map(skill =>
                     
-                   <p> {skill.name}: {skillBonuses(skill)} </p>
-                   
-                )}
+                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                    
+                 )}
+                 {dexteritySkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  {constitutionSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  {intelligenceSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  {wisdomSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  {charismaSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
                 </Col>
                 <Col>
                 <div className="HitPointContainer">
@@ -398,11 +518,36 @@ const CharacterProfile = props => {
                 </Col>
                 <Col>
                 <p>Experience: <textarea onChange={handleEvtChange}id="experience"value={character.experience}></textarea></p>
-                {skills.map(skill =>
+                {strengthSkills.map(skill =>
                     
-                   <p> {skill.name}: {skillBonuses(skill)} </p>
-                   
-                )}
+                    <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                    
+                 )}
+                 {dexteritySkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  {constitutionSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  {intelligenceSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  {wisdomSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
+                  {charismaSkills.map(skill =>
+                     
+                     <p className="skillBonuses"> {skill.name}: {skillBonuses(skill)} </p>
+                     
+                  )}
                 </Col>
                 <Col>
                 <div className="HitPointContainer">

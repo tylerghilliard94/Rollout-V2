@@ -170,11 +170,12 @@ const HitPoints = props => {
             <p className="cardDescription">
                 {sessionStorage.hitPoints}
             </p>
+            <p className="hitPointDescription"> Default Choice <br></br> This takes the average of your hit die and adds your Constitution Bonus for each level over 1.</p>
             </div>
             
             </Card.Body>
         </Card>
-            <p className="orTitle">
+            <p className="orTitleHitPoints">
                 OR
             </p>
         <Card className="hitCard text-center m-3" >
@@ -183,9 +184,11 @@ const HitPoints = props => {
             <Card.Title className="hitCardTitleFront">
                 Risky Hit Point Choice
             </Card.Title>
-            <Card.Img className="hitCardImg">
+            <Card.Img src="https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="hitPointCardImg">
                 
             </Card.Img>
+            <p className="hitPointDescription"> This choice rolls your class's hit die for each level over one and adds your Constitution Bonus. Result may vary.</p>
+            
            
             </div>
             <div className="cardBack" >
@@ -197,6 +200,7 @@ const HitPoints = props => {
             </Card.Title>
             <p className="hitPointDescription">
             {sessionStorage.chanceHitPoints}
+
             </p>
             
             </div>

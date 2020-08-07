@@ -31,7 +31,7 @@ const RaceCard = (props) => {
             <Card.Title className="raceCardTitleBack"id={props.race.race}>
                 {props.race.race}
             </Card.Title>
-            <p className="cardDescription"id={props.race.race}>
+            <p className="cardDescriptionRace"id={props.race.race}>
             {props.race.description}<br></br><br></br>
             {props.race.statBonus}
             </p>

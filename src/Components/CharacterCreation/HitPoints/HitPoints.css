@@ -4,7 +4,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #fff8ea;
+    background-color: #72170f !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -75,11 +75,14 @@ backface-visibility: hidden;
 height: 100%;
 }
 
+.cardDescription{
+    font-size: 1vw !important;
+}
 .cardBack {
     transform: rotateY(180deg);
 }
 .hitCardTitleFront {
-    margin-left: -2vw;
+  
     color: black;
 }
 .hitCardTitleBack {
@@ -89,17 +92,31 @@ height: 100%;
 .hitPointDescription{
     padding-left: .4vw;
     color: black;
+    font-size: .8vw !important;
+}
+
+.hitPointCardImg {
+    margin-top: 0vw;
+    height: 4vw !important;
+    width: 4vw !important;
 }
 
 .hitPointCol {
-    margin-left: 2vw;
+    margin-left: 10.5vw !important;
+    margin-top: 2vw;
 }
 
 .nextBtnCol {
-    margin-left: -3vw !important;
+    margin-left: -4.5vw !important;
 }
 
+.orTitleHitPoints{
+    font-size: 3vw;
+    margin-top: 7vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
 .backBtnCol {
-    margin-left: 3vw;
+    margin-left: 5vw !important;
 }
 
