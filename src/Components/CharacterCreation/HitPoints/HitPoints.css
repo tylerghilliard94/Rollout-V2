@@ -1,4 +1,4 @@
-.statCardBody1, .statCardBody2, .statCardBody3, .statCardBody4, .statCardBody5, .statCardBody6 {
+.hitCardBody, .hitCardBody2 {
     width: 12vw;
     height: 17vw;
     flex: 0, 0, 20%;
@@ -13,7 +13,7 @@
 }
 
 .rollButton1
-.stats{
+.hits{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -27,32 +27,26 @@
 }
 
 
-.rollButton1, .rollButton4 {
+.showButton{
     background-color: #af2121 !important;
     color: #efede7 !important;
     margin-left: 4vw;
     margin-top: 1vw;
     width: 3vw
 }
-.rollButton2, .rollButton5 {
+.showButton2{
     background-color: #af2121 !important;
     color: #efede7 !important;
     margin-left: 10.5vw;
     margin-top: 1vw;
     width: 3vw
 }
-.rollButton3, .rollButton6 {
-    background-color: #af2121 !important;
-    color: #efede7 !important;
-    margin-left: 10.5vw;
-    margin-top: 1vw;
-    width: 3vw
-}
-.statContainer {
+
+.hitContainer {
     background-color: #222F2F;
 }
 
-.statCard{
+.hitCard{
     width: 12vw;
     height: 17vw;
     background-color: #efede7;
@@ -81,7 +75,7 @@ height: 100%;
 .cardBack {
     transform: rotateY(180deg);
 }
-.statCardTitleFront {
+.hitCardTitleFront {
     margin-left: -2vw;
 }
 
