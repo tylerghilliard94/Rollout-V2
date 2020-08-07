@@ -4,6 +4,7 @@ import APIManager from "../../Modules/APIManager"
 import ClassCard from "./ClassCard"
 import "./Class.css"
 import { Card, Row, Col, Container, ProgressBar } from "react-bootstrap"
+import BaseNavBar from "../../NavBar/BaseNavBar"
 
 
 const CharacterCreation = props => {
@@ -15,12 +16,14 @@ const CharacterCreation = props => {
 
     
     return (
-        <div className="classContainer">
+        <>
+        <BaseNavBar />
+        <Col className="classContainer">
           
          
       
        
-        <ProgressBar className="characterCreationProgress" animated variant="danger" now="5" ></ProgressBar>
+        <ProgressBar className="characterCreationProgressClass" animated variant="danger" now="5" ></ProgressBar>
         <h1 className="classTitle">Choose a Class</h1>
    
            <Container className="classCardContainer">
@@ -29,7 +32,8 @@ const CharacterCreation = props => {
              </Container>
           
           
-        </div>
+        </Col>
+        </>
     )
 }
 

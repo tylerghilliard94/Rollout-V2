@@ -12,40 +12,40 @@
 }
 
 .classCardBodyBarbarian{
-    background-color: #72170f !important;
+    background-color: #d67a45 !important;
 }
 .classCardBodyBard{
-    background-color: #72170f !important;
+    background-color: #c369bf !important;
 }
 .classCardBodyCleric{
-    background-color: #72170f !important;
+    background-color: #79848d !important;
 }
 .classCardBodyDruid{
-    background-color: #72170f !important;
+    background-color: #62af3e !important;
 }
 .classCardBodyFighter{
     background-color: #72170f !important;
 }
 .classCardBodyMonk{
-    background-color: #72170f !important;
+    background-color: #61c0c3 !important;
 }
 .classCardBodyPaladin{
-    background-color: #72170f !important;
+    background-color: #dee94b !important;
 }
 .classCardBodyRanger{
-    background-color: #72170f !important;
+    background-color: #1c4b22 !important;
 }
 .classCardBodyRogue{
-    background-color: #72170f !important;
+    background-color: #272a27 !important;
 }
 .classCardBodySorcerer{
-    background-color: #72170f !important;
+    background-color: #b47421 !important;
 }
 .classCardBodyWarlock{
-    background-color: #72170f !important;
+    background-color: #8444a1 !important;
 }
 .classCardBodyWizard{
-    background-color: #72170f !important;
+    background-color: #3c53b8 !important;
     
 }
 
@@ -59,12 +59,13 @@
     margin-top: 2vw;
     padding-bottom: 2vw;
     margin-left: 6.8vw !important;
-    background-color: #efede7;
+    background-color: #f3f2ef;
 }
 
 .classContainer {
-    background-color: #efede7;
-    
+    background-color: #f3f2ef;
+    margin-top: -2.5vw;
+    padding-bottom: 1.5vw !important;
 }
 
 .classCard{
@@ -144,5 +145,13 @@ height: 15vw !important;
     margin-left: 12vw;
     background-color: #222F2F !important;
     margin-top: 2.5vw;
+
+}
+
+.characterCreationProgressClass{
+    width:75%;
+    margin-left: 12vw;
+    background-color: #222F2F !important;
+    margin-top: 5vw;
 
 }

@@ -1,12 +1,12 @@
 .defaultCardBody {
-    background-color: #e7eeef;
+    background-color: #f3f2ef;
     border-radius: 5%;
     margin: 1rem;
     padding: 0rem !important;
     
 }
 .customCardBody {
-    background-color: #e7eeef;
+    background-color: #f3f2ef;
     border-radius: 5%;
     margin: 1rem;
     padding: 0rem !important;
@@ -18,7 +18,7 @@
 .orTitle{
     color: #222f2f;
     margin-left: 5vw;
-    
+    font-family: rieven-uncial, sans-serif;
     font-size: 3vw;
     margin-top: 12vw;
     margin-bottom: 5vw;
@@ -40,6 +40,281 @@
     width: 14vw;
     height: 20vw;
     background-color: #6d1d13 !important;
+    perspective: 1000px;
+   
+    margin-left: 7vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+   
+}
+.defaultCardBarbarian {
+    width: 14vw;
+    height: 20vw;
+    background-color: #d67a45 !important;
+    perspective: 1000px;
+   
+    margin-left: 27vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+}
+.customCardBarbarian{
+    width: 14vw;
+    height: 20vw;
+    background-color: #d67a45 !important;
+    perspective: 1000px;
+   
+    margin-left: 7vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+   
+}
+.defaultCardBard {
+    width: 14vw;
+    height: 20vw;
+    background-color: #c369bf !important;
+    perspective: 1000px;
+   
+    margin-left: 27vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+}
+.customCardBard{
+    width: 14vw;
+    height: 20vw;
+    background-color: #c369bf !important;
+    perspective: 1000px;
+   
+    margin-left: 7vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+   
+}
+.defaultCardCleric {
+    width: 14vw;
+    height: 20vw;
+    background-color: #79848d !important;
+    perspective: 1000px;
+   
+    margin-left: 27vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+}
+.customCardCleric{
+    width: 14vw;
+    height: 20vw;
+    background-color: #79848d !important;
+    perspective: 1000px;
+   
+    margin-left: 7vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+   
+}
+.defaultCardDruid {
+    width: 14vw;
+    height: 20vw;
+    background-color: #62af3e !important;
+    perspective: 1000px;
+   
+    margin-left: 27vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+}
+.customCardDruid{
+    width: 14vw;
+    height: 20vw;
+    background-color: #62af3e !important;
+    perspective: 1000px;
+   
+    margin-left: 7vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+   
+}
+.defaultCardMonk {
+    width: 14vw;
+    height: 20vw;
+    background-color: #61c0c3 !important;
+    perspective: 1000px;
+   
+    margin-left: 27vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+}
+.customCardMonk{
+    width: 14vw;
+    height: 20vw;
+    background-color: #61c0c3 !important;
+    perspective: 1000px;
+   
+    margin-left: 7vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+   
+}
+.defaultCardPaladin {
+    width: 14vw;
+    height: 20vw;
+    background-color: #dee94b !important;
+    perspective: 1000px;
+   
+    margin-left: 27vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+}
+.customCardPaladin{
+    width: 14vw;
+    height: 20vw;
+    background-color: #dee94b !important;
+    perspective: 1000px;
+   
+    margin-left: 7vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+   
+}
+.defaultCardRanger {
+    width: 14vw;
+    height: 20vw;
+    background-color: #1c4b22 !important;
+    perspective: 1000px;
+   
+    margin-left: 27vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+}
+.customCardRanger{
+    width: 14vw;
+    height: 20vw;
+    background-color: #1c4b22 !important;
+    perspective: 1000px;
+   
+    margin-left: 7vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+   
+}
+.defaultCardRogue {
+    width: 14vw;
+    height: 20vw;
+    background-color: #272a27 !important;
+    perspective: 1000px;
+   
+    margin-left: 27vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+}
+.customCardRogue{
+    width: 14vw;
+    height: 20vw;
+    background-color: #272a27 !important;
+    perspective: 1000px;
+   
+    margin-left: 7vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+   
+}
+.defaultCardSorcerer {
+    width: 14vw;
+    height: 20vw;
+    background-color: #b47421 !important;
+    perspective: 1000px;
+   
+    margin-left: 27vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+}
+.customCardSorcerer{
+    width: 14vw;
+    height: 20vw;
+    background-color: #b47421 !important;
+    perspective: 1000px;
+   
+    margin-left: 7vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+   
+}
+.defaultCardWarlock {
+    width: 14vw;
+    height: 20vw;
+    background-color: #8444a1 !important;
+    perspective: 1000px;
+   
+    margin-left: 27vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+}
+.customCardWarlock{
+    width: 14vw;
+    height: 20vw;
+    background-color: #8444a1 !important;
+    perspective: 1000px;
+   
+    margin-left: 7vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+   
+}
+.defaultCardWizard {
+    width: 14vw;
+    height: 20vw;
+    background-color: #3c53b8 !important;
+    perspective: 1000px;
+   
+    margin-left: 27vw;
+    margin-right: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+   
+}
+.customCardWizard{
+    width: 14vw;
+    height: 20vw;
+    background-color: #3c53b8 !important;
     perspective: 1000px;
    
     margin-left: 7vw;

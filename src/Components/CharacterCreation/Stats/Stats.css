@@ -4,7 +4,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f;
+    background-color: #d67a45 !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -18,7 +18,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f;
+    background-color: #c369bf !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -32,7 +32,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f;
+    background-color: #79848d !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -40,7 +40,19 @@
     
 }
 
-
+.statCardBodyDruid {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #62af3e !important;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
 .statCardBodyFighter {
     width: 12vw;
     height: 17vw;
@@ -60,7 +72,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f;
+    background-color: #61c0c3 !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -74,7 +86,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f;
+    background-color: #dee94b !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -87,7 +99,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f;
+    background-color: #1c4b22 !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -100,7 +112,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f;
+    background-color: #272a27 !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -113,7 +125,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f;
+    background-color: #b47421 !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -127,7 +139,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f;
+    background-color: #8444a1 !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -140,7 +152,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f;
+    background-color: #3c53b8 !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -181,7 +193,7 @@
     margin-top: 2vw;
     margin-bottom: 2vw;
     margin-left: 5vw;
-    background-color: #efede7;
+    background-color: #f3f2ef;
 
 }
 
@@ -201,7 +213,7 @@
 .rollButtonAll{
     background-color: tomato !important;
     color: #efede7 !important;
-    margin-left: 17.5vw;
+    margin-left: 17vw;
     margin-top: 1vw;
     width: 6vw
 }
@@ -232,7 +244,7 @@
     margin-right: .6vw !important;
 }
 .statContainer {
-    background-color: #222F2F;
+    background-color: #f3f2ef;
 }
 
 .statCard{

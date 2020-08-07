@@ -231,8 +231,9 @@ margin-bottom: 1.5vw;
 }
 
 .skillBonusCard{
-    background-color: #222f2f !important;
-    color: #f3f2ef
+    background-color: transparent!important;
+    color: #f3f2ef;
+    border-color: transparent !important;
 }
 
 .strengthCol, .dexterityCol, .intelligenceCol, .wisdomCol{
@@ -353,10 +354,10 @@ overflow-x: scroll !important;
     border-color: #f3f2ef;
     resize: none;
     font-size: 2vw;
-    width: 3.5vw;
+    width: 4.5vw;
     height: 3.5vw;
-    margin-left: -.66vw;
-    margin-top: -.2vw;
+    margin-left: -1.2vw;
+    margin-top: -.19vw;
    
     text-align: center;
 }
@@ -377,7 +378,7 @@ overflow-x: scroll !important;
     height: 10vw;
     margin-left: -2.5vw;
     background-color: #222f2f !important;
-    margin-top: 6.35vw;
+    margin-top: 6.6vw;
 }
 
 .statTextEditMiddle{

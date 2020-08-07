@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react"
 import {Card, Button, Row, ProgressBar, Col} from "react-bootstrap"
 import "./Stats.css"
+import BaseNavBar from "../../NavBar/BaseNavBar"
 
 
 
@@ -264,6 +265,7 @@ const Stats = props => {
 
 return (
     <>
+    <BaseNavBar />
     <ProgressBar className="characterCreationProgress" animated variant="danger" now="56" ></ProgressBar>
     <div className="stats">
         
@@ -292,12 +294,12 @@ return (
             <Card.Title className="statCardTitleFront">
                 Strength
             </Card.Title>
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
+            <Card.Img roundedCircle src={sessionStorage.picture} className="statCardImg">
                 
             </Card.Img>
             </div>
             <div className="cardBack" >
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
+            <Card.Img roundedCircle src={sessionStorage.picture} className="statCardImg">
                 
             </Card.Img>
             <Card.Title className="statCardTitleBack">
@@ -320,12 +322,12 @@ return (
             <Card.Title className="statCardTitleFront">
                 Dexterity
             </Card.Title>
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
+            <Card.Img roundedCircle src={sessionStorage.picture} className="statCardImg">
                 
             </Card.Img>
             </div>
             <div className="cardBack" >
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
+            <Card.Img roundedCircle src={sessionStorage.picture} className="statCardImg">
                 
             </Card.Img>
             <Card.Title className="statCardTitleBack">
@@ -347,12 +349,12 @@ return (
             <Card.Title className="statCardTitleFront">
                 Constitution
             </Card.Title>
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
+            <Card.Img roundedCircle src={sessionStorage.picture} className="statCardImg">
                 
             </Card.Img>
             </div>
             <div className="cardBack" >
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
+            <Card.Img roundedCircle src={sessionStorage.picture} className="statCardImg">
                 
             </Card.Img>
             <Card.Title className="statCardTitleBack">
@@ -412,12 +414,12 @@ return (
             <Card.Title className="statCardTitleFront">
                 Intelligence
             </Card.Title>
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
+            <Card.Img roundedCircle src={sessionStorage.picture} className="statCardImg">
                 
             </Card.Img>
             </div>
             <div className="cardBack" >
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
+            <Card.Img roundedCircle src={sessionStorage.picture} className="statCardImg">
                 
             </Card.Img>
             <Card.Title className="statCardTitleBack">
@@ -438,12 +440,12 @@ return (
             <Card.Title className="statCardTitleFront">
                 Wisdom
             </Card.Title>
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
+            <Card.Img roundedCircle src={sessionStorage.picture} className="statCardImg">
                 
             </Card.Img>
             </div>
             <div className="cardBack" >
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
+            <Card.Img roundedCircle src={sessionStorage.picture} className="statCardImg">
                 
             </Card.Img>
             <Card.Title className="statCardTitleBack">
@@ -464,12 +466,12 @@ return (
             <Card.Title className="statCardTitleFront">
                 Charisma
             </Card.Title>
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
+            <Card.Img roundedCircle src={sessionStorage.picture} className="statCardImg">
                 
             </Card.Img>
             </div>
             <div className="cardBack" >
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="statCardImg">
+            <Card.Img roundedCircle src={sessionStorage.picture} className="statCardImg">
                 
             </Card.Img>
             <Card.Title className="statCardTitleBack">

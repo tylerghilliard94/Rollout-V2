@@ -1,3 +1,22 @@
 .characterPromptImage {
     background-color: #222F2F;
 }
+
+.initialPromptImage{
+    height: 30vw !important;
+    width: 30vw !important;
+    margin-left: 35vw;
+    margin-top: -1vw;
+}
+
+.initialPromptTitle{
+    margin-left: 38.5vw;
+    font-size: 1.5vw;
+}
+
+.initialPromptButton{
+    background-color: tomato !important;
+    border-color: tomato !important;
+    margin-left: 45.5vw;
+    margin-top: 2vw;
+}

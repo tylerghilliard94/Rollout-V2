@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react"
-import {Button, Form, Row, ProgressBar} from "react-bootstrap"
+import {Button, Form, Row, ProgressBar, Col} from "react-bootstrap"
 import APIManager from "../../Modules/APIManager"
+import "./FinalDetails.css"
+import BaseNavBar from "../../NavBar/BaseNavBar"
 
 const FinalDetails = props => {
     const [info, setInfo] = useState({language1: "", language2: "", skill1: "", skill2: "", skill3: "", alignment: ""})
@@ -8,8 +10,11 @@ const FinalDetails = props => {
     const [skill, setSkill] = useState([])
     const [alignment, setAlignment] = useState([])
     const[disableLang, setDisableLang] = useState(true)
+    const[disableSkill1, setDisableSkill1] = useState(true)
     const[disableSkill2, setDisableSkill2] = useState(true)
     const[disableSkill3, setDisableSkill3] = useState(true)
+    const[disableAlignment, setDisableAlignment] = useState(true)
+    const[disableFinal, setDisableFinal] = useState(true)
     
 
     const characterFactory = () => {
@@ -164,7 +169,7 @@ const FinalDetails = props => {
         const stateToChange = { ...info };
         stateToChange[event.target.id] = event.target.value;
         setInfo(stateToChange);
-        setDisableLang(false)
+        setDisableSkill1(false)
         
     }
     const handleSkill1FieldChange = (event) => {
@@ -185,7 +190,14 @@ const FinalDetails = props => {
         const stateToChange = { ...info };
         stateToChange[event.target.id] = event.target.value;
         setInfo(stateToChange);
-        setDisableSkill3(false)
+        setDisableAlignment(false)
+       
+    }
+    const handleFinal = (event) => {
+        const stateToChange = { ...info };
+        stateToChange[event.target.id] = event.target.value;
+        setInfo(stateToChange);
+        setDisableFinal(false)
        
     }
 
@@ -206,28 +218,28 @@ const FinalDetails = props => {
 
     return(
         <>
+        <BaseNavBar />
          <ProgressBar className="characterCreationProgress" animated variant="danger" now="90" ></ProgressBar>
-        <div className="baseInfo">
+      
            
         
         
         
-        <Form >
-        <div>
-            <Row>
-            <div className="baseInfodiv">
-        <Button 
-            className="backButton"
-            variant="custom" 
-            type="submit"
-            onClick={handleBack}>
-              Back
-            </Button>
-        </div>
-            <h2>Choose your Languages:</h2>
+        
+       
+            <Col className="finalInfoContainer">
+        <Row className="finalInfoRow">
+            <Col>
+            <div onClick={handleBack} class="arrowBackFinal"></div>
+            </Col>
+            
+            <Col>
+        <Form className="dropdownForm">
+       
+            <h2 className="languageTitle">Choose your Languages:</h2>
             <Form.Group>
             <label className="language1label">Language one</label>
-              <Form.Control className="characterLevelForm"
+              <Form.Control className="characterFinalForm"
                 onChange={handleLang1FieldChange}
                 as="select"
                 name="select"
@@ -244,7 +256,7 @@ const FinalDetails = props => {
               </Form.Control>
               
               <label className="language2label">Language two</label>
-              <Form.Control className="characterLevelForm"
+              <Form.Control className="characterFinalForm"
                 onChange={handleLang2FieldChange}
                 as="select"
                 name="select"
@@ -260,21 +272,19 @@ const FinalDetails = props => {
              
               </Form.Control>
             </Form.Group>
-            <div>
             
-            </div>
            
-            </Row>
-            <Row>
-                <h2>Choose your Skills:</h2>
+            
+            
+                <h2 className="skillTitle">Choose your Skills:</h2>
             <Form.Group>
               <label className="skill1label">Skill one</label>
-              <Form.Control className="characterLevelForm"
+              <Form.Control className="characterFinalForm"
                 onChange={handleSkill1FieldChange}
                 as="select"
                 name="select"
                 id="skill1"
-                
+                disabled={disableSkill1}
                 
                 
             
@@ -286,7 +296,7 @@ const FinalDetails = props => {
              
               </Form.Control>
               <label className="skill2label">Skill two</label>
-              <Form.Control className="characterLevelForm"
+              <Form.Control className="characterFinalForm"
                 onChange={handleSkill2FieldChange}
                 as="select"
                 name="select"
@@ -301,7 +311,7 @@ const FinalDetails = props => {
               )}
               </Form.Control>
               <label className="skill3label">Skill three</label>
-              <Form.Control className="characterLevelForm"
+              <Form.Control className="characterFinalForm"
                 onChange={handleSkill3FieldChange}
                 as="select"
                 name="select"
@@ -316,15 +326,15 @@ const FinalDetails = props => {
               )}
               </Form.Control>
             </Form.Group>
-            </Row>
-            <Row>
-                <h2>Choose your Alignment:</h2>
+            
+                <h2 className="alignmentTitle">Choose your Alignment:</h2>
             <Form.Group>
-            <Form.Control className="characterLevelForm"
-                onChange={handleFieldChange}
+            <Form.Control className="characterFinalForm"
+                onChange={handleFinal}
                 as="select"
                 name="select"
                 id="alignment"
+                disabled={disableAlignment}
                 
                 
             
@@ -335,20 +345,23 @@ const FinalDetails = props => {
               )}
               </Form.Control>
                </Form.Group>
-               </Row>
-            </div>
+             
+            
             
             </Form>
+            </Col>
+            <Col>
             <Button 
             className="finalCharacter"
             variant="custom" 
             type="submit"
+            disabled={disableFinal}
             onClick={handleFinalizeCharacter}>
-              Finalize Character
+              <strong>Finalize Character</strong>
             </Button>
-            
-            
-        </div>
+            </Col>
+            </Row>
+            </Col>
         </>
     )
 }

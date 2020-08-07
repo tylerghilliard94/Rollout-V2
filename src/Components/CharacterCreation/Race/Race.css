@@ -1,10 +1,154 @@
-.raceCardBody {
+.raceCardBodyBarbarian {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #d67a45 !important;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}.raceCardBodyBard {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #c369bf !important;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}.raceCardBodyCleric {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #79848d !important;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}.raceCardBodyDruid {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #62af3e !important;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+
+
+
+
+.raceCardBodyFighter {
     width: 12vw;
     height: 17vw;
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #72170f !important;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+.raceCardBodyMonk {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #61c0c3 !important;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+.raceCardBodyPaladin {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #dee94b !important;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+.raceCardBodyRanger {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #1c4b22 !important;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+.raceCardBodyRogue {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #272a27 !important;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+.raceCardBodySorcerer {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #b47421 !important;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+.raceCardBodyWarlock {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #8444a1 !important;
+    position: relative;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    
+    
+}
+.raceCardBodyWizard {
+    width: 12vw;
+    height: 17vw;
+    flex: 0, 0, 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #3c53b8 !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -21,11 +165,11 @@
     margin-top: 2vw;
     margin-bottom: 2vw;
     margin-left: 13vw !important;
-    background-color: #efede7;
+    background-color: #f3f2ef;
 }
 
 .raceContainer {
-    background-color: #efede7;
+    background-color: #f3f2ef;
 }
 
 .raceCard{
@@ -38,7 +182,7 @@
    
 }
 
-.raceCard:hover .raceCardBody {
+.raceCardBodyBarbarian:hover, .raceCardBodyBard:hover, .raceCardBodyCleric:hover, .raceCardBodyDruid:hover,  .raceCardBodyFighter:hover, .raceCardBodyMonk:hover, .raceCardBodyPaladin:hover, .raceCardBodyRanger:hover, .raceCardBodyRogue:hover, .raceCardBodySorcerer:hover, .raceCardBodyWarlock:hover, .raceCardBodyWizard:hover {
     transform: rotateY(180deg);
 }
 

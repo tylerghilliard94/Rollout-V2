@@ -95,6 +95,18 @@ height: 100%;
     font-size: .8vw !important;
 }
 
+
+.hitPointDescriptionNumber{
+    padding-left: .4vw;
+    color: black;
+    font-size: 2vw !important;
+}
+
+.cardDescriptionNumber{
+    padding-left: .4vw;
+    color: black;
+    font-size: 2vw !important;
+}
 .hitPointCardImg {
     margin-top: 0vw;
     height: 4vw !important;
@@ -120,3 +132,41 @@ height: 100%;
     margin-left: 5vw !important;
 }
 
+.showButton{
+    width: 10vw;
+
+    margin-left: 23.8vw;
+    background-color: tomato !important;
+}
+
+.hitPointRow{
+    margin-top: 5vw;
+}
+
+.hitPointsTitle{
+    margin-top: 2vw;
+}
+.arrowBackHitPoints {
+    content: ">";
+	height: 2vw; width: 2vw;
+	border: 1px solid tomato;
+	border-width: 2px 2px 0 0;
+    transform: rotate(225deg);
+    margin-top: 19vw;
+    margin-left: 3vw;
+    
+}
+.arrowBackHitPoints:hover, .arrowNextHitPoints:hover{
+    transition: .5s;
+    height: 3vw; width: 3vw;
+}
+
+.arrowNextHitPoints {
+    content: ">";
+	height: 2vw; width: 2vw;
+	border: 1px solid tomato;
+	border-width: 2px 2px 0 0;
+    transform: rotate(45deg);
+    margin-top: 19vw;
+    margin-left: 8vw;
+}

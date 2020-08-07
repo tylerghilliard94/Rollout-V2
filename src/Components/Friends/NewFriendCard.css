@@ -1,0 +1,24 @@
+.friendCardRowNew{
+    background-color: #262b2f !important;
+    margin-left: 1vw !important;
+    margin-right: 1vw !important;
+}
+
+.addNew-friend-btn{
+    padding-right: -.2vw;
+    margin-left: 1.2vw;;
+    width:3vw;
+    height: 2.5vw;
+    border-color: tomato !important;
+    font-family: rieven-uncial, sans-serif;
+}
+
+.friendCardBodyNew{
+    padding: 0vw !important;
+    background-color: #262B2F !important;
+}
+
+.friendSeachBar{
+    margin-right: -2vw !important;
+}
+

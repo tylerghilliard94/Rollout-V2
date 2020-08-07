@@ -1,5 +1,7 @@
 .friendListRow {
     background-color: #262B2F;
+    height: 2.55vw;
+    
 }
 .FriendListTitle {
     color:#f3f2ef;
@@ -7,4 +9,8 @@
     margin-right: 2vw;
     margin-left:5vw;
     background-color: #262B2F;
+}
+.addPlus{
+    font-size: 1.5vw;
+  
 }

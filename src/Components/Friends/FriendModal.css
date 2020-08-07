@@ -4,16 +4,35 @@
     position: absolute;
     left: .0vw;
     border-radius: 0% !important;
-  
+    font-size: 1.5vw !important;
     width:3vw;
-    height: 2.5vw;
+    height: 2.55vw;
+   
+    padding: 0vw!important;
+    padding-bottom: 1.5vw !important;
 }
 
 .addFriendPlus {
     position: relative;
-    left: -14.1vw;
+    left: -13.2vw;
     top:  -.25vw;
     color: #f3f2ef ;
     font-size: 1.7vw !important;
     margin: 0vw !important;
+    
+}
+
+.modal-content{
+    width: 20vw !important;
+    margin-left: 15vw;
+    background-color: #f3f2ef !important;
+  
+}
+.new-friends{
+    text-align: center;
+}
+
+.searchForm{
+    margin-left: 3.3vw;
+    margin-bottom: 1vw;
 }

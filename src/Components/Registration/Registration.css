@@ -10,8 +10,7 @@
     background-color: #222F2F;
     display: flex;
     justify-content: center;
-    margin-top: 12rem;
-    margin-bottom: 2rem;
+    height: 100% !important;
 }
 
 
@@ -24,8 +23,8 @@
     border: 2px solid #efede7!important;
     border-radius: 6px !important;
     background-color: #efede7!important;
-    margin-bottom: 8vw;
-    margin-top: -2vw
+    margin-bottom: 4vw;
+    margin-top: 4vw
     
 }
 .registrationLogo {

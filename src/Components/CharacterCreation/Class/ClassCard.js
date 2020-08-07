@@ -29,7 +29,7 @@ const ClassCard = (props) => {
         }else if(sessionStorage.class === "Sorcerer"){
             sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
         }else if(sessionStorage.class === "Warlock"){
-            sessionStorage.setItem("picture", "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596603800/Warlock_Logo_3d0674_lqlf6l.png")
+            sessionStorage.setItem("picture", "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596604314/Warlock-Logo_oxtwdi.png")
         }else if(sessionStorage.class === "Wizard"){
             sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
         }
@@ -47,12 +47,12 @@ const ClassCard = (props) => {
             <Card.Title className="classCardTitleFront"id={props.class.class}>
                 {props.class.class}
             </Card.Title>
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png"className="classCardImg"id={props.class.class}>
+            <Card.Img roundedCircle src={props.class.picture}className="classCardImg"id={props.class.class}>
                 
             </Card.Img>
             </div>
             <div className="cardBack" id={props.class.class}>
-            <Card.Img roundedCircle src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="classCardImg"id={props.class.class}>
+            <Card.Img roundedCircle src={props.class.picture} className="classCardImg"id={props.class.class}>
                 
             </Card.Img>
             <Card.Title className="classCardTitleBack"id={props.class.class}>
