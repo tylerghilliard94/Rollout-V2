@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react"
-import {Row, Card, Button, SplitButton,ProgressBar} from "react-bootstrap"
+import {Row, Card, Button, SplitButton,ProgressBar, Col} from "react-bootstrap"
 import "./HitPoints.css"
 
 const HitPoints = props => {
@@ -73,6 +73,12 @@ const HitPoints = props => {
         sessionStorage.removeItem("chanceHitPoints")
         
     }
+    const handleBack = (evt) => {
+        
+        props.history.push("/Stats")
+        sessionStorage.removeItem("chanceHitPoints")
+        
+    }
 
     if(sessionStorage.level == 1) {
 
@@ -82,6 +88,12 @@ const HitPoints = props => {
         
         
         <ProgressBar className="characterCreationProgress" animated variant="danger" now="75" ></ProgressBar>
+        <h1 className="hitPointsTitle">Hit Points</h1>
+        <Row>
+        <Col sm={2}>
+        <div onClick={handleBack} class="arrowBack"></div>
+        </Col>
+        <Col sm={8}>
         <Row>
         
             <Card className="hitCard text-center m-3" >
@@ -112,15 +124,7 @@ const HitPoints = props => {
             </div>
             </Card.Body>
         </Card>
-        <Button 
-            className="showButton"
-            variant="custom" 
-            type="submit"
-            id="next"
-            onClick={handleNext}
-            >
-              Next
-            </Button>
+        
         </Row>
         <Row>
             <Button 
@@ -133,7 +137,11 @@ const HitPoints = props => {
               Show
             </Button>
         </Row>
-        
+        </Col>
+        <Col sm={2}>
+        <div onClick={handleNext} class="arrowNext"></div>
+        </Col>
+        </Row>
         </>
     )
     }else{
@@ -141,7 +149,14 @@ const HitPoints = props => {
             <>
            
             <ProgressBar className="characterCreationProgress" animated variant="danger" now="75" ></ProgressBar>
+            <h1 className="hitPointsTitle">Hit Points</h1>
             <Row>
+            <Col className="backBtnCol" sm={2}>
+            <div onClick={handleBack} class="arrowBack"></div>
+            </Col>
+            <Col className="hitPointCol" sm={6}>
+            <Row>
+            
             
             <Card className="hitCard text-center m-3" >
             <Card.Body className="hitCardBody"id="safe">
@@ -189,15 +204,7 @@ const HitPoints = props => {
             </Card.Body>
         </Card>
         
-            <Button 
-            className="showButton"
-            variant="custom" 
-            type="submit"
-            id="next"
-            onClick={handleNext}
-            >
-              Next
-            </Button>
+           
         </Row>
         <Row>
         
@@ -211,7 +218,11 @@ const HitPoints = props => {
               Choose Risky Choice
             </Button>
         </Row>
-        
+        </Col>
+        <Col className="nextBtnCol" sm={2}>
+        <div onClick={handleNext} class="arrowNext"></div>
+        </Col>
+        </Row>
         </>
         )
     }

@@ -12,7 +12,7 @@
     
 }
 
-.rollButton1
+
 .hits{
     display: flex;
     flex-direction: column;
@@ -26,6 +26,9 @@
 
 }
 
+.hitPointsTitle{
+    text-align: center;
+}
 
 .showButton{
     background-color: #af2121 !important;
@@ -88,4 +91,15 @@ height: 100%;
     color: black;
 }
 
+.hitPointCol {
+    margin-left: 2vw;
+}
+
+.nextBtnCol {
+    margin-left: -3vw !important;
+}
+
+.backBtnCol {
+    margin-left: 3vw;
+}
 

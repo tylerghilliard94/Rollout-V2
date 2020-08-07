@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {Form, Button, Card, ProgressBar} from "react-bootstrap"
+import {Form, Button, Card, ProgressBar, Col} from "react-bootstrap"
 import "./BaseInfo.css"
 
 
@@ -31,20 +31,17 @@ const BaseInfo = props => {
     return (
         <>
         <ProgressBar className="characterCreationProgress" animated variant="danger" now="42" ></ProgressBar>
+        <h1 className="baseInfoTitle">Base Character Information</h1>
         <div className="baseInfo">
         
         
-        <div className="baseInfodiv">
+        <Col sm={2} className="baseInfodiv">
             
-        <Button 
-            className="backButton"
-            variant="custom" 
-            type="submit"
-            onClick={handleBack}>
-              Back
-            </Button>
-        </div>
-        
+			<div onClick={handleBack} class="arrowBack"></div>
+		
+       
+        </Col>
+        <Col sm={8}>
         <Form >
         <div>
             <Form.Group>
@@ -100,18 +97,15 @@ const BaseInfo = props => {
                 placeholder="Character Description"
               />
             </Form.Group>
-            </div>
+        </div>
             
             </Form>
+            </Col>
+            <Col sm={2}>
             <div>
-            <Button 
-            className = "nextButton"
-            variant="custom" 
-            type="submit"
-            onClick={handleBaseInfo}>
-              Next
-            </Button>
+            <div onClick={handleBaseInfo} class="arrowNext"></div>
             </div>
+            </Col>
            
             
         </div>

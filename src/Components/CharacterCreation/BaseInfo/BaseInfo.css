@@ -1,8 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
+
 .baseInfo{
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    margin-top: 10vw;
 }
 option {
     color: black;
+}
+
+.baseInfoTitle {
+    text-align: center;
+    margin-top: 1.5vw;;
+}
+
+.characterNameForm{
+    width: 50% !important;
+}
+
+.characterLevelForm {
+    width: 25% !important;
+}
+.arrowBack {
+    content: ">";
+	height: 2vw; width: 2vw;
+	border: 1px solid tomato;
+	border-width: 2px 2px 0 0;
+    transform: rotate(225deg);
+    margin-top: 10vw;
+    margin-left: 3vw;
+    
+}
+
+.arrowNext {
+    content: ">";
+	height: 2vw; width: 2vw;
+	border: 1px solid tomato;
+	border-width: 2px 2px 0 0;
+    transform: rotate(45deg);
+    margin-top: 10vw;
+    margin-left: 10vw;
 }

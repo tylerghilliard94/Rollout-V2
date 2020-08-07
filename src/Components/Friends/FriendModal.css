@@ -1,4 +1,19 @@
 .addFriendButton {
     background-color: tomato !important;
     color:#f3f2ef !important;
+    position: absolute;
+    left: .0vw;
+    border-radius: 0% !important;
+  
+    width:3vw;
+    height: 2.5vw;
+}
+
+.addFriendPlus {
+    position: relative;
+    left: -14.1vw;
+    top:  -.25vw;
+    color: #f3f2ef ;
+    font-size: 1.7vw !important;
+    margin: 0vw !important;
 }
