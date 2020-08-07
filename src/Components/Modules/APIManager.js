@@ -72,4 +72,8 @@ export default {
             body: JSON.stringify(data)
         })
     },
+    // GetAllSpells(){
+    //     return fetch(`https://www.dnd5eapi.co/api/equipment/abacus`)
+    //     .then(response=>response.json())
+    // }
 }

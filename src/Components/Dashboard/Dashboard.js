@@ -40,6 +40,7 @@ const Dashboard = props => {
     }
     useEffect(() => {
         updateCharacters()
+       
     }, [sessionStorage.friendId])
 
     if(props.friendPage) {
