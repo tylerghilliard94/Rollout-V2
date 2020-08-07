@@ -13,7 +13,7 @@ const NewFriendCard = props => {
         APIManager.Post("friends", newFriend).then(() => {
             APIManager.GetAll("users").then((response) => props.setFriends(response)).then(() => {
                 APIManager.GetUsersFriends("friends").then((response) => props.setNewFriends(response)).then(() => props.setFilterFriends([]))
-                .then(() => update()).then(() => props.clear).then(() => props.newFriends)
+                .then(() => update()).then(() => props.clear).then(() => props.newFriends())
                 
             })
         })

@@ -29,26 +29,32 @@ const FriendCard = props => {
         <>
         <Card className="FriendCardContainer">
             <Card.Body className="FriendCardBody"   >
-            <Row >
-            
+            <Row className="friendCardRow" >
+                <Col className="friendCol" sm={3}>
+            <Image className="angelImage" src={("../images/Brendaangel.PNG")} roundedCircle />
+            </Col>
+            <Col className="friendCol" sm={6}>
             <Card.Text className="friendCardText"id={props.friend.id}onClick={handleShowFriendDashboard}>
             {props.friend.user.userName}
             </Card.Text>
-            <Image className="angelImage" src={("../images/Brendaangel.PNG")} roundedCircle />
+            
+            </Col>
+            <Col className="friendCol" sm={2}>
             <Button
-              className = "delete-friend-btn blue btn-floating halfway-fab large waves-effect waves-light red "
+              className = "delete-friend-btn blue  large red "
               
               
               id={props.friend.id}
-              icon={<Icon>delete</Icon>}
-            
-             
               onClick={handleFriendDelete}
+              icon={<Icon>delete</Icon>}
+               
+             
+             
               type="submit"
             >
                  
             </Button>
-            
+            </Col>
             
              
             
