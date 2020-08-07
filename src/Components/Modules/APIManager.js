@@ -13,14 +13,18 @@ export default {
     },
     
     GetDefaultbyClass(string, className){
-        console.log(className)
+        
         return fetch(`${apiURL}${string}?class=${className}`)
         .then(response=>response.json())
     },
+    GetbyId(string, id){
+    return fetch(`${apiURL}${string}/${id}`)
+    .then(response=>response.json())
+},
     GetUsersFriends(str){
         return fetch(`${apiURL}${str}?activeUserId=${sessionStorage.activeUserID}&_expand=user`)
         .then(res=>res.json()).then((response) => {
-            console.log(response)
+            
             return response
         })
     },
@@ -58,5 +62,14 @@ export default {
         return fetch(`${apiURL}${string}/${id}`, {
         method: `DELETE`
     })
-    }
+    },
+    Update(str, id, data){
+        return fetch(`${apiURL}${str}/${id}`, {
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+    },
 }

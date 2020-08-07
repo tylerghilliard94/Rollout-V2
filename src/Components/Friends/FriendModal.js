@@ -34,8 +34,12 @@ const HandleFriendModal = (props) => {
                 }
                
             })
+
             return filterCheck
         })
+        if(searchEvent == ""){
+            finalFilter = []
+        }
         
       setFilterFriends(finalFilter)
         

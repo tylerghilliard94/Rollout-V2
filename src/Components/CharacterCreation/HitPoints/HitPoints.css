@@ -77,10 +77,15 @@ height: 100%;
 }
 .hitCardTitleFront {
     margin-left: -2vw;
+    color: black;
+}
+.hitCardTitleBack {
+    color: black;
 }
 
-.cardDescription{
+.hitPointDescription{
     padding-left: .4vw;
+    color: black;
 }
 
 

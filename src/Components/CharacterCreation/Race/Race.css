@@ -60,10 +60,12 @@ height: 100%;
 }
 .raceCardTitleFront {
     margin-left: -2vw;
+    color: black;
 }
 
 .raceCardTitleBack {
     margin-left: 1.5vw;
+    color: black;
 }
 .cardDescription{
     padding-left: .4vw;

@@ -301,11 +301,11 @@ const FinalDetails = props => {
             
             </Form>
             <Button 
-            className="backButton"
+            className="finalCharacter"
             variant="custom" 
             type="submit"
             onClick={handleFinalizeCharacter}>
-              Back
+              Finalize Character
             </Button>
             
             

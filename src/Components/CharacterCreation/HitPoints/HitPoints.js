@@ -18,7 +18,7 @@ const HitPoints = props => {
             let safeHit = sessionStorage.hitDice / 2
             
             let chanceHitTotal = parseInt(safeHitTotal)
-            console.log(safeHitTotal)
+           
 
             for(let i = 2; i <= sessionStorage.level; i++){
                 safeHitTotal += parseInt(safeHit)

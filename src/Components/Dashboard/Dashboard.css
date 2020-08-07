@@ -4,3 +4,10 @@
     color: #efede7 !important;
     
 }
+*{
+    color: white;
+}
+textarea {
+    background-color: #222F2F ;
+    border-color: transparent;
+}
