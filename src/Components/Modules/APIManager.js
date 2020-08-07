@@ -12,7 +12,7 @@ export default {
         .then(response=>response.json())
     },
 
-    Push(string, obj) {
+    Post(string, obj) {
         return fetch(`${apiURL}${string}`, {
         method: `POST`,
         headers: {

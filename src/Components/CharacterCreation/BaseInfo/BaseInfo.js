@@ -4,7 +4,9 @@ import "./BaseInfo.css"
 
 
 const BaseInfo = props => {
+    
     const [info, setInfo] = useState({characterName: "", level: 0, description: ""})
+   
 
     const handleBaseInfo = () => {
         sessionStorage.setItem("characterName", info.characterName)
@@ -22,6 +24,7 @@ const BaseInfo = props => {
         stateToChange[event.target.id] = event.target.value;
         setInfo(stateToChange);
     }
+   
 
     return (
         <div className="baseInfo">
