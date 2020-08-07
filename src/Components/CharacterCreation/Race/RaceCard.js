@@ -15,7 +15,7 @@ const RaceCard = (props) => {
         <>
         
         <Card className="raceCard text-center m-3" id={props.race.race} onClick={setRace}>
-            <Card.Body className={`raceCardBody${sessionStorage.class}`}id={props.race.race}>
+            <Card.Body className={`raceCardBody${sessionStorage.class} raceCardBody`}id={props.race.race}>
             <div className="cardFront" id={props.race.race}>
             <Card.Title className="raceCardTitleFront"id={props.race.race}>
                 {props.race.race}

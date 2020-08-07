@@ -27,9 +27,9 @@ const ClassCard = (props) => {
         }else if(sessionStorage.class === "Rogue"){
             sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
         }else if(sessionStorage.class === "Sorcerer"){
-            sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
+            sessionStorage.setItem("picture", "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596776710/Sorcerer-Logo_bp3j1f.png")
         }else if(sessionStorage.class === "Warlock"){
-            sessionStorage.setItem("picture", "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596604314/Warlock-Logo_oxtwdi.png")
+            sessionStorage.setItem("picture", "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596776706/Warlock-Logo-Light_fz9esl.png")
         }else if(sessionStorage.class === "Wizard"){
             sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
         }

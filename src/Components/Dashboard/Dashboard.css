@@ -19,8 +19,8 @@
 .DashboardCardText {
     text-align: center;
     margin-top: 3vw;
-    font-size: 1.3vw;
-    
+    font-size: 1.5vw;
+    font-family: rieven-uncial, sans-serif;
 }
 
 .FriendCardBody {
@@ -36,7 +36,7 @@
     text-align: center;
     margin-top: 5vw;
     color: #262b2f91;
-    background-color: #f3f2ef !important;
+    background-color: transparent !important;
 }
 
 .startNewCharacterCardBody{
@@ -47,9 +47,7 @@
 .startNewCharacterCardBody:hover{
     background-color: #f3f2efef !important;
 }
-.cardAddTitle:hover {
-    background-color: #f3f2efef !important;
-}
+
 .startNewCharacterCard{
     width: 14vw;
     height: 20vw;
@@ -77,6 +75,7 @@
     height: 20vw;
     margin-left: auto;
     background-color: #c369bf !important;
+    filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
     
@@ -89,6 +88,7 @@
     height: 20vw;
     margin-left: auto;
     background-color: #79848d !important;
+    filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
     
@@ -101,6 +101,7 @@
     height: 20vw;
     margin-left: auto;
     background-color: #62af3e !important;
+    filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
     
@@ -113,6 +114,7 @@
     height: 20vw;
     margin-left: auto;
     background-color: #5f140d !important;
+    filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
     
@@ -125,6 +127,7 @@
     height: 20vw;
     margin-left: auto;
     background-color: #61c0c3 !important;
+    filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
     
@@ -137,6 +140,7 @@
     height: 20vw;
     margin-left: auto;
     background-color: #dee94b !important;
+    filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
     
@@ -149,6 +153,7 @@
     height: 20vw;
     margin-left: auto;
     background-color: #1c4b22 !important;
+    filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
     
@@ -161,6 +166,7 @@
     height: 20vw;
     margin-left: auto;
     background-color: #272a27 !important;
+    filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
     
@@ -172,7 +178,8 @@
     width: 14vw;
     height: 20vw;
     margin-left: auto;
-    background-color: #b47421 !important;
+    background-color: #d86a1c !important;
+    filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
     
@@ -185,6 +192,7 @@
     height: 20vw;
     margin-left: auto;
     background-color: #8444a1 !important;
+    filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
     
@@ -197,6 +205,7 @@
     height: 20vw;
     margin-left: auto;
     background-color: #3c53b8 !important;
+    filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
     
@@ -211,7 +220,7 @@ body{
     background-color: #f3f2ef !important;
 }
 .delete-Character-btn {
-margin-left: 6vw;
+margin-left: 6.3vw;
 margin-top: 1vw;
 margin-bottom: 2vw;
 }

@@ -59,14 +59,14 @@ const HitPoints = props => {
     }
     const handleShowSafe = () => {
         document.getElementById(`safe`).className +=' animation';
-        
+       
     }
     const handleShowChance = (evt) => {
         document.getElementById(`${evt.target.id}`).className +=' animation';
-        sessionStorage.setItem("hitPoints", sessionStorage.chanceHitPoints)
+        sessionStorage.hitPoints = sessionStorage.chanceHitPoints
         handleShowSafe()
        
-        sessionStorage.removeItem("chanceHitPoints")
+       
     }
     const handleNext = (evt) => {
         
@@ -95,15 +95,15 @@ const HitPoints = props => {
         <div onClick={handleBack} class="arrowBack"></div>
         </Col>
         <Col sm={8}>
-        <Row>
+        <Row className="hitCardDefaultRow">
         
-            <Card className="hitCard text-center m-3" >
-            <Card.Body className="hitCardBody"id="default">
+            <Card className="hitCardDefault text-center m-3" >
+            <Card.Body className={`hitCardBody${sessionStorage.class}`}id="default">
             <div className="cardFront" >
             <Card.Title className="hitCardTitleFront">
                 Default Hit Points
             </Card.Title>
-            <Card.Img className="hitCardImg">
+            <Card.Img src={sessionStorage.picture} className="hitPointCardImg">
                 
             </Card.Img>
             <p className="cardDescription">
@@ -112,13 +112,13 @@ const HitPoints = props => {
             </p>
             </div>
             <div className="cardBack" >
-            <Card.Img className="hitCardImg">
+            <Card.Img src={sessionStorage.picture}className="hitPointCardImgBack">
                 
             </Card.Img>
             <Card.Title className="hitCardTitleBack">
-                Hit Points
+                <strong>Hit Points</strong>
             </Card.Title>
-            <p className="hitPointDescription">
+            <p className="hitPointDescriptionNumber">
             {sessionStorage.hitPoints}
             </p>
             
@@ -129,7 +129,7 @@ const HitPoints = props => {
         </Row>
         <Row>
             <Button 
-            className="showButton"
+            className="showButtonDefault"
             variant="custom" 
             type="submit"
             id="default"
@@ -160,7 +160,7 @@ const HitPoints = props => {
             
             
             <Card className="hitCard text-center m-3" >
-            <Card.Body className="hitCardBody"id="safe">
+            <Card.Body className={`hitCardBody${sessionStorage.class}`}id="safe">
             <div className="cardFront" >
             <Card.Title className="hitCardTitleFront">
                 Safe Hit Point Choice
@@ -174,7 +174,7 @@ const HitPoints = props => {
             <p className="hitPointDescription"> Default Choice <br></br> This takes the average of your hit die and adds your Constitution Bonus for each level over 1.</p>
             </div>
             <div className="cardBack" >
-            <Card.Img src="https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="hitPointCardImg">
+            <Card.Img src={sessionStorage.picture} className="hitPointCardImgBack">
                 
                 </Card.Img>
             <Card.Title className="hitCardTitleBack">
@@ -189,12 +189,12 @@ const HitPoints = props => {
                 OR
             </p>
         <Card className="hitCard text-center m-3" >
-            <Card.Body className="hitCardBody2"id="chance">
+            <Card.Body className={`hitCardBody2${sessionStorage.class}`}id="chance">
             <div className="cardFront" >
             <Card.Title className="hitCardTitleFront">
                 Risky Hit Point Choice
             </Card.Title>
-            <Card.Img src="https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" className="hitPointCardImg">
+            <Card.Img src={sessionStorage.picture} className="hitPointCardImg">
                 
             </Card.Img>
             <p className="hitPointDescription"> This choice rolls your class's hit die for each level over one and adds your Constitution Bonus. Result may vary.</p>
