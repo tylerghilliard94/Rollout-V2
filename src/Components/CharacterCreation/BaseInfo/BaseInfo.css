@@ -54,5 +54,6 @@ option {
     height: .000001vw !important;
     width: .000001vw !important;
     padding: 0vw !important;
+    margin-top: -2vw;
 }
 

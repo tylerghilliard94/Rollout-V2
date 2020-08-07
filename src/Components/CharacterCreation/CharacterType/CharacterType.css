@@ -252,7 +252,7 @@
 .defaultCardSorcerer {
     width: 14vw;
     height: 20vw;
-    background-color: #b47421 !important;
+    background-color: #ff8027 !important;
     perspective: 1000px;
    
     margin-left: 27vw;
@@ -264,7 +264,7 @@
 .customCardSorcerer{
     width: 14vw;
     height: 20vw;
-    background-color: #b47421 !important;
+    background-color: #d86a1c !important;
     perspective: 1000px;
    
     margin-left: 7vw;

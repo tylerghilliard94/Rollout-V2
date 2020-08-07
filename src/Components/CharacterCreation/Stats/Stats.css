@@ -125,7 +125,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #b47421 !important;
+    background-color: #d86a1c !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -227,7 +227,7 @@
 .rollButton2, .rollButton5 {
     background-color: tomato !important;
     color: #efede7 !important;
-    margin-left: 10.5vw;
+    margin-left: 10vw;
     margin-top: .25vw;
     width: 4vw
 }
@@ -286,7 +286,7 @@ height: 100%;
 }
 
 .cardDescriptionStats{
-    padding-left: .4vw;
+    padding-left: 0vw;
     font-size: .8vw;
 }
 
