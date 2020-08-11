@@ -4,7 +4,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #d67a45 !important;
+    background-color: #7c1717 !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -43,7 +43,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f !important;
+    background-color: #62af3e !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -56,7 +56,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f !important;
+    background-color: #3f130d !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -328,7 +328,7 @@ height: 100%;
     margin-top: 3vw;
 }
 
-.hitCardDefault{
+.hitCardDefault, .hitCard{
     background-color: #f3f2ef !important;
 }
 

@@ -39,6 +39,8 @@ const Dashboard = props => {
     }
     }
     useEffect(() => {
+        sessionStorage.removeItem("spellUrl")
+        sessionStorage.removeItem("characterId")
         updateCharacters()
        
     }, [sessionStorage.friendId])

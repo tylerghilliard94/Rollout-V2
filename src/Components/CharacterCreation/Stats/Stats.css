@@ -4,7 +4,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #d67a45 !important;
+    background-color: #7c1717 !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -59,7 +59,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #72170f;
+    background-color: #3f130d !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -125,7 +125,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #d86a1c !important;
+    background-color: #3f130d !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;

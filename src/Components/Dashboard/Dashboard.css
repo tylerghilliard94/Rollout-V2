@@ -62,7 +62,7 @@
     width: 14vw;
     height: 20vw;
     margin-left: auto;
-    background-color: #d67a45 !important;
+    background-color: #7c1717 !important;
    filter: drop-shadow(.25vw .25vw .25vw #676969);
     
     
@@ -113,7 +113,7 @@
     width: 14vw;
     height: 20vw;
     margin-left: auto;
-    background-color: #5f140d !important;
+    background-color: #3f130d !important;
     filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
@@ -220,7 +220,7 @@ body{
     background-color: #f3f2ef !important;
 }
 .delete-Character-btn {
-margin-left: 6.3vw;
+margin-left: 7.3vw;
 margin-top: 1vw;
 margin-bottom: 2vw;
 }

@@ -47,7 +47,7 @@ const HandleFriendModal = (props) => {
 
             return filterCheck
         })
-        console.log(finalFilter)
+       
         
         if(searchEvent == ""){
             finalFilter = []
