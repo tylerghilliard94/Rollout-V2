@@ -4,13 +4,14 @@ import CharacterNavBar from "../NavBar/CharacterNavBar"
 import {Card, Form, FormControl, Row, Button, Col} from "react-bootstrap"
 import InventoryCard from "./InventoryCard"
 import "./Inventory.css"
+import Money from "./Money"
 
 const Inventory = props => {
     const [equipments, setEquipments] = useState([])
     const [filterEquipments, setFilterEquipments] = useState([])
     const [refresh, setRefresh] = useState("")
     const [equipmentStatus, setEquipmentStatus] = useState(true)
-
+  
 
     const weaponSet = (response) => {
         let filter = response.filter(equipment => {
@@ -53,6 +54,7 @@ const Inventory = props => {
 
     useEffect(() => {
         sessionStorage.setItem("equipmentType", "equipment")
+
     }, [])
     useEffect(() =>{
         
@@ -70,6 +72,7 @@ const Inventory = props => {
                 armorSet(response)
         })  
         }
+       
         
     }, [refresh])
 
@@ -106,6 +109,9 @@ const Inventory = props => {
         sessionStorage.equipmentType = evt.target.value
         refreshEquipmentBook(evt.target.value)
 }
+    const handleNewItem = () => {
+        props.history.push("/InventoryCustom")
+    }
     // const handleLevelSort = (evt) => {
     //     if(evt.target.value === "All"){
     //         setRefresh(evt.target.value)
@@ -124,7 +130,7 @@ const Inventory = props => {
     return(
         <>
         <CharacterNavBar {...props} />
-        {console.log(equipments)}
+        
         <Row>
             
         <Form inline className="searchForm">
@@ -225,7 +231,10 @@ const Inventory = props => {
         <Button onClick={handleNewequipment}>
             Add New Equipment
         </Button>
-        
+        <Button onClick={handleNewItem}>
+            Add Custom Equipment
+        </Button>
+        <Money />
         
         </Row>
         <Col className="equipmentCardCol">

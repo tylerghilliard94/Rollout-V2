@@ -39,10 +39,12 @@ const InventoryCard = props => {
           
            
             <Card.Text className="SpellCardText">
-            {props.equipment.name}
+            {props.equipment.name} ({props.equipment.custom})
+           
             </Card.Text>
             
-            {sessionStorage.equipmentType === "weapons" ? <p>{damageDice()}</p> :  sessionStorage.equipmentType === "armor" ? <p>Armor Type: {props.equipment.armor_category}</p> : <p>{props.equipment.desc}</p>}
+            <p>{props.equipment.desc}</p>
+            {sessionStorage.equipmentType === "weapons" ? <p>{damageDice()}</p> :  sessionStorage.equipmentType === "armor" ? <p>Armor Type: {props.equipment.armor_category}</p> : null}
             {sessionStorage.equipmentType === "weapons" ? <p>{damageType()}</p> :  sessionStorage.equipmentType === "armor" ? <p>Armor Class: {armorClass()}</p> : null}
             
            

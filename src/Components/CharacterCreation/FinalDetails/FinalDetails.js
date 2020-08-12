@@ -142,6 +142,7 @@ const FinalDetails = props => {
 
     const saveCharacter = () => {
         APIManager.Post("characters", characterFactory()).then(() => clearCharacter()).then(() => {
+            
             props.history.push("/Dashboard")
     })
     
