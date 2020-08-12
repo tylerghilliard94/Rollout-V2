@@ -2,11 +2,32 @@ import React from "react"
 import {Card, Col, Row, Image, Button} from "react-bootstrap"
 import APIManager from "../Modules/APIManager"
 
-const SpellCard = props => {
+const InventoryCard = props => {
 
-        const handleSpellDelete = (evt) => {
-            APIManager.Delete("spellBook", evt.target.id ).then((response) => props.setSpells(response))
+        const handleEquipmentDelete = (evt) => {
+            APIManager.Delete("inventory", evt.target.id ).then((response) => props.setEquipment(response))
 
+        }
+        const damageDice = () => {
+            if(props.equipment.damage == undefined){
+                return ""
+            }else{
+                return props.equipment.damage.damage_dice
+            }
+        }
+        const damageType = () => {
+            if(props.equipment.damage == undefined){
+                return ""
+            }else{
+                return props.equipment.damage.damage_type.name
+            }
+        }
+        const armorClass = () => {
+            if(props.equipment.armor_class == undefined){
+                return ""
+            }else{
+                return props.equipment.armor_class.base
+            }
         }
     return (
         <>
@@ -18,11 +39,16 @@ const SpellCard = props => {
           
            
             <Card.Text className="SpellCardText">
-            {props.spell.name}
+            {props.equipment.name}
             </Card.Text>
-            <p>{props.spell.desc}</p>
-            <Button className="deleteSpellBtn" id={props.spell.id} onClick={handleSpellDelete}>
-                Delete Spell
+            
+            {sessionStorage.equipmentType === "weapons" ? <p>{damageDice()}</p> :  sessionStorage.equipmentType === "armor" ? <p>Armor Type: {props.equipment.armor_category}</p> : <p>{props.equipment.desc}</p>}
+            {sessionStorage.equipmentType === "weapons" ? <p>{damageType()}</p> :  sessionStorage.equipmentType === "armor" ? <p>Armor Class: {armorClass()}</p> : null}
+            
+           
+            
+            <Button className="deleteSpellBtn" id={props.equipment.id} onClick={handleEquipmentDelete}>
+                Delete Equipment
             </Button>
     
            
@@ -41,4 +67,4 @@ const SpellCard = props => {
     )
 }
 
-export default SpellCard
+export default InventoryCard

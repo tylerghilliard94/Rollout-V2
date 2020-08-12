@@ -85,7 +85,11 @@ export default {
         .then(response=>response.json())
     },
     GetAllEquipment(url){
-        return fetch(`https://www.dnd5eapi.co/api/features`)
+        return fetch(`https://www.dnd5eapi.co/api/`)
+        .then(response=>response.json())
+    },
+    GetEquipment(str){
+        return fetch(`${apiURL}${str}?equipment_category[name]=Weapon`)
         .then(response=>response.json())
     }
 }
