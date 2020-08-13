@@ -30,9 +30,9 @@ const InventoryCustom = props => {
             <Form.Control onChange={handleFieldChange} type="text" id="name" className="objectName">
 
             </Form.Control>
-            <Form.Control onChange={handleFieldChange} type="text" id="desc" className="objectDesc">
+            <textarea onChange={handleFieldChange}  id="desc" className="objectDesc">
 
-            </Form.Control>
+            </textarea>
             <Form.Control className="equipmentChangeForm"
                 onChange={handleFieldChange}
                 as="select"

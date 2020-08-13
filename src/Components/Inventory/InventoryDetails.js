@@ -54,25 +54,40 @@ const InventoryDetails = props => {
     return(
         <>
         <CharacterNavBar {...props} />
-        <Card className="equipmentDetailCard">
-        <Row >
-    <h1>{equipment.name}</h1>
-        {console.log(equipment)}
+        <Card className="spellDetailCard">
+        <Card.Body className="spellDetailCardBody">
+      
+    <h1 className="spellName">{equipment.name}</h1>
+      
     {/* {equipment.classes.map(type=>
         <h2>{type.name}</h2>)} */}
-    </Row>
-        <Row>
             <Col>
-            <p>{equipment.desc}</p>
+            <p className="spellDesc">{equipment.desc}</p>
+            </Col>
+            <Col>
             {sessionStorage.equipmentType === "armor" ? <p>{equipment.armor_category} Armor</p> : null}
+            </Col>
+            <Col>
             <p>{equipment.category_range}</p>
+            </Col>
            
             <Row>
+                <Col>
             <p>Weight: {equipment.weight}</p>
-            <p>{armorClass()}</p>
-            <p>{damageDice()}</p>
-            <p>{damageType()}</p>
-            <p>{stealthDis()}</p>
+            </Col>
+            
+            {sessionStorage.equipmentType === "armor" ? <Col><p>Armor Class: {armorClass()} </p> </Col> : null}
+            {sessionStorage.equipmentType === "weapons" ? <Col>
+            <p>Damage: {damageDice()}</p>
+            </Col> : null}
+            {sessionStorage.equipmentType === "weapons" ?  <Col>
+            <p>Damage Type: {damageType()}</p>
+            </Col> : null}
+           
+            {sessionStorage.equipmentType === "armor" ? <Col>
+            <p>Stealth Disadvantage: {stealthDis()}</p>
+            </Col> : null}
+            
 
            
             </Row>
@@ -81,18 +96,20 @@ const InventoryDetails = props => {
            
             
             {/* <p>{equipment.school.name}</p> */}
-           
+           <Col>
             {sessionStorage.equipmentType === "armor" ? <p>Minimum Strength Needed: {equipment.str_minimum}</p> : null}
-            
+            </Col>
+            <Col>
             <p>{equipment.casting_time}</p>
+            </Col>
             {/* <p>{equipment.dc.dc_type.name}</p> */}
             {/* <p>{equipment.dc.dc_success}</p> */}
             </Row>
-            </Col>
-        </Row>
-        <Button onClick={handleSaveEquipment}>
+        
+        <Button className="saveSpellBtn" onClick={handleSaveEquipment}>
         Save equipment
         </Button>
+        </Card.Body>
         </Card>
         </>
     )

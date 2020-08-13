@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import {Row, Col, Image, Button, Card} from "react-bootstrap"
 import APIManager from "../Modules/APIManager"
 import CharacterNavBar from "../NavBar/CharacterNavBar"
+import BaseNavBar from "../NavBar/BaseNavBar"
 import { set } from "object-path"
 import "./CharacterProfile.css"
 
@@ -367,7 +368,7 @@ const CharacterProfile = props => {
         return(
             <>
             
-            <CharacterNavBar clearUser={clearUser} {...props} />
+            <BaseNavBar clearUser={clearUser} {...props} />
                     <Row>
                     <Col  className="infoCol"sm={3}>
                 <div>

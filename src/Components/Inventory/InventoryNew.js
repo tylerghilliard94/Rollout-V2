@@ -59,10 +59,10 @@ const InventoryNew = props => {
         <>
         <CharacterNavBar {...props} />
         <Form inline className="searchForm">
-            <FormControl type="text" placeholder="Search" className=" mr-sm-2  equipmentearchBar" onChange={handleSearchChange}  />
+            <FormControl type="text" placeholder="Search" className=" mr-sm-2  spellNewSearchBar" onChange={handleSearchChange}  />
             
         </Form>
-        <Row>
+        <Row sm="6" className="spellCardNewRow">
         {filterEquipment.map(equipment => 
             <InventoryCardNew  equipment={equipment} {...props} /> )}
             </Row>

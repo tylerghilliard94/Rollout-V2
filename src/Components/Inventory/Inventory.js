@@ -134,7 +134,7 @@ const Inventory = props => {
         <Row>
             
         <Form inline className="searchForm">
-        <Form.Control className="equipmentChangeForm"
+        <Form.Control className="equipmentTypeForm"
                 onChange={handlEquipmentChange}
                 as="select"
                 name="select"
@@ -228,14 +228,15 @@ const Inventory = props => {
             
         </Form>
 
-        <Button onClick={handleNewequipment}>
+        <Button className="newSpellBtn" onClick={handleNewequipment}>
             Add New Equipment
         </Button>
-        <Button onClick={handleNewItem}>
+        <Button className="newSpellBtn"onClick={handleNewItem}>
             Add Custom Equipment
         </Button>
+        <Col>
         <Money />
-        
+        </Col>
         </Row>
         <Col className="equipmentCardCol">
         <Row>

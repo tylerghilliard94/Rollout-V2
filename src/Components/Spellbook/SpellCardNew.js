@@ -12,22 +12,22 @@ const SpellCardNew = props => {
         <>
          <Card className="SpellCardContainer">
             <Card.Body className="SpellCardBodyNew"  onClick={handleDetails} >
-            <Row className="SpellCardRowNew" >
+       
                 <Col className="SpellCol" sm={3}>
-            <Image className="friendImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
+            <Image className="spellImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
             </Col>
-            <Col className="SpellCol" sm={6}>
-            <Card.Text className="SpellCardText">
+           
+            <Card.Text className="SpellCardTextNew">
             {props.spell.name}
             </Card.Text>
             
-            </Col>
+  
            
             
              
             
            
-            </Row>
+      
             </Card.Body>
         </Card>
         

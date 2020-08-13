@@ -8,24 +8,28 @@ const SpellCard = props => {
             APIManager.Delete("spellBook", evt.target.id ).then((response) => props.setSpells(response))
 
         }
+        const handleDetails = (evt) => {
+            sessionStorage.setItem("spellId", props.spell.id )
+            props.history.push("/SpellBookDetails")
+        }
     return (
         <>
-         <Card className="SpellCardContainer">
-            <Card.Body className="SpellCardBody"   >
+        <Col className="spellContainerCol">
+         <Card className="SpellCardContainerMain">
+            <Card.Body className="SpellCardBody"  onClick={handleDetails} >
           
               
-            <Image className="friendImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
+            <Image className="spellImageMain" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
           
            
             <Card.Text className="SpellCardText">
             {props.spell.name}
             </Card.Text>
-            <p>Level: {props.spell.level}</p>
-            <p>{props.spell.desc}</p>
-            <Button className="deleteSpellBtn" id={props.spell.id} onClick={handleSpellDelete}>
-                Delete Spell
-            </Button>
-    
+            <p className="SpellCardLevel">Level: {props.spell.level}</p>
+            <div className="SpellCardDescOverFlow">
+            <p className="SpellCardDesc">{props.spell.desc}</p>
+           
+            </div>
            
             
              
@@ -34,10 +38,12 @@ const SpellCard = props => {
           
             </Card.Body>
         </Card>
-        
+        <Button className="deleteSpellBtn" id={props.spell.id} onClick={handleSpellDelete}>
+                Delete Spell
+            </Button>
         
 
-
+            </Col>
         </>
     )
 }

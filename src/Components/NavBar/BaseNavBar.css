@@ -7,9 +7,15 @@
     background-color: #222F2F;
 }
 
-.LogoutNavLink{
+.LogoutNavLink, .CharacterProfileLink, .SpellBookNavLink, .InventoryLink{
     color: #efede7;
     
+}
+
+.profileList{
+    margin-top: 1.5vw;
+    font-style: bold;
+    margin-left: 1.5vw;
 }
 
 .logoutList{

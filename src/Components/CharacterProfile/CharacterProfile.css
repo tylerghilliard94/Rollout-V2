@@ -100,6 +100,7 @@ margin-bottom: 1.5vw;
 }
 .characterDescription {
     margin-top: 2vw;
+    white-space: pre-wrap !important;
 }
 
 
@@ -311,6 +312,7 @@ overflow-x: scroll !important;
     margin-left: 1vw !important;
     height: 15vw !important;
     text-overflow: scroll;
+    white-space: pre-wrap;
 }
 .characterDescriptionDiv{
     height: 10vw;

@@ -10,26 +10,27 @@ const InventoryCardNew = props => {
     }
     return (
         <>
-         <Card className="equipmentCardContainer">
-            <Card.Body className="equipmentCardBodyNew"  onClick={handleDetails} >
-            <Row className="equipmentCardRowNew" >
-                <Col className="equipmentCol" sm={3}>
-            <Image className="friendImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
+         <Card className="SpellCardContainer">
+            <Card.Body className="SpellCardBodyNew"  onClick={handleDetails} >
+       
+                <Col className="SpellCol" sm={3}>
+            <Image className="spellImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
             </Col>
-            <Col className="equipmentCol" sm={6}>
-            <Card.Text className="equipmentCardText">
+           
+            <Card.Text className="SpellCardTextNew">
             {props.equipment.name}
             </Card.Text>
             
-            </Col>
+  
            
             
              
             
            
-            </Row>
+      
             </Card.Body>
         </Card>
+        
         
         
 
