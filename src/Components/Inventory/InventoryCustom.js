@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 import CharacterNavBar from "../NavBar/CharacterNavBar"
-import { Form, Button } from "react-bootstrap"
+import { Form, Button, Row } from "react-bootstrap"
 import APIManager from "../Modules/APIManager"
 import { propTypes } from "react-bootstrap/esm/Image"
 
@@ -25,15 +25,26 @@ const InventoryCustom = props => {
     return (
         <>
         <CharacterNavBar />
-
-        <Form>
+        <h1 className="objectTitle">Create a custom item!</h1>
+        <Form classname="objectForm">
+            <Form.Group>
+                <Row>
+            <label className="objectNameLabel">Item Name:</label>
             <Form.Control onChange={handleFieldChange} type="text" id="name" className="objectName">
 
             </Form.Control>
+            </Row>
+            </Form.Group>
+            <Form.Group>
+            <label className="objectDescLabel">Item Description:</label>
             <textarea onChange={handleFieldChange}  id="desc" className="objectDesc">
 
             </textarea>
-            <Form.Control className="equipmentChangeForm"
+            </Form.Group>
+            <Form.Group>
+                <Row>
+            <label className="objectTypeLabel">Item Type:</label>
+            <Form.Control className="objectType"
                 onChange={handleFieldChange}
                 as="select"
                 name="select"
@@ -48,8 +59,10 @@ const InventoryCustom = props => {
               
               <option value="armor">Armor</option>
              
-             
+            
               </Form.Control>
+              </Row>
+              </Form.Group>
         </Form>
         <Button className="customSaveButton" onClick={handleItemSave}>
             Save Item

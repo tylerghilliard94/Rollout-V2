@@ -1,3 +1,137 @@
 .equipmentDesc{
     white-space: pre-wrap;
 }
+
+.newInventoryBtn{
+    background-color: tomato !important;
+    border-color: tomato !important;
+    height: 2.2vw;
+    margin-top: .5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.equipmentTypeForm{
+    margin-left: 25vw;
+}
+
+.moneyTitleRow{
+    margin-left: 13.5vw !important;
+    margin-top: 1vw;
+   
+}
+
+.moneyTitle{
+    font-size: 1.7vw !important;
+}
+
+.moneyNumbersLeft{
+    margin-left: 3.5vw !important;
+    font-size: 1.4vw;
+}
+.moneyNumbersMiddle{
+    margin-left: 3.5vw !important;
+    font-size: 1.4vw;
+    margin-bottom: 1vw;
+}
+.moneyNumbersRight{
+    margin-left: 3.5vw !important;
+    font-size: 1.4vw;
+}
+
+.moneyNumbersLeftEdit{
+    margin-left: 3.5vw !important;
+    font-size: 1.4vw;
+}
+.moneyNumbersMiddleEdit{
+    margin-left: 3.5vw !important;
+    font-size: 1.4vw;
+}
+.moneyNumbersRightEdit{
+    margin-left: 3.5vw !important;
+    font-size: 1.4vw;
+}
+
+.moneyCard{
+background-color: #222f2f !important;
+}
+.moneyCardBody{
+    padding: 0vw !important;
+    margin: .5vw !important;
+    background-color: #f3f2ef !important;
+}
+
+.money{
+    font-size: 1.2vw;
+}
+
+.moneyEdit{
+    font-size: 1.2vw;
+    width: 4vw;
+    height: 1.6vw;
+   
+    margin-bottom: -.1vw;
+    margin-left: -.13vw;
+
+    background-color: #f3f2ef !important;
+    border-color: #f3f2ef !important;
+    resize: none;
+    overflow: hidden;
+}
+
+.equipCategory{
+    text-align: center;
+    font-size: 1.4vw;
+}
+
+.SpellCardDescArmor{
+    text-align: center;
+}
+
+.objectName{
+    width: 34.6% !important;
+    margin-top: 2vw;
+  
+   
+}
+
+.objectTitle{
+    text-align: center;
+    margin-top: 2vw;
+}
+
+.objectNameLabel{
+    margin-top: 2vw;
+    margin-right: 4.3vw;
+    Margin-left: 25vw !important;
+
+  
+}
+
+.objectDescLabel{
+    Margin-left: 24.3vw !important;
+}
+
+.objectDesc{
+    width: 35vw;
+    margin-bottom: -2.2vw;
+    margin-left: 2vw;
+}
+
+.objectTypeLabel{
+    Margin-left: 25vw !important;
+    margin-top: 2vw;
+    margin-right: 4.9vw;
+}
+
+.objectType{
+    width: 34.6% !important;
+    margin-top: 2vw;
+}
+
+.customSaveButton{
+    Margin-left: 65vw !important;
+
+    background-color: tomato !important;
+    border-color: tomato !important
+}

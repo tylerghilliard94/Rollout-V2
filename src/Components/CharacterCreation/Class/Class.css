@@ -12,16 +12,16 @@
 }
 
 .classCardBodyBarbarian{
-    background-color: #7c1717 !important;
+    background-color: #b42525 !important;
 }
 .classCardBodyBard{
-    background-color: #c369bf !important;
+    background-color: #d195ce !important;
 }
 .classCardBodyCleric{
     background-color: #79848d !important;
 }
 .classCardBodyDruid{
-    background-color: #62af3e !important;
+    background-color: #65814c !important;
 }
 .classCardBodyFighter{
     background-color: #3f130d !important;
@@ -30,7 +30,7 @@
     background-color: #61c0c3 !important;
 }
 .classCardBodyPaladin{
-    background-color: #dee94b !important;
+    background-color: #b6ab4b !important;
 }
 .classCardBodyRanger{
     background-color: #1c4b22 !important;
@@ -45,7 +45,7 @@
     background-color: #8444a1 !important;
 }
 .classCardBodyWizard{
-    background-color: #3c53b8 !important;
+    background-color: #4c63ce !important;
     
 }
 
@@ -58,7 +58,7 @@
     height: auto;
     margin-top: 2vw;
     padding-bottom: 2vw;
-    margin-left: 6.8vw !important;
+    margin-left: 6.5vw !important;
     background-color: #f3f2ef;
 }
 

@@ -57,3 +57,6 @@ option {
     margin-top: -2vw;
 }
 
+.container-fluid{
+    padding: 0vw !important;
+}

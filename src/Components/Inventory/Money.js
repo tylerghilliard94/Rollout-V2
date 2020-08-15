@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import { Card, Row, Button } from "react-bootstrap"
+import { Card, Row, Button, Col } from "react-bootstrap"
 import APIManager from "../Modules/APIManager"
 
 
@@ -59,28 +59,48 @@ const Money = () => {
 
     
     return (
-        <Card>
-            <Row>
-                <Card.Title>Coin Purse</Card.Title>
-                <Button onClick={handleEditSave}>
+        <Card className="moneyCard">
+             <Card.Body className="moneyCardBody">
+            <Row className="moneyTitleRow">
+           
+                <Card.Title className="moneyTitle">Coin Purse</Card.Title>
+                <Button className="newSpellBtn" onClick={handleEditSave}>
                     Save Coins
                 </Button>
             </Row>
-            <Row> 
-    <p>GP: <textarea id="gp"onChange={handleEvtChange}>{money.gp}</textarea></p> <p>SP: <textarea id="sp" onChange={handleEvtChange}>{money.sp}</textarea></p> <p>CP: <textarea id="cp" onChange={handleEvtChange}>{money.cp}</textarea></p>
+            <Row className="moneyEditRow"> 
+            <Col>
+    <p className="moneyNumbersLeftEdit">GP: <textarea className="moneyEdit" id="gp"onChange={handleEvtChange}>{money.gp}</textarea></p>
+    </Col> 
+    <Col>
+     <p className="moneyNumbersMiddleEdit">SP: <textarea className="moneyEdit" id="sp" onChange={handleEvtChange}>{money.sp}</textarea></p> 
+     </Col>
+     <Col>
+     <p className="moneyNumbersRightEdit">CP: <textarea className="moneyEdit" id="cp" onChange={handleEvtChange}>{money.cp}</textarea></p>
+     </Col>  
             </Row>
+            </Card.Body>
         </Card>
     )
     }else {
         return(
-            <Card>
-              
-            <Row>
-                <Card.Title>Coin Purse</Card.Title>
+            <Card className="moneyCard">
+              <Card.Body className="moneyCardBody">
+            <Row className="moneyTitleRow">
+                <Card.Title className="moneyTitle">Coin Purse</Card.Title>
             </Row>
-            <Row> 
-        <p>GP: <a onClick={handleEdit} >{money.gp}</a></p> <p>SP: <a onClick={handleEdit}>{money.sp}</a></p> <p>CP: <a onClick={handleEdit}>{money.cp}</a></p>
+            <Row className="moneyEditRow"> 
+            <Col>
+        <p className="moneyNumbersLeft">GP: <a className="money" onClick={handleEdit} >{money.gp}</a></p>
+        </Col>
+        <Col>
+         <p className="moneyNumbersMiddle">SP: <a className="money" onClick={handleEdit}>{money.sp}</a></p>
+         </Col>
+         <Col>
+          <p className="moneyNumbersRight" >CP: <a className="money" onClick={handleEdit}>{money.cp}</a></p>
+          </Col>
             </Row>
+            </Card.Body>
         </Card>
         )
     }

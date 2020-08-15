@@ -52,7 +52,7 @@
 .defaultCardBarbarian {
     width: 14vw;
     height: 20vw;
-    background-color: #7c1717 !important;
+    background-color: #b42525 !important;
     perspective: 1000px;
    
     margin-left: 27vw;
@@ -64,7 +64,7 @@
 .customCardBarbarian{
     width: 14vw;
     height: 20vw;
-    background-color: #7c1717 !important;
+    background-color: #b42525 !important;
     perspective: 1000px;
    
     margin-left: 7vw;
@@ -77,7 +77,7 @@
 .defaultCardBard {
     width: 14vw;
     height: 20vw;
-    background-color: #c369bf !important;
+    background-color: #d195ce !important;
     perspective: 1000px;
    
     margin-left: 27vw;
@@ -89,7 +89,7 @@
 .customCardBard{
     width: 14vw;
     height: 20vw;
-    background-color: #c369bf !important;
+    background-color: #d195ce !important;
     perspective: 1000px;
    
     margin-left: 7vw;
@@ -127,7 +127,7 @@
 .defaultCardDruid {
     width: 14vw;
     height: 20vw;
-    background-color: #62af3e !important;
+    background-color: #65814c !important;
     perspective: 1000px;
    
     margin-left: 27vw;
@@ -139,7 +139,7 @@
 .customCardDruid{
     width: 14vw;
     height: 20vw;
-    background-color: #62af3e !important;
+    background-color: #65814c !important;
     perspective: 1000px;
    
     margin-left: 7vw;
@@ -177,7 +177,7 @@
 .defaultCardPaladin {
     width: 14vw;
     height: 20vw;
-    background-color: #dee94b !important;
+    background-color: #d8ca4f !important;
     perspective: 1000px;
    
     margin-left: 27vw;
@@ -189,7 +189,7 @@
 .customCardPaladin{
     width: 14vw;
     height: 20vw;
-    background-color: #dee94b !important;
+    background-color: #b6ab4b !important;
     perspective: 1000px;
    
     margin-left: 7vw;
@@ -302,7 +302,7 @@
 .defaultCardWizard {
     width: 14vw;
     height: 20vw;
-    background-color: #3c53b8 !important;
+    background-color: #4c63ce !important;
     perspective: 1000px;
    
     margin-left: 27vw;
@@ -314,7 +314,7 @@
 .customCardWizard{
     width: 14vw;
     height: 20vw;
-    background-color: #3c53b8 !important;
+    background-color: #4c63ce !important;
     perspective: 1000px;
    
     margin-left: 7vw;

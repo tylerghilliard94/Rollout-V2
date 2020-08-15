@@ -225,21 +225,21 @@ const Inventory = props => {
              
               </Form.Control>} */}
             <FormControl type="text" placeholder="Search" className=" mr-sm-2  equipmentSearchBar" onChange={handleSearchChange}  />
-            
-        </Form>
-
-        <Button className="newSpellBtn" onClick={handleNewequipment}>
+            <Button className="newInventoryBtn" onClick={handleNewequipment}>
             Add New Equipment
         </Button>
-        <Button className="newSpellBtn"onClick={handleNewItem}>
+        <Button className="newInventoryBtn"onClick={handleNewItem}>
             Add Custom Equipment
         </Button>
+        </Form>
+
+       
         <Col>
         <Money />
         </Col>
         </Row>
         <Col className="equipmentCardCol">
-        <Row>
+        <Row sm="5">
         {filterEquipments.map(equipment => 
             <InventoryCard  equipment={equipment} setEquipment={refreshEquipmentBook} {...props} /> )}
             </Row>
