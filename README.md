@@ -16,7 +16,7 @@
 ### Using Roll-Out
 
 *Register a new account.
-*Upon registering a new profile you will be greeted with a prompt to make your first character./n
+*Upon registering a new profile you will be greeted with a prompt to make your first character.
 *Once you are in the character creation process, you will first be asked to choose a class. The cards have info on the back as you hover over them. Click on a card to continue.
 *Then the user can choose a default character if they want to hop right in or they can choose to move along with character creation and choose a custom character.
 *Then the user can choose race which functions much like the class cards. Click a card to continue.
