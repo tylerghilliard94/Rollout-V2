@@ -7,29 +7,29 @@
 
 ### Installation
 
-1.Clone the repository
-2.cd into the corresponding directory
-3.`npm install` to install React.js and the necessary packages
-4.Go into the API directory and type `json-server -p 8088 -w database.json` to start up the local database.
-5.cd into the main directory and `npm start` to get the app up and rolling.
+1. Clone the repository
+2. cd into the corresponding directory
+3. `npm install` to install React.js and the necessary packages
+4. Go into the API directory and type `json-server -p 8088 -w database.json` to start up the local database.
+5. cd into the main directory and `npm start` to get the app up and rolling.
 
 ### Using Roll-Out
 
-*Register a new account.
-*Upon registering a new profile you will be greeted with a prompt to make your first character.
-*Once you are in the character creation process, you will first be asked to choose a class. The cards have info on the back as you hover over them. Click on a card to continue.
-*Then the user can choose a default character if they want to hop right in or they can choose to move along with character creation and choose a custom character.
-*Then the user can choose race which functions much like the class cards. Click a card to continue.
-*Here the user will be prompted to enter a character name, level, and description of the character. Click the next arrow to continue.
-*The user can then roll their primary stats one at a time or all at once. These are not permanent and can be altered on the character profile page. Click the next arrow to continue.
-*Now the users health points are decided and they have the choice to take the average choice or take a chance on rolling for better health. Click to take a rick or click next to continue.
-*The user is prompted to choose two languages, three skills, and their alignment. Once these are chosen the finalize character button activates and the suer can finish character creation.
-*Once done with your character, its card will appear on the main dashboard. The character is deletable if the user so chooses.
-*The user can click on their character to show their character profile page which if the user clicks on stats or details they can edit the info and save the changes at any time.
-*To add friends on the main dhasboard, click on the + button by the friends list and search for other users.
-*Once added the user can click on their friend to go to their dashboard and see their characters. 
-*The user can also click on these characters to see their profile but can not edit the data.
-*Once you are done click logout to go back to the login page.
+- Register a new account.
+- Upon registering a new profile you will be greeted with a prompt to make your first character.
+- Once you are in the character creation process, you will first be asked to choose a class. The cards have info on the back as you hover over them. Click on a card to continue.
+- Then the user can choose a default character if they want to hop right in or they can choose to move along with character creation and choose a custom character.
+- Then the user can choose race which functions much like the class cards. Click a card to continue.
+- Here the user will be prompted to enter a character name, level, and description of the character. Click the next arrow to continue.
+- The user can then roll their primary stats one at a time or all at once. These are not permanent and can be altered on the character profile page. Click the next arrow to continue.
+- Now the users health points are decided and they have the choice to take the average choice or take a chance on rolling for better health. Click to take a rick or click next to continue.
+- The user is prompted to choose two languages, three skills, and their alignment. Once these are chosen the finalize character button activates and the suer can finish character creation.
+- Once done with your character, its card will appear on the main dashboard. The character is deletable if the user so chooses.
+- The user can click on their character to show their character profile page which if the user clicks on stats or details they can edit the info and save the changes at any time.
+- To add friends on the main dhasboard, click on the + button by the friends list and search for other users.
+- Once added the user can click on their friend to go to their dashboard and see their characters. 
+- The user can also click on these characters to see their profile but can not edit the data.
+- Once you are done click logout to go back to the login page.
 
 
 
