@@ -10,7 +10,7 @@
 1. Clone the repository
 2. cd into the corresponding directory
 3. `npm install` to install React.js and the necessary packages
-4. Go into the API directory and type `json-server -p 8088 -w database.json` to start up the local database.
+4. Go into the API directory and type `json-server -p 8088 -w databaseDemo.json` to start up the local database.
 5. cd into the main directory and `npm start` to get the app up and rolling.
 
 ### Using Roll-Out
