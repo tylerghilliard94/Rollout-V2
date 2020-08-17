@@ -57,36 +57,35 @@ const InventoryDetails = props => {
         <Card className="spellDetailCard">
         <Card.Body className="spellDetailCardBody">
       
-    <h1 className="spellName">{equipment.name}</h1>
-      
+    <h1 className="spellName">{equipment.name} {equipment.custom ? <div>({equipment.custom})</div> : null }</h1>
+      {console.log(equipment)}
     {/* {equipment.classes.map(type=>
         <h2>{type.name}</h2>)} */}
             <Col>
             <p className="spellDesc">{equipment.desc}</p>
             </Col>
-            <Col>
-            {sessionStorage.equipmentType === "armor" ? <p>{equipment.armor_category} Armor</p> : null}
-            </Col>
-            <Col>
-            <p>{equipment.category_range}</p>
-            </Col>
+            {equipment.custom ? null : <div>
+            
            
             <Row>
-                <Col>
-            <p>Weight: {equipment.weight}</p>
+            {sessionStorage.equipmentType === "armor" ? <Col><p className="moneyNumbersRight">{equipment.armor_category} Armor</p> </Col> : null}
+            {sessionStorage.equipmentType === "weapons" ?  <Col>
+            <p className="moneyNumbersLeft">{equipment.category_range}</p>
             </Col>
-            
-            {sessionStorage.equipmentType === "armor" ? <Col><p>Armor Class: {armorClass()} </p> </Col> : null}
+            : null}
+                <Col>
+            <p className="moneyNumbersLeft">Weight: {equipment.weight}</p>
+            </Col>
+            {sessionStorage.equipmentType === "equipment" ? <Col><p className="moneyNumbersMiddle">{equipment.gear_category} </p> </Col> : null}
+            {sessionStorage.equipmentType === "armor" ? <Col><p className="moneyNumbersMiddle">Armor Class: {armorClass()} </p> </Col> : null}
             {sessionStorage.equipmentType === "weapons" ? <Col>
-            <p>Damage: {damageDice()}</p>
+            <p className="moneyNumbersMiddle" >Damage: {damageDice()}</p>
             </Col> : null}
             {sessionStorage.equipmentType === "weapons" ?  <Col>
-            <p>Damage Type: {damageType()}</p>
+            <p className="moneyNumbersRight">Damage Type: {damageType()}</p>
             </Col> : null}
+            {sessionStorage.equipmentType === "equipment" ? <Col><p className="moneyNumbersRight">Quantity: {equipment.quantity} </p> </Col> : null}
            
-            {sessionStorage.equipmentType === "armor" ? <Col>
-            <p>Stealth Disadvantage: {stealthDis()}</p>
-            </Col> : null}
             
 
            
@@ -94,20 +93,23 @@ const InventoryDetails = props => {
             <Row>
             
            
-            
+            {sessionStorage.equipmentType === "armor" ? <Col>
+            <p className="moneyNumbersRight">Stealth Disadvantage: {stealthDis()}</p>
+            </Col> : null}
             {/* <p>{equipment.school.name}</p> */}
            <Col>
-            {sessionStorage.equipmentType === "armor" ? <p>Minimum Strength Needed: {equipment.str_minimum}</p> : null}
+            {sessionStorage.equipmentType === "armor" ? <p className="moneyNumbersRight">Minimum Strength Needed: {equipment.str_minimum}</p> : null}
             </Col>
             <Col>
-            <p>{equipment.casting_time}</p>
+            <p className="moneyNumbersRight">{equipment.casting_time}</p>
             </Col>
             {/* <p>{equipment.dc.dc_type.name}</p> */}
             {/* <p>{equipment.dc.dc_success}</p> */}
-            </Row>
+            </Row></div>}
+            
         
         <Button className="saveSpellBtn" onClick={handleSaveEquipment}>
-        Save equipment
+        Save Equipment
         </Button>
         </Card.Body>
         </Card>

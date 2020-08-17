@@ -62,7 +62,7 @@
     width: 14vw;
     height: 20vw;
     margin-left: auto;
-    background-color: #7c1717 !important;
+    background-color: #b42525 !important;
    filter: drop-shadow(.25vw .25vw .25vw #676969);
     
     
@@ -74,7 +74,7 @@
     width: 14vw;
     height: 20vw;
     margin-left: auto;
-    background-color: #c369bf !important;
+    background-color: #d195ce !important;
     filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
@@ -100,7 +100,7 @@
     width: 14vw;
     height: 20vw;
     margin-left: auto;
-    background-color: #62af3e !important;
+    background-color: #65814c !important;
     filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
@@ -139,7 +139,7 @@
     width: 14vw;
     height: 20vw;
     margin-left: auto;
-    background-color: #dee94b !important;
+    background-color: #b6ab4b !important;
     filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
@@ -204,7 +204,7 @@
     width: 14vw;
     height: 20vw;
     margin-left: auto;
-    background-color: #3c53b8 !important;
+    background-color: #4c63ce !important;
     filter: drop-shadow(.25vw .25vw .25vw #676969);
    
     
@@ -220,7 +220,7 @@ body{
     background-color: #f3f2ef !important;
 }
 .delete-Character-btn {
-margin-left: 7.3vw;
+margin-left: 6.3vw;
 margin-top: 1vw;
 margin-bottom: 2vw;
 }

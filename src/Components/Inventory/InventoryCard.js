@@ -29,29 +29,32 @@ const InventoryCard = props => {
                 return props.equipment.armor_class.base
             }
         }
+        const handleDetails = (evt) => {
+            sessionStorage.setItem("inventoryId", props.equipment.id )
+            props.history.push("/EquipmentDetails")
+        }
     return (
         <>
-         <Card className="SpellCardContainer">
-            <Card.Body className="SpellCardBody"   >
+        <Col className="spellContainerCol">
+         <Card className="SpellCardContainerMain">
+            <Card.Body className="SpellCardBody"  onClick={handleDetails} >
           
               
-            <Image className="friendImage" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
+            <Image className="spellImageMain" src="http://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png" roundedCircle />
           
            
-            <Card.Text className="SpellCardText">
-            {props.equipment.name} ({props.equipment.custom})
+            <Card.Text className="SpellCardTextMain">
+            {props.equipment.name} {props.equipment.custom ? <div>({props.equipment.custom})</div> : null}
            
             </Card.Text>
             
-            <p className="equipmentDesc">{props.equipment.desc}</p>
-            {sessionStorage.equipmentType === "weapons" ? <p>{damageDice()}</p> :  sessionStorage.equipmentType === "armor" ? <p>Armor Type: {props.equipment.armor_category}</p> : null}
-            {sessionStorage.equipmentType === "weapons" ? <p>{damageType()}</p> :  sessionStorage.equipmentType === "armor" ? <p>Armor Class: {armorClass()}</p> : null}
+            <p className="SpellCardDesc">{props.equipment.desc}</p>
+            {sessionStorage.equipmentType === "weapons" ? <p className="SpellCardDescArmor">{damageDice()}</p> :  sessionStorage.equipmentType === "armor" ? <p className="SpellCardDescArmor">Armor Type: {props.equipment.armor_category}</p> : null}
+            {sessionStorage.equipmentType === "weapons" ? <p className="SpellCardDescArmor">{damageType()}</p> :  sessionStorage.equipmentType === "armor" ? <p className="SpellCardDescArmor">Armor Class: {armorClass()}</p> : null}
             
            
             
-            <Button className="deleteSpellBtn" id={props.equipment.id} onClick={handleEquipmentDelete}>
-                Delete Equipment
-            </Button>
+           
     
            
             
@@ -61,7 +64,10 @@ const InventoryCard = props => {
           
             </Card.Body>
         </Card>
-        
+        <Button className="deleteSpellBtn" id={props.equipment.id} onClick={handleEquipmentDelete}>
+                Delete Equipment
+            </Button>
+        </Col>
         
 
 

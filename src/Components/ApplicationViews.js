@@ -19,6 +19,7 @@ import SpellBookDetails from './Spellbook/SpellBookDetails';
 import Inventory from "./Inventory/Inventory"
 import InventoryNew from "./Inventory/InventoryNew"
 import InventoryDetails from "./Inventory/InventoryDetails"
+import EquipmentDetails from "./Inventory/EquipmentDetails"
 import InventoryCustom from "./Inventory/InventoryCustom"
 
 const ApplicationViews = props => {
@@ -238,6 +239,17 @@ const ApplicationViews = props => {
                 render={props => {
                     if(hasUser){
                        return <InventoryDetails {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+            <Route
+                exact
+                path="/EquipmentDetails"
+                render={props => {
+                    if(hasUser){
+                       return <EquipmentDetails {...props} />;
                     } else {
                        return <Redirect exact to="/" />
                     }

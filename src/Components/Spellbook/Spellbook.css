@@ -5,7 +5,7 @@
     margin-top: 2vw !important;
 }
 
-.spellTypeForm, .equipmentTypeForm{
+.spellTypeForm{
     margin-left: 32vw;
 }
 
@@ -130,6 +130,12 @@
 .SpellCardText{
     text-align: center;
     margin-left: -1vw;
+    margin-top: 1.5vw;
+    font-size: 1.5vw;
+}
+.SpellCardTextMain{
+    text-align: center;
+    margin-left: 0vw;
     margin-top: 1.5vw;
     font-size: 1.5vw;
 }

@@ -4,7 +4,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #7c1717 !important;
+    background-color: #b42525 !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -18,7 +18,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #c369bf !important;
+    background-color: #d195ce !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -46,7 +46,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #62af3e !important;
+    background-color: #65814c !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -86,7 +86,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #dee94b !important;
+    background-color: #b6ab4b !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -125,7 +125,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #3f130d !important;
+    background-color: #d86a1c !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;
@@ -152,7 +152,7 @@
     flex: 0, 0, 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #3c53b8 !important;
+    background-color: #4c63ce !important;
     position: relative;
     transition: 1.5s;
     transform-style: preserve-3d;

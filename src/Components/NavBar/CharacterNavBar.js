@@ -4,10 +4,15 @@ import {Image, Row, Col} from "react-bootstrap"
 
 const CharacterNavBar = props => {
     const handleLogout = () => {
-        props.clearUser();
+        clearUser();
         ;
       }
-
+     
+      const clearUser = () => {
+        sessionStorage.clear();
+        localStorage.clear();
+        
+    }
     return(
         <header>
           <ul id="nav-mobile" className="nav-Container right"  >
