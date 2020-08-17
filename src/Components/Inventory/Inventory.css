@@ -12,11 +12,11 @@
 }
 
 .equipmentTypeForm{
-    margin-left: 25vw;
+    margin-left: 21vw;
 }
 
 .moneyTitleRow{
-    margin-left: 13.5vw !important;
+    margin-left: 9.5vw !important;
     margin-top: 1vw;
    
 }
@@ -26,34 +26,35 @@
 }
 
 .moneyNumbersLeft{
-    margin-left: 3.5vw !important;
+    margin-left: 2vw !important;
     font-size: 1.4vw;
 }
 .moneyNumbersMiddle{
-    margin-left: 3.5vw !important;
+    margin-left: 2vw !important;
     font-size: 1.4vw;
     margin-bottom: 1vw;
 }
 .moneyNumbersRight{
-    margin-left: 3.5vw !important;
+    margin-left: 2vw !important;
     font-size: 1.4vw;
 }
 
 .moneyNumbersLeftEdit{
-    margin-left: 3.5vw !important;
+    margin-left: 2vw !important;
     font-size: 1.4vw;
 }
 .moneyNumbersMiddleEdit{
-    margin-left: 3.5vw !important;
+    margin-left: 2vw !important;
     font-size: 1.4vw;
 }
 .moneyNumbersRightEdit{
-    margin-left: 3.5vw !important;
+    margin-left: 2vw !important;
     font-size: 1.4vw;
 }
 
 .moneyCard{
 background-color: #222f2f !important;
+
 }
 .moneyCardBody{
     padding: 0vw !important;
@@ -67,7 +68,7 @@ background-color: #222f2f !important;
 
 .moneyEdit{
     font-size: 1.2vw;
-    width: 4vw;
+    width: 3vw;
     height: 1.6vw;
    
     margin-bottom: -.1vw;
@@ -134,4 +135,7 @@ background-color: #222f2f !important;
 
     background-color: tomato !important;
     border-color: tomato !important
+}
+.moneyCard{
+    margin-right: 2vw;
 }
