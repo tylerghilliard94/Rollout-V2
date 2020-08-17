@@ -54,7 +54,12 @@ From logging in a new user should be able to go through character creation witho
 I want to make this app because this is a genre I love and with how things are right now, having a digital aid to help you into a new hobby or a returning player being able to quickly hop in, is something that’s greatly needed. I know many people that want to play but see the character sheet and get overwhelmed by the amount of information needed and just stop there.
 
 ### Images
-![Image of Character profile](https://github.com/tylerghilliard94/front-end-capstone-re-roll/blob/master/src/Images/Character-Profile.PNG)
+![Image of Character profile](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/Character-Profile-page.PNG)
+![Image of Main Dashboard](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/main%20dashboard.PNG)
+![Image of SpellBook](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/spellbookPage.PNG)
+![Image of Inventory](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/inventoryPage.PNG)
+![Image of Class Select](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/classSelect.PNG)
+
 
 ## MVP Definition: 
 
