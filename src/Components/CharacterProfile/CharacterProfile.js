@@ -382,6 +382,7 @@ const CharacterProfile = props => {
                     </Row>
                     <p className="characterDescription">Description: </p>
                     <a className="infoTextDesc">{character.description}</a>
+                    <p className="characterLevel">Race: <a className="infoText">{character.race}</a></p>
                     <p className="characterLevel">Level: <a className="infoText">{character.level}</a></p>
                     <p className="characterExperience">Experience: <a className="infoText">{character.experience}</a></p>
                     <p className="characterAlignment">Alignment: <a className="infoText">{character.alignment}</a></p>
@@ -579,6 +580,7 @@ const CharacterProfile = props => {
                     <p className="characterDescription">Description: </p>
                     <div className="characterDescriptionDiv"><a className="infoTextDesc"onClick={handleEdit}>{character.description}</a></div>
                     <p className="characterLevel">Level: <a className="infoText"onClick={handleEdit}>{character.level}</a></p>
+                    <p className="characterLevel">Race: <a className="infoText">{character.race}</a></p>
                     <p className="characterExperience">Experience: <a className="infoText"onClick={handleEdit}>{character.experience}</a></p>
                     <p className="characterAlignment">Alignment: <a className="infoText"onClick={handleEdit}>{character.alignment}</a></p>
                     <p className="characterSkills">Proficient Skills:<br></br>
@@ -771,6 +773,7 @@ const CharacterProfile = props => {
                     <p className="characterDescription">Description: </p>
                     <textarea className="characterDescriptionEdit"onChange={handleEvtChange}id="description"value={character.description}></textarea>
                     <p className="characterLevel">Level: <textarea className="characterInfoEdit"onChange={handleEvtChange}id="level"value={character.level}></textarea></p>
+                    <p className="characterLevel">Race: <a className="infoText">{character.race}</a></p>
                     <p className="characterExperience">Experience: <textarea className="characterInfoEdit"onChange={handleEvtChange}id="experience"value={character.experience}></textarea></p>
                     <p className="characterAlignment">Alignment: <textarea className="characterInfoEdit"onChange={handleEvtChange}id="alignment"value={character.alignment}></textarea></p>
                     <p className="characterSkills">Proficient Skills:<br></br>

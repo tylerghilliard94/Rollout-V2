@@ -196,7 +196,7 @@
 .hitCard{
     width: 12vw;
     height: 17vw;
-    background-color: #efede7;
+    background-color: #f3f2ef !important;
     perspective: 1000px;
     background-color: transparent;
    
@@ -242,13 +242,13 @@ height: 100%;
 
 
 .hitPointDescriptionNumber{
-    padding-left: .4vw;
+  
     color: black;
     font-size: 2vw !important;
 }
 
 .cardDescriptionNumber{
-    padding-left: .4vw;
+  
     color: black;
     font-size: 2vw !important;
 }

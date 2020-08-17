@@ -27,3 +27,10 @@
     margin-left: 5vw;
     color: #efede7;
 }
+
+.LogoutNavLink:hover,.CharacterProfileLink:hover, .SpellBookNavLink:hover, .InventoryLink:hover {
+    color: tomato !important;
+    font-style: bold;
+    list-style-type: none;
+    
+}

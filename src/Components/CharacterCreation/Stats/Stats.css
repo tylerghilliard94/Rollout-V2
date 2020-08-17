@@ -193,7 +193,7 @@
     margin-top: 2vw;
     margin-bottom: 2vw;
     margin-left: 5vw;
-    background-color: #f3f2ef;
+    background-color: #f3f2ef !important;
 
 }
 
@@ -250,7 +250,7 @@
 .statCard{
     width: 12vw;
     height: 17vw;
-    background-color: #efede7 !important;
+    background-color: #f3f2ef !important;
     perspective: 1000px;
     background-color: transparent;
    
