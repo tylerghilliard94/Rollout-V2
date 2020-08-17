@@ -382,8 +382,9 @@ const CharacterProfile = props => {
                     </Row>
                     <p className="characterDescription">Description: </p>
                     <a className="infoTextDesc">{character.description}</a>
-                    <p className="characterLevel">Race: <a className="infoText">{character.race}</a></p>
+                    
                     <p className="characterLevel">Level: <a className="infoText">{character.level}</a></p>
+                    <p className="characterLevel">Race: <a className="infoText">{character.race}</a></p>
                     <p className="characterExperience">Experience: <a className="infoText">{character.experience}</a></p>
                     <p className="characterAlignment">Alignment: <a className="infoText">{character.alignment}</a></p>
                     <p className="characterSkills">Proficient Skills:<br></br>
