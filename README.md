@@ -2,7 +2,7 @@
 ### Name of Project: Roll-Out
 
 
-
+## Special Thanks: Ethan Neil for creating the Roll-out Logo and class logos!
 
 
 ### Installation
@@ -23,7 +23,7 @@
 - Here the user will be prompted to enter a character name, level, and description of the character. Click the next arrow to continue.
 - The user can then roll their primary stats one at a time or all at once. These are not permanent and can be altered on the character profile page. Click the next arrow to continue.
 - Now the users health points are decided and they have the choice to take the average choice or take a chance on rolling for better health. Click to take a rick or click next to continue.
-- The user is prompted to choose two languages, three skills, and their alignment. Once these are chosen the finalize character button activates and the suer can finish character creation.
+- The user is prompted to choose two languages, three skills, and their alignment. Once these are chosen the finalize character button activates and the user can finish character creation.
 - Once done with your character, its card will appear on the main dashboard. The character is deletable if the user so chooses.
 - The user can click on their character to show their character profile page which if the user clicks on stats or details they can edit the info and save the changes at any time.
 - To add friends on the main dhasboard, click on the + button by the friends list and search for other users.
@@ -53,7 +53,7 @@ From logging in a new user should be able to go through character creation witho
 
 I want to make this app because this is a genre I love and with how things are right now, having a digital aid to help you into a new hobby or a returning player being able to quickly hop in, is something that’s greatly needed. I know many people that want to play but see the character sheet and get overwhelmed by the amount of information needed and just stop there.
 ### Demo
-![Image of Class Select](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/classSelect.PNG)
+![Image of Class Select](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/Roll-Out-DemoV2.gif)
 ### Images
 ![Image of Character profile](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/Character%20Profile%20Page.PNG)
 
@@ -82,12 +82,11 @@ I want to make this app because this is a genre I love and with how things are r
 
 * As a new player, I would like to be able to put all of my spells in a tab and save them as needed and delete them as needed.
 
-* As a new player, I would like to be able to add character logs to remind myself of events that happened to my character in game.
 
 
 ## Technology Stack: 
 
-* Reactstrap
+* Reactstrap/React-Bootstrap
 * D&D 5e Open API http://www.dnd5eapi.co/
 * React
 
