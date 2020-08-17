@@ -52,7 +52,8 @@ From logging in a new user should be able to go through character creation witho
 ### Why do you want to build this application? 
 
 I want to make this app because this is a genre I love and with how things are right now, having a digital aid to help you into a new hobby or a returning player being able to quickly hop in, is something that’s greatly needed. I know many people that want to play but see the character sheet and get overwhelmed by the amount of information needed and just stop there.
-
+### Demo
+![Image of Class Select](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/classSelect.PNG)
 ### Images
 ![Image of Character profile](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/Character%20Profile%20Page.PNG)
 
