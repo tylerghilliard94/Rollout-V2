@@ -83,7 +83,7 @@ I want to make this app because this is a genre I love and with how things are r
 * As a new player, I would like to be able to put all of my spells in a tab and save them as needed and delete them as needed.
 
 
-## Special Thanks: Ethan Neil for creating the Roll-out Logo and class logos!
+## Special Thanks: Ethan Neal for creating the Roll-out Logo and class logos!
 
 ## Technology Stack: 
 
