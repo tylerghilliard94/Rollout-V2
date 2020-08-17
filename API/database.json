@@ -1,12 +1,12 @@
 {
   "users": [
-   
+    
   ],
   "friends": [
     
   ],
   "characters": [
-    
+   
   ],
   "defaultCharacters": [
     {
@@ -2256,11 +2256,10 @@
       "url": "/api/spells/zone-of-truth"
     }
   ],
-  "spellBook": [
-    
-  ],
-  "inventory": [
-    
+  "spellBook": [],
+  "inventory": [],
+  "moneyBags": [
+   
   ],
   "equipment": [
     {
