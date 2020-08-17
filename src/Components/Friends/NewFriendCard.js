@@ -49,7 +49,7 @@ const NewFriendCard = props => {
              
               type="button"
             >
-               <strong onClick={handleFriendAdd}> +</strong>
+              +
             </Button>
             </Col>
             

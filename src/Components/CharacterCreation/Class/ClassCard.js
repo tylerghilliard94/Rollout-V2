@@ -9,7 +9,7 @@ const ClassCard = (props) => {
         sessionStorage.setItem("class", evt.target.id)
         sessionStorage.setItem("hitDice", props.class.hitDice)
         if(sessionStorage.class === "Barbarian"){
-            sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
+            sessionStorage.setItem("picture", "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596825622/barbarian-logo_wte4dq.png")
         }else if(sessionStorage.class === "Bard"){
             sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
         }else if(sessionStorage.class === "Cleric"){
@@ -17,9 +17,9 @@ const ClassCard = (props) => {
         }else if(sessionStorage.class === "Druid"){
             sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
         }else if(sessionStorage.class === "Fighter"){
-            sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
+            sessionStorage.setItem("picture", "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596945398/Fighter-logo_wmjqmr.png")
         }else if(sessionStorage.class === "Monk"){
-            sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
+            sessionStorage.setItem("picture", "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596929822/monk-logo_rgqgyq.png")
         }else if(sessionStorage.class === "Paladin"){
             sessionStorage.setItem("picture", "https://res.cloudinary.com/dgllrw1m3/image/upload/v1596424158/logowithRing_zwiplv.png")
         }else if(sessionStorage.class === "Ranger"){

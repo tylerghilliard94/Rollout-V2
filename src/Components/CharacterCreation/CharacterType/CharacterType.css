@@ -27,7 +27,7 @@
 .defaultCardFighter {
     width: 14vw;
     height: 20vw;
-    background-color: #6d1d13 !important;
+    background-color: #3f130d !important;
     perspective: 1000px;
    
     margin-left: 27vw;
@@ -39,7 +39,7 @@
 .customCardFighter{
     width: 14vw;
     height: 20vw;
-    background-color: #6d1d13 !important;
+    background-color: #3f130d !important;
     perspective: 1000px;
    
     margin-left: 7vw;
@@ -52,7 +52,7 @@
 .defaultCardBarbarian {
     width: 14vw;
     height: 20vw;
-    background-color: #d67a45 !important;
+    background-color: #7c1717 !important;
     perspective: 1000px;
    
     margin-left: 27vw;
@@ -64,7 +64,7 @@
 .customCardBarbarian{
     width: 14vw;
     height: 20vw;
-    background-color: #d67a45 !important;
+    background-color: #7c1717 !important;
     perspective: 1000px;
    
     margin-left: 7vw;

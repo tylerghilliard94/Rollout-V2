@@ -12,6 +12,9 @@ import Stats from "./CharacterCreation/Stats/Stats"
 import HitPoints from "./CharacterCreation/HitPoints/HitPoints"
 import FinalDetails from "./CharacterCreation/FinalDetails/FinalDetails"
 import CharacterProfile from "./CharacterProfile/CharacterProfile"
+import SpellBook from "./Spellbook/Spellbook"
+import SpellBookNew from "./Spellbook/SpellBookNew"
+import SpellDetails from './Spellbook/SpellDetails';
 
 const ApplicationViews = props => {
     const hasUser = props.hasUser
@@ -153,6 +156,39 @@ const ApplicationViews = props => {
                 render={props => {
                     if(hasUser){
                        return <CharacterProfile {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+            <Route
+                exact
+                path="/SpellBook"
+                render={props => {
+                    if(hasUser){
+                       return <SpellBook {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+             <Route
+                exact
+                path="/SpellBookNew"
+                render={props => {
+                    if(hasUser){
+                       return <SpellBookNew {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+            <Route
+                exact
+                path="/SpellDetails"
+                render={props => {
+                    if(hasUser){
+                       return <SpellDetails {...props} />;
                     } else {
                        return <Redirect exact to="/" />
                     }

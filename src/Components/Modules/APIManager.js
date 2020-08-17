@@ -28,6 +28,14 @@ export default {
             return response
         })
     },
+
+    GetCharactersSpells(str){
+        return fetch(`${apiURL}${str}?characterId=${sessionStorage.characterId}`)
+        .then(res=>res.json()).then((response) => {
+            
+            return response
+        })
+    },
     GetAllFriends(str){
         return fetch(`${apiURL}${str}?_expand=user`)
         .then(res=>res.json())
@@ -72,8 +80,12 @@ export default {
             body: JSON.stringify(data)
         })
     },
-    // GetAllSpells(){
-    //     return fetch(`https://www.dnd5eapi.co/api/equipment/abacus`)
-    //     .then(response=>response.json())
-    // }
+    GetSpellDetails(url){
+        return fetch(`https://www.dnd5eapi.co${url}`)
+        .then(response=>response.json())
+    },
+    GetAllEquipment(url){
+        return fetch(`https://www.dnd5eapi.co/api/features`)
+        .then(response=>response.json())
+    }
 }

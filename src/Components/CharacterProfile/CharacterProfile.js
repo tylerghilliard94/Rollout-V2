@@ -76,6 +76,7 @@ const CharacterProfile = props => {
     setCharismaSkills(charismaFilter)
    }
    useEffect(() => {
+    sessionStorage.removeItem("spellUrl")
     APIManager.GetAll("skills").then((response) => {
         setSkills(response)
     })
