@@ -120,8 +120,16 @@ const CharacterProfile = props => {
         bonuses.strengthBonus = "+ 4"
     }else if (character.strength >= 20 && character.strength < 22) {
         bonuses.strengthBonus = "+ 5"
-    }else if(character.strength == 22){
+    }else if(character.strength >= 22 && character.strength < 24){
         bonuses.strengthBonus = "+ 6"
+    }else if(character.strength >= 24 && character.strength < 26){
+        bonuses.strengthBonus = "+ 7"
+    }else if(character.strength >= 26 && character.strength < 28){
+        bonuses.strengthBonus = "+ 8"
+    }else if(character.strength >= 28 && character.strength < 29){
+        bonuses.strengthBonus = "+ 9"
+    }else if(character.strength == 30){
+        bonuses.strengthBonus = "+ 10"
     }
     if(character.dexterity> 0 && character.dexterity< 2) {
         bonuses.dexterityBonus = "- 5"
@@ -145,8 +153,16 @@ const CharacterProfile = props => {
         bonuses.dexterityBonus = "+ 4"
     }else if (character.dexterity >= 20 && character.dexterity < 22) {
         bonuses.dexterityBonus = "+ 5"
-    }else if(character.dexterity == 22){
+    }else if(character.dexterity >= 22 && character.dexterity < 24){
         bonuses.dexterityBonus = "+ 6"
+    }else if(character.dexterity >= 24 && character.dexterity < 26){
+        bonuses.dexterityBonus = "+ 7"
+    }else if(character.dexterity >= 26 && character.dexterity < 28){
+        bonuses.dexterityBonus = "+ 8"
+    }else if(character.dexterity >= 28 && character.dexterity < 29){
+        bonuses.dexterityBonus = "+ 9"
+    }else if(character.dexterity == 30){
+        bonuses.dexterityBonus = "+ 10"
     }
     if(character.constitution> 0 && character.constitution< 2) {
         bonuses.constitutionBonus = "- 5"
@@ -170,8 +186,16 @@ const CharacterProfile = props => {
         bonuses.constitutionBonus = "+ 4"
     }else if (character.constitution >= 20 && character.constitution < 22) {
         bonuses.constitutionBonus = "+ 5"
-    }else if(character.constitution == 22){
+    }else if(character.constitution >= 22 && character.constitution< 24){
         bonuses.constitutionBonus = "+ 6"
+    }else if(character.constitution >= 24 && character.constitution < 26){
+        bonuses.constitutionBonus = "+ 7"
+    }else if(character.constitution >= 26 && character.constitution < 28){
+        bonuses.constitutionBonus = "+ 8"
+    }else if(character.constitution >= 28 && character.constitution < 29){
+        bonuses.constitutionBonus = "+ 9"
+    }else if(character.constitution== 30){
+        bonuses.constitutionBonus = "+ 10"
     }
     if(character.intelligence> 0 && character.intelligence< 2) {
         bonuses.intelligenceBonus = "- 5"
@@ -195,8 +219,16 @@ const CharacterProfile = props => {
         bonuses.intelligenceBonus = "+ 4"
     }else if (character.intelligence >= 20 && character.intelligence < 22) {
         bonuses.intelligenceBonus = "+ 5"
-    }else if(character.intelligence == 22){
+    }else if(character.intelligence >= 22 && character.intelligence < 24){
         bonuses.intelligenceBonus = "+ 6"
+    }else if(character.intelligence >= 24 && character.intelligence < 26){
+        bonuses.intelligenceBonus = "+ 7"
+    }else if(character.intelligence >= 26 && character.intelligence < 28){
+        bonuses.intelligenceBonus = "+ 8"
+    }else if(character.intelligence >= 28 && character.intelligence < 29){
+        bonuses.intelligenceBonus = "+ 9"
+    }else if(character.intelligence == 30){
+        bonuses.intelligenceBonus = "+ 10"
     }
     if(character.wisdom> 0 && character.wisdom< 2) {
         bonuses.wisdomBonus = "- 5"
@@ -220,8 +252,16 @@ const CharacterProfile = props => {
         bonuses.wisdomBonus = "+ 4"
     }else if (character.wisdom >= 20 && character.wisdom < 22) {
         bonuses.wisdomBonus = "+ 5"
-    }else if(character.wisdom == 22){
+    }else if(character.wisdom >= 22 && character.wisdom < 24){
         bonuses.wisdomBonus = "+ 6"
+    }else if(character.wisdom >= 24 && character.wisdom < 26){
+        bonuses.wisdomBonus = "+ 7"
+    }else if(character.wisdom >= 26 && character.wisdom < 28){
+        bonuses.wisdomBonus = "+ 8"
+    }else if(character.wisdom >= 28 && character.wisdom < 29){
+        bonuses.wisdomBonus = "+ 9"
+    }else if(character.wisdom == 30){
+        bonuses.wisdomBonus = "+ 10"
     }
     if(character.charisma> 0 && character.charisma< 2) {
         bonuses.charismaBonus = "- 5"
@@ -245,8 +285,16 @@ const CharacterProfile = props => {
         bonuses.charismaBonus = "+ 4"
     }else if (character.charisma >= 20 && character.charisma < 22) {
         bonuses.charismaBonus = "+ 5"
-    }else if(character.charisma == 22){
+    }else if(character.charisma >= 22 && character.charisma < 24){
         bonuses.charismaBonus = "+ 6"
+    }else if(character.charisma >= 24 && character.charisma < 26){
+        bonuses.charismaBonus = "+ 7"
+    }else if(character.charisma >= 26 && character.charisma < 28){
+        bonuses.charismaBonus = "+ 8"
+    }else if(character.charisma >= 28 && character.charisma < 29){
+        bonuses.charismaBonus = "+ 9"
+    }else if(character.charisma == 30){
+        bonuses.charismaBonus = "+ 10"
     }
 
    

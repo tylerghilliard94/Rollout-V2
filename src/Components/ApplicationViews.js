@@ -15,6 +15,10 @@ import CharacterProfile from "./CharacterProfile/CharacterProfile"
 import SpellBook from "./Spellbook/Spellbook"
 import SpellBookNew from "./Spellbook/SpellBookNew"
 import SpellDetails from './Spellbook/SpellDetails';
+import Inventory from "./Inventory/Inventory"
+import InventoryNew from "./Inventory/InventoryNew"
+import InventoryDetails from "./Inventory/InventoryDetails"
+import InventoryCustom from "./Inventory/InventoryCustom"
 
 const ApplicationViews = props => {
     const hasUser = props.hasUser
@@ -189,6 +193,50 @@ const ApplicationViews = props => {
                 render={props => {
                     if(hasUser){
                        return <SpellDetails {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+            <Route
+                exact
+                path="/Inventory"
+                render={props => {
+                    if(hasUser){
+                       return <Inventory {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+             <Route
+                exact
+                path="/InventoryNew"
+                render={props => {
+                    if(hasUser){
+                       return <InventoryNew {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+             <Route
+                exact
+                path="/InventoryDetails"
+                render={props => {
+                    if(hasUser){
+                       return <InventoryDetails {...props} />;
+                    } else {
+                       return <Redirect exact to="/" />
+                    }
+                }}
+            />
+            <Route
+                exact
+                path="/InventoryCustom"
+                render={props => {
+                    if(hasUser){
+                       return <InventoryCustom {...props} />;
                     } else {
                        return <Redirect exact to="/" />
                     }
