@@ -23,10 +23,11 @@ const SpellBookNew = props => {
         let  filteredSpells = spells.filter(spell => 
             
 
-            spell.name.toUpperCase().includes(searchEvent) ? true: false
+            spell.name.toUpperCase().includes(searchEvent) ? true:  false
             
         
         )
+
         
        
        
@@ -42,10 +43,10 @@ const SpellBookNew = props => {
         <>
         <CharacterNavBar {...props} />
         <Form inline className="searchForm">
-            <FormControl type="text" placeholder="Search" className=" mr-sm-2  spellSearchBar" onChange={handleSearchChange}  />
+            <FormControl type="text" placeholder="Search" className=" mr-sm-2  spellNewSearchBar" onChange={handleSearchChange}  />
             
         </Form>
-        <Row>
+        <Row sm="6" className="spellCardNewRow">
         {filterSpells.map(spell => 
             <SpellCardNew  spell={spell} {...props} /> )}
             </Row>

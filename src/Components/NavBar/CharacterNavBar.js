@@ -23,17 +23,17 @@ const CharacterNavBar = props => {
               </li>
               </Col>
               <Col sm={1}>
-                  <li>
+                  <li className="profileList">
               <NavLink className="CharacterProfileLink" exact to= "/CharacterProfile" > Profile </NavLink>
               </li>
               </Col>
               <Col sm={1}>
-                  <li>
+                  <li className="logoutList">
               <NavLink className="SpellBookNavLink" exact to= "/SpellBook" > SpellBook </NavLink>
               </li>
               </Col>
               <Col sm={1}>
-                  <li>
+                  <li className="logoutList">
               <NavLink className="InventoryLink" exact to= "/Inventory" > Inventory </NavLink>
               </li>
               </Col>

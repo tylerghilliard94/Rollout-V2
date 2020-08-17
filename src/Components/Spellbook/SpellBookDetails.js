@@ -4,22 +4,20 @@ import CharacterNavBar from "../NavBar/CharacterNavBar"
 import {Card, Form, FormControl, Row, Button, Col} from "react-bootstrap"
 import SpellCard from "./SpellCard"
 
-const SpellDetails = props => {
+const SpellBookDetails = props => {
     const [spell, setSpell] = useState({})
     
 
 
     useEffect(() =>{
-        APIManager.GetSpellDetails(sessionStorage.spellUrl).then((response) => setSpell(response))
+        APIManager.GetbyId("spellBook", sessionStorage.spellId).then((response) => setSpell(response))
 
     }, [])
 
-   const handleSaveSpell = () => {
-       spell.characterId = parseInt(sessionStorage.characterId)
-        spell.spellType = sessionStorage.spellType
-       APIManager.Post("spellBook", spell).then(() =>{
-           props.history.push("/SpellBook")
-       })
+   const handleBackSpell = () => {
+       sessionStorage.removeItem("spellId")
+        props.history.push("/SpellBook")
+      
    }
     return(
         <>
@@ -42,7 +40,7 @@ const SpellDetails = props => {
             <p className="spellRange">Range: {spell.range}</p>
             </Col>
             <Col>
-            <p className="spellDuration">{spell.duration}</p>
+            <p className="spellDuration">Duration: {spell.duration}</p>
             </Col>
             </Row>
             <Row>
@@ -54,15 +52,15 @@ const SpellDetails = props => {
            
            
             <Col>
-            <p className="spellCastTime">{spell.casting_time}</p>
+            <p className="spellCastTime">Cast Time: {spell.casting_time}</p>
             </Col>
             {/* <p>{spell.dc.dc_type.name}</p> */}
             {/* <p>{spell.dc.dc_success}</p> */}
             </Row>
          
       
-        <Button className="saveSpellBtn" onClick={handleSaveSpell}>
-        Save spell
+        <Button className="saveSpellBtn" onClick={handleBackSpell}>
+        Back to SpellBook
         </Button>
         </Card.Body>
         </Card>
@@ -70,4 +68,4 @@ const SpellDetails = props => {
     )
 }
 
-export default SpellDetails
+export default SpellBookDetails

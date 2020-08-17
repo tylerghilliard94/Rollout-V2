@@ -109,10 +109,10 @@ const SpellBook = props => {
         <>
         <CharacterNavBar {...props} />
         {console.log(spells)}
-        <Row>
+        <Row className="searchRow">
             
         <Form inline className="searchForm">
-        <Form.Control className="spellChangeForm"
+        <Form.Control className="spellTypeForm"
                 onChange={handleSpellChange}
                 as="select"
                 name="select"
@@ -204,22 +204,22 @@ const SpellBook = props => {
             
         </Form>
 
-        {spellStatus ?  <Button onClick={handleNewSpell}>
+        {spellStatus ?  <Button className="newSpellBtn" onClick={handleNewSpell}>
             Add New Spell
         </Button>
         :
         
-        <Button onClick={handleNewSpell}>
+        <Button className="newFeatBtn" onClick={handleNewSpell}>
             Add New Feat
         </Button>}
         
         </Row>
-        <Col className="spellCardCol">
-        <Row>
+        
+        <Row sm="5">
         {filterSpells.map(spell => 
             <SpellCard  spell={spell} setSpells={refreshSpellBook} {...props} /> )}
             </Row>
-            </Col>
+            
         </>
     )
 }
