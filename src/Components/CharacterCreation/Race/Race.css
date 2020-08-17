@@ -175,7 +175,7 @@
 .raceCard{
     width: 12vw;
     height: 17vw;
-    background-color: #efede7 !important;
+    background-color: #f3f2ef !important;
     perspective: 1000px;
     background-color: transparent;
    
@@ -196,7 +196,7 @@ border-radius: 5%;
 
 .cardFront {
     left: 1vw;
-    background-color:#efede7;
+    background-color:#f3f2ef;
     bottom: 1vw;
     width: 10vw !important;
 height: 15vw !important;
@@ -208,7 +208,7 @@ height: 15vw !important;
     right: 1vw;
     width: 10vw !important;
     height: 15vw !important;
-    background-color:#efede7;
+    background-color:#f3f2ef;
 }
 .raceCardTitleFront {
     
