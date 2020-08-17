@@ -55,9 +55,9 @@ I want to make this app because this is a genre I love and with how things are r
 
 ### Images
 ![Image of Character profile](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/Character%20Profile%20Page.PNG)
-![Image of Main Dashboard](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/main%20dashboard.PNG)
+
 ![Image of SpellBook](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/spellbookPage.PNG)
-![Image of Inventory](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/inventoryPage.PNG)
+
 ![Image of Class Select](https://github.com/tylerghilliard94/front-end-capstone-roll-out/blob/master/src/Images/classSelect.PNG)
 
 
