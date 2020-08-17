@@ -1,12 +1,88 @@
 {
   "users": [
-    
+    {
+      "email": "wow@wow.com",
+      "userName": "Lykrin",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "email": "wow@woww.com",
+      "userName": "Amanda",
+      "password": "123",
+      "id": 2
+    }
   ],
   "friends": [
-    
+    {
+      "userId": 2,
+      "activeUserId": 1,
+      "id": 1
+    }
   ],
   "characters": [
-   
+    {
+      "characterName": "Magnus Lancaster",
+      "class": "Fighter",
+      "level": 1,
+      "race": "Human",
+      "picture": "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596945398/Fighter-logo_wmjqmr.png",
+      "description": "A brash yet skilled melee brawler.",
+      "alignment": "Chaotic-Good",
+      "experience": 0,
+      "strength": 19,
+      "dexterity": 15,
+      "constitution": 17,
+      "intelligence": 13,
+      "wisdom": 12,
+      "charisma": 14,
+      "proficiencyBonus": 2,
+      "hitPoints": 13,
+      "hitDice": 10,
+      "skill1": "Athletics",
+      "skill2": "Survival",
+      "skill3": "Acrobatics",
+      "armorClass": 16,
+      "speed": 30,
+      "language1": "Common",
+      "language2": "Celestial",
+      "spellcastingAbility": 0,
+      "spellSaveDC": 0,
+      "spellAttackBonus": 0,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "characterName": "Coliander Potts",
+      "class": "Druid",
+      "level": 1,
+      "race": "Elf",
+      "picture": "http://res.cloudinary.com/dgllrw1m3/image/upload/v1597455011/Druid-Logo_qsidvz.png",
+      "description": "A girl attuned to nature.",
+      "alignment": "Neutral-Good",
+      "experience": 0,
+      "strength": 20,
+      "dexterity": 22,
+      "constitution": 18,
+      "intelligence": 16,
+      "wisdom": 17,
+      "charisma": 16,
+      "proficiencyBonus": 2,
+      "hitPoints": 12,
+      "hitDice": 8,
+      "skill1": "Nature",
+      "skill2": "Animal Handling",
+      "skill3": "Insight",
+      "armorClass": 10,
+      "speed": 30,
+      "language1": "Celestial",
+      "language2": "Elvish",
+      "spellcastingAbility": "Wisdom",
+      "spellSaveDC": 13,
+      "spellAttackBonus": 5,
+      "userId": 2,
+      "id": 2
+    }
   ],
   "defaultCharacters": [
     {
@@ -2259,7 +2335,13 @@
   "spellBook": [],
   "inventory": [],
   "moneyBags": [
-   
+    {
+      "gp": 0,
+      "sp": 0,
+      "cp": 0,
+      "characterId": 1,
+      "id": 1
+    }
   ],
   "equipment": [
     {
