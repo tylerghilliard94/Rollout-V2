@@ -1,275 +1,140 @@
 import React from 'react';
-import {Route, Redirect} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Dashboard from "./Dashboard/Dashboard"
-import InitialCharacterPrompt from "./InititalCharacterPrompt/InitialCharacterPrompt"
-import Class from "./CharacterCreation/Class/Class"
-import Registration from './Registration/Registration';
-import Login from './Login/Login';
-import CharacterType from "./CharacterCreation/CharacterType/CharacterType"
-import Race from "./CharacterCreation/Race/Race"
-import BaseInfo from "./CharacterCreation/BaseInfo/BaseInfo"
-import Stats from "./CharacterCreation/Stats/Stats"
-import HitPoints from "./CharacterCreation/HitPoints/HitPoints"
-import FinalDetails from "./CharacterCreation/FinalDetails/FinalDetails"
-import CharacterProfile from "./CharacterProfile/CharacterProfile"
-import SpellBook from "./Spellbook/Spellbook"
-import SpellBookNew from "./Spellbook/SpellBookNew"
-import SpellDetails from './Spellbook/SpellDetails';
-import SpellBookDetails from './Spellbook/SpellBookDetails';
-import Inventory from "./Inventory/Inventory"
-import InventoryNew from "./Inventory/InventoryNew"
-import InventoryDetails from "./Inventory/InventoryDetails"
-import EquipmentDetails from "./Inventory/EquipmentDetails"
-import InventoryCustom from "./Inventory/InventoryCustom"
+// import InitialCharacterPrompt from "./InititalCharacterPrompt/InitialCharacterPrompt"
+// import Class from "./CharacterCreation/Class/Class"
+// import CharacterType from "./CharacterCreation/CharacterType/CharacterType"
+// import Race from "./CharacterCreation/Race/Race"
+// import BaseInfo from "./CharacterCreation/BaseInfo/BaseInfo"
+// import Stats from "./CharacterCreation/Stats/Stats"
+// import HitPoints from "./CharacterCreation/HitPoints/HitPoints"
+// import FinalDetails from "./CharacterCreation/FinalDetails/FinalDetails"
+// import CharacterProfile from "./CharacterProfile/CharacterProfile"
+// import SpellBook from "./Spellbook/Spellbook"
+// import SpellBookNew from "./Spellbook/SpellBookNew"
+// import SpellDetails from './Spellbook/SpellDetails';
+// import SpellBookDetails from './Spellbook/SpellBookDetails';
+// import Inventory from "./Inventory/Inventory"
+// import InventoryNew from "./Inventory/InventoryNew"
+// import InventoryDetails from "./Inventory/InventoryDetails"
+// import EquipmentDetails from "./Inventory/EquipmentDetails"
+// import InventoryCustom from "./Inventory/InventoryCustom"
 
-const ApplicationViews = props => {
-    const hasUser = props.hasUser
-    const setUser = props.setUser
-    const friendPage = true
+const ApplicationViews = () => {
 
-   
 
-    return (
+
+   return (
       <>
-        
-        <Route
-          exact
-          path="/"
-          render={(props) => {
-            return <Login setUser={setUser} {...props} />;
-          }}
-        />
-        
-        <Route
-          path="/Registration"
-          render={(props) => {
-            return <Registration setUser={setUser} {...props} />;
-          }}
-        />
-          <Route
-                exact
-                path="/Dashboard"
-                render={props => {
-                    if(hasUser){
-                       return <Dashboard {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+         <Routes>
+
+            <Route
+               exact
+               path="/dashboard"
+               element={<Dashboard />} />
+            {/* <Route
+               exact
+               path="/FriendCharacters"
+               element={<Dashboard friendPage={friendPage} {...props} />} />
+            <Route
+               exact
+               path="/CharacterPrompt"
+               element={<InitialCharacterPrompt {...props} />}
+
             />
             <Route
-                exact
-                path="/FriendCharacters"
-                render={props => {
-                    if(hasUser){
-                       return <Dashboard friendPage={friendPage} {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/Class"
+               element={<Class {...props} />}
             />
             <Route
-                exact
-                path="/CharacterPrompt"
-                render={props => {
-                    if(hasUser){
-                       return <InitialCharacterPrompt {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/CharacterType"
+               element={<CharacterType {...props} />}
+
             />
             <Route
-                exact
-                path="/Class"
-                render={props => {
-                    if(hasUser){
-                       return <Class {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/Race"
+               element={<Race {...props} />}
             />
             <Route
-                exact
-                path="/CharacterType"
-                render={props => {
-                    if(hasUser){
-                       return <CharacterType {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/BaseInfo"
+               element={<BaseInfo {...props} />}
             />
             <Route
-                exact
-                path="/Race"
-                render={props => {
-                    if(hasUser){
-                       return <Race {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/Stats"
+               element={<Stats {...props} />}
             />
             <Route
-                exact
-                path="/BaseInfo"
-                render={props => {
-                    if(hasUser){
-                       return <BaseInfo {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/HitPoints"
+               element={<HitPoints {...props} />}
+
             />
             <Route
-                exact
-                path="/Stats"
-                render={props => {
-                    if(hasUser){
-                       return <Stats {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/FinalDetails"
+               element={<FinalDetails {...props} />}
             />
             <Route
-                exact
-                path="/HitPoints"
-                render={props => {
-                    if(hasUser){
-                       return <HitPoints {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/CharacterProfile"
+               element={<CharacterProfile {...props} />}
             />
             <Route
-                exact
-                path="/FinalDetails"
-                render={props => {
-                    if(hasUser){
-                       return <FinalDetails {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/SpellBook"
+               element={<SpellBook {...props} />}
+
             />
             <Route
-                exact
-                path="/CharacterProfile"
-                render={props => {
-                    if(hasUser){
-                       return <CharacterProfile {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/SpellBookNew"
+               element={<SpellBookNew {...props} />}
+
             />
             <Route
-                exact
-                path="/SpellBook"
-                render={props => {
-                    if(hasUser){
-                       return <SpellBook {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
-            />
-             <Route
-                exact
-                path="/SpellBookNew"
-                render={props => {
-                    if(hasUser){
-                       return <SpellBookNew {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/SpellDetails"
+               element={<SpellDetails {...props} />}
             />
             <Route
-                exact
-                path="/SpellDetails"
-                render={props => {
-                    if(hasUser){
-                       return <SpellDetails {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/SpellBookDetails"
+               element={<SpellBookDetails {...props} />}
             />
             <Route
-                exact
-                path="/SpellBookDetails"
-                render={props => {
-                    if(hasUser){
-                       return <SpellBookDetails {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/Inventory"
+               element={<Inventory {...props} />}
             />
             <Route
-                exact
-                path="/Inventory"
-                render={props => {
-                    if(hasUser){
-                       return <Inventory {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
-            />
-             <Route
-                exact
-                path="/InventoryNew"
-                render={props => {
-                    if(hasUser){
-                       return <InventoryNew {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
-            />
-             <Route
-                exact
-                path="/InventoryDetails"
-                render={props => {
-                    if(hasUser){
-                       return <InventoryDetails {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/InventoryNew"
+               element={<InventoryNew {...props} />}
             />
             <Route
-                exact
-                path="/EquipmentDetails"
-                render={props => {
-                    if(hasUser){
-                       return <EquipmentDetails {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/InventoryDetails"
+               element={<InventoryDetails {...props} />}
             />
             <Route
-                exact
-                path="/InventoryCustom"
-                render={props => {
-                    if(hasUser){
-                       return <InventoryCustom {...props} />;
-                    } else {
-                       return <Redirect exact to="/" />
-                    }
-                }}
+               exact
+               path="/EquipmentDetails"
+               element={<EquipmentDetails {...props} />}
             />
-            
-        </>
-    )
-            }
+            <Route
+               exact
+               path="/InventoryCustom"
+               element={<InventoryCustom {...props} />}
+            /> */}
+         </Routes>
+      </>
+   )
+}
 
 
 export default ApplicationViews

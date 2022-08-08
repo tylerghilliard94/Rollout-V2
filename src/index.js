@@ -1,20 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
 import Initialize from './Components/Initialize'
-import * as serviceWorker from './serviceWorker';
+import { createRoot } from "react-dom/client"
 import { BrowserRouter as Router } from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'materialize-css';
+import { UserProfileProvider } from './Providers/UserProvider';
 
-ReactDOM.render(
+
+const rootElement = document.getElementById("root")
+
+const root = createRoot(rootElement)
+root.render(
   <Router>
-    <Initialize />
-  </Router>,
-  document.getElementById('root')
+    <UserProfileProvider>
+      <Initialize />
+    </UserProfileProvider>
+  </Router>
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

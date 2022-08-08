@@ -1,98 +1,49 @@
-import React, { useState, useEffect } from "react";
-import { Form, FormGroup, Label,  Button, Card, Alert, CardImg, CardBody, CardSubtitle, Input, Col } from "reactstrap";
-import APIManager from "../Modules/APIManager";
+import React, { useState, useEffect, useContext } from "react";
+import { Form, FormGroup, Label, Button, Card, Alert, CardImg, CardBody, CardSubtitle, Input, Col } from "reactstrap";
+import { register } from "../APIManagers/Auth/Register";
+import { setStorage } from "../../Utils/BrowserStorage"
+import { useNavigate } from "react-router-dom"
 import "./Registration.css";
+import { UserProfileContext } from "../../Providers/UserProvider";
+
 
 
 const Register = (props) => {
-  
-    const [credentials, setCredentials] = useState({ email: "", userName: "", password: ""});
-    const [users, setUsers] = useState([])
-    useEffect(()=> {
-      APIManager.GetAll("users")
-      .then((response) => {
-        setUsers(response)
-      })
-    }, [])
-    const handleRegister = (event) => {
-        event.preventDefault();
-        const userEmailInputValue = document.getElementById("email").value
-        const userNameInputValue = document.getElementById("userName").value
-        const userPasswordValue = document.getElementById("password").value
-        const userConfirmPasswordValue = document.getElementById("confirmedPassword").value
-        let userNameCheck = true;
-        let userEmailCheck = true;
-        users.forEach(user => {
-            if (user.email === userEmailInputValue ) {
-                userEmailCheck = false;
-                if (user.userName === userNameInputValue){
-                    userNameCheck = false;
-                } 
-            }   
+  let navigate = useNavigate()
+
+  const [user, setUser] = useState({})
+
+  const { isAuthenticated } = useContext(UserProfileContext)
+
+  const handleRegister = (event) => {
+    event.preventDefault();
+
+    if (user.password === user.confirmedPassword) {
+      register(user)
+        .then(res => {
+
+
+          setStorage(res)
+          isAuthenticated()
+          navigate("/dashboard")
         })
-        let characterCheck= false
-            if (userEmailCheck === true && userEmailInputValue !== "") {
-                if (userNameCheck === true && userNameInputValue !== "") {
-                    if (userPasswordValue === userConfirmPasswordValue && userPasswordValue !== "" ) {
-                        
-                        APIManager.Post("users", credentials) .then(() => {
-                          APIManager.GetAll("users").then((response) => {
-                            response.forEach(user => {
-                              if(user.userName === userNameInputValue){
-                                credentials.userId = user.id
-                                
-                                props.setUser(credentials)
-                                    APIManager.GetAll("characters").then((response) => {
-                                       
-                                        response.forEach(character => {
-                                          if(character.userId === parseInt(sessionStorage.activeUserID)){
-                                              characterCheck = true
-                                          }
-                                        })
-                                    }).then(()=> {
-                                        if(characterCheck){
-                                            props.history.push("/Dashboard")
-                                          } else {
-                                              props.history.push("/CharacterPrompt")
-                                          }
-                                    })
-                                  
-                              }
-                            })
-                          })
-                        })
-                       
-                        
-                    } else {
-                       return (
-                        window.alert("Passwords don't match.")
-                              )
-                    }
-                } else {
-                   return (
-                    window.alert("Username is already in use.")
-                          )
-                }
-            } else {
-               return (
-                      window.alert("Email already in use.")
-                      )
-            }
-        
     }
-    const handleFieldChange = (event) => {
-        const stateToChange = { ...credentials };
-        stateToChange[event.target.id] = event.target.value;
-        setCredentials(stateToChange);
-    }
-    return (
-      <Col className="registerContainer">
-        <Card className="registrationCard">
+
+
+  }
+  const handleFieldChange = (event) => {
+    const stateToChange = { ...user };
+    stateToChange[event.target.name] = event.target.value;
+    setUser(stateToChange);
+  }
+  return (
+    <Col className="registerContainer">
+      <Card className="registrationCard">
         <CardBody className="registrationCardBody">
           <CardImg
             className="registrationLogo"
             src=
-                "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596404968/Role_Out_D_ygzjys.png"
+            "http://res.cloudinary.com/dgllrw1m3/image/upload/v1596404968/Role_Out_D_ygzjys.png"
             alt="imgLogo"
           />
           <CardSubtitle className="registerWelcome">
@@ -100,12 +51,13 @@ const Register = (props) => {
           </CardSubtitle>
           <Form className="registerForm" onSubmit={handleRegister}>
             <FormGroup>
-              <Label className="registerEmailLabel">Email address</Label>
+              <Label className="registerEmailLabel">Email Address</Label>
               <Input
                 className="registerLogin"
                 onChange={handleFieldChange}
                 type="email"
                 id="email"
+                name="email"
                 placeholder="Enter Email"
               />
             </FormGroup>
@@ -116,9 +68,10 @@ const Register = (props) => {
                 onChange={handleFieldChange}
                 type="userName"
                 id="userName"
+                name="userName"
                 placeholder="Enter Username"
               />
-              
+
             </FormGroup>
             <FormGroup>
               <Label className="registerPasswordLabel">Password</Label>
@@ -127,6 +80,7 @@ const Register = (props) => {
                 onChange={handleFieldChange}
                 type="password"
                 id="password"
+                name="password"
                 placeholder="Password"
               />
             </FormGroup>
@@ -138,21 +92,21 @@ const Register = (props) => {
                 className="registerLogin"
                 type="password"
                 id="confirmedPassword"
+                name="confirmedPassword"
                 placeholder="Confirm Password"
               />
             </FormGroup>
             <Button
               className="registrationButton"
-              onClick={handleRegister}
               variant="custom"
               type="submit"
             >
               Register
             </Button>
           </Form>
-          </CardBody>
-        </Card>
-      </Col>
-    );
+        </CardBody>
+      </Card>
+    </Col>
+  );
 }
 export default Register

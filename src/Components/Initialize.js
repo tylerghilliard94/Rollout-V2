@@ -1,39 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
+import { Routes, Navigate, Route } from "react-router-dom"
+import { UserProfileContext } from "../Providers/UserProvider";
 import ApplicationViews from './ApplicationViews';
+import Login from "./Login/Login";
+import Register from "./Registration/Registration";
 
 
 
 
-const Initialize = (props) => {
+const Initialize = () => {
 
-  
-  
-    const isAuthenticated = () => {
-      if (
-        sessionStorage.getItem("activeUser") !== null ||
-        localStorage.getItem("activeUser") !== null
-      ) {
-        return true;
-      } else {
-        return false;
-      }
-    };
-    
-    const [hasUser, setHasUser] = useState(isAuthenticated());
+  const { hasUser } = useContext(UserProfileContext)
 
-    const setUser = (user) => {
-      sessionStorage.setItem("activeUserID", user.userId);
-      sessionStorage.setItem("activeUser", user.userName)
-      setHasUser(isAuthenticated())
-      
-    }
-    
-    
-    return (
-        <>
-          <ApplicationViews setUser={setUser} hasUser={hasUser} />
-        </>
-    )
+  return (
+    <>
+      <Routes>
+
+        {hasUser === true || hasUser === undefined ? <Route path="*" element={<ApplicationViews hasUser={hasUser} />} /> : <Route path="*" element={<Navigate to={"/login"} replace />} />}
+        <Route path="login" element={<Login />}></Route>
+        <Route path="register" element={<Register />}></Route>
+
+      </Routes>
+
+    </>
+  )
 }
 
 export default Initialize
