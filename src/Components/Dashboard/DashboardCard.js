@@ -1,22 +1,26 @@
 import React from "react"
 import { Card, Image, Row, Col } from "react-bootstrap"
+import { useNavigate } from "react-router-dom"
 
 import { Button } from "reactstrap"
+import { deleteCharacterById } from "../APIManagers/CharacterManager"
 
 
-const DashboardCard = ({ character }) => {
+const DashboardCard = ({ character, updateCharacters }) => {
 
-    const handleCharacterDelete = () => {
-        //     APIManager.Delete("characters", props.character.id).then(() => {
+    const navigate = useNavigate()
 
-        //         props.updateCharacters()
+    const handleCharacterDelete = (evt) => {
+        debugger
+        deleteCharacterById(evt.target.id).then(() => {
 
-        //     })
+            updateCharacters()
+
+        })
     }
     const handleShowCharacterProfile = (evt) => {
-        //     sessionStorage.setItem("characterId", evt.target.id)
 
-        //     props.history.push("/CharacterProfile")
+        navigate(`/CharacterProfile/${evt.target.id}`)
     }
     // if (props.friendPage) {
     //     return (

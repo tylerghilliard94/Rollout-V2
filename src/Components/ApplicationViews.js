@@ -9,7 +9,7 @@ import Dashboard from "./Dashboard/Dashboard"
 // import Stats from "./CharacterCreation/Stats/Stats"
 // import HitPoints from "./CharacterCreation/HitPoints/HitPoints"
 // import FinalDetails from "./CharacterCreation/FinalDetails/FinalDetails"
-// import CharacterProfile from "./CharacterProfile/CharacterProfile"
+import CharacterProfile from "./CharacterProfile/CharacterProfile"
 // import SpellBook from "./Spellbook/Spellbook"
 // import SpellBookNew from "./Spellbook/SpellBookNew"
 // import SpellDetails from './Spellbook/SpellDetails';
@@ -35,102 +35,102 @@ const ApplicationViews = () => {
             {/* <Route
                exact
                path="/FriendCharacters"
-               element={<Dashboard friendPage={friendPage} {...props} />} />
-            <Route
+               element={<Dashboard friendPage={friendPage} {...props} />} /> */}
+            {/* <Route
                exact
                path="/CharacterPrompt"
                element={<InitialCharacterPrompt {...props} />}
 
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/Class"
                element={<Class {...props} />}
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/CharacterType"
                element={<CharacterType {...props} />}
 
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/Race"
                element={<Race {...props} />}
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/BaseInfo"
                element={<BaseInfo {...props} />}
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/Stats"
                element={<Stats {...props} />}
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/HitPoints"
                element={<HitPoints {...props} />}
 
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/FinalDetails"
                element={<FinalDetails {...props} />}
-            />
+            /> */}
             <Route
                exact
-               path="/CharacterProfile"
-               element={<CharacterProfile {...props} />}
+               path="/CharacterProfile/:characterId"
+               element={<CharacterProfile />}
             />
-            <Route
+            {/* <Route
                exact
                path="/SpellBook"
                element={<SpellBook {...props} />}
 
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/SpellBookNew"
                element={<SpellBookNew {...props} />}
 
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/SpellDetails"
                element={<SpellDetails {...props} />}
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/SpellBookDetails"
                element={<SpellBookDetails {...props} />}
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/Inventory"
                element={<Inventory {...props} />}
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/InventoryNew"
                element={<InventoryNew {...props} />}
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/InventoryDetails"
                element={<InventoryDetails {...props} />}
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/EquipmentDetails"
                element={<EquipmentDetails {...props} />}
-            />
-            <Route
+            /> */}
+            {/* <Route
                exact
                path="/InventoryCustom"
                element={<InventoryCustom {...props} />}
-            /> */}
+            />  */}
          </Routes>
       </>
    )

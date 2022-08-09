@@ -31,14 +31,10 @@ const Dashboard = (props) => {
     const updateCharacters = () => {
         if (dashboardId) {
             getCharactersByUserId(dashboardId)
-                .then((response) => {
-                    setCharacters(response)
-                })
+                .then(setCharacters)
         } else {
             getAllCurrentUsersCharacters()
-                .then((response) => {
-                    setCharacters(response)
-                })
+                .then(setCharacters)
         }
     }
     useEffect(() => {

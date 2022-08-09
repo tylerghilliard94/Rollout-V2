@@ -11,8 +11,9 @@ export const UserProfileProvider = (props) => {
         if (
             localStorage.getItem("ro_token") !== null
         ) {
+
             setCurrentUser({
-                user_id: localStorage.getItem("ro_user"),
+                user_id: parseInt(localStorage.getItem("ro_user")),
                 username: localStorage.getItem("ro_username")
             })
             setHasUser(true);
@@ -23,10 +24,7 @@ export const UserProfileProvider = (props) => {
 
 
 
-    useEffect(() => {
-        isAuthenticated()
-    }
-        , [])
+    useEffect(isAuthenticated, [])
 
     return (
         <UserProfileContext.Provider value={{ currentUser, setCurrentUser, hasUser, isAuthenticated }}>
